@@ -1,7 +1,9 @@
+import { AppProps } from 'next/dist/next-server/lib/router/router'
+
 import '../styles/globals.sass'
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default App
