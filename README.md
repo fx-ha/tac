@@ -2,8 +2,6 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
-- install sass
-- install typescript
 - install react bootstrap
 - copy schaubuehne.de
 - seiten:
@@ -38,3 +36,7 @@ Builds the app for production.
 
 npm start
 Runs the built app in production mode.
+
+## Done
+- install typescript
+- install sass
