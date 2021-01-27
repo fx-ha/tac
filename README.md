@@ -2,7 +2,6 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
-- install react bootstrap
 - copy schaubuehne.de
 - seiten:
  - Startseite
@@ -17,7 +16,6 @@ Next.js Frontend for Theater am Campus
  - Impressum
  - Datenschutz
 - pwa 
-- publish to vercel
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
@@ -47,3 +45,5 @@ Runs the built app in production mode.
 ## Done
 - install typescript
 - install sass
+- install react bootstrap
+- publish to vercel
