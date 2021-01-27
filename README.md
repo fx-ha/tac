@@ -2,6 +2,7 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
+- html lang attribute
 - copy schaubuehne.de
 - seiten:
  - Startseite
