@@ -5,10 +5,17 @@ Next.js Frontend for Theater am Campus
 - install react bootstrap
 - copy schaubuehne.de
 - seiten:
- - startseite
- - spielplan
- - archiv
- - kontakt
+ - Startseite
+  - kurze Vorstellung Theater am Campus
+  - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
+  - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
+ - Spielplan
+  - Auflistung aller Aufführungen für das Semester
+ - Theaterinitiativen
+  - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können  
+ - Archiv
+ - Impressum
+ - Datenschutz
 - pwa 
 - publish to vercel
 
