@@ -2,13 +2,17 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
+- install sass
+- install typescript
+- install react bootstrap
 - copy schaubuehne.de
 - seiten:
  - startseite
  - spielplan
  - archiv
  - kontakt
-- pwa https://github.com/vercel/next.js/tree/master/examples/progressive-web-app
+- pwa 
+- publish to vercel
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
@@ -23,6 +27,8 @@ Next.js Frontend for Theater am Campus
   - React Bootstrap
    - https://react-bootstrap.github.io/
    - https://github.com/vercel/next.js/tree/master/examples/with-react-bootstrap
+  - PWA 
+   - https://github.com/vercel/next.js/tree/master/examples/progressive-web-app
 
 npm run dev
 Starts the development server.
