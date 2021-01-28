@@ -2,20 +2,28 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
-- html lang attribute
+- design layout
+- index
+ - design
+ - infobox als card? (z.b. corona)
+ - nächste veranstaltungen
+ - kalendar
+- spielplan
+ - design 
+ - auflistung veranstaltungen
+- theaterinitiativen
+ - design
+ - cards wie auf tac-seite
+- archiv
+ - design 
+ - auflistung vergangener veranstaltungen
+- impressum
+ - design 
+- datenschutz
+ - design 
+ - e-recht24 text
 - copy schaubuehne.de
-- seiten:
- - Startseite
-  - kurze Vorstellung Theater am Campus
-  - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
-  - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
- - Spielplan
-  - Auflistung aller Aufführungen für das Semester
- - Theaterinitiativen
-  - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können  
- - Archiv
- - Impressum
- - Datenschutz
+- Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa 
 
 ## Inspiration
@@ -48,3 +56,16 @@ Runs the built app in production mode.
 - install sass
 - install react bootstrap
 - publish to vercel
+- seiten:
+ - Startseite
+  - kurze Vorstellung Theater am Campus
+  - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
+  - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
+ - Spielplan
+  - Auflistung aller Aufführungen für das Semester
+ - Theaterinitiativen
+  - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können  
+ - Archiv
+ - Impressum
+ - Datenschutz
+- html lang attribute
