@@ -30,6 +30,7 @@ export default function Layout({
               <Link href="/spielplan" passHref><Nav.Link>Spielplan</Nav.Link></Link>
               <Link href="/theaterinitiativen" passHref><Nav.Link>Theaterinitiativen</Nav.Link></Link>
               <Link href="/archiv" passHref><Nav.Link>Archiv</Nav.Link></Link>
+              <Link href="/wer-sind-wir" passHref><Nav.Link>Über uns</Nav.Link></Link>
               <Link href="/kontakt" passHref><Nav.Link>Kontakt</Nav.Link></Link>
               <Link href="/impressum" passHref><Nav.Link>Impressum</Nav.Link></Link>
               <Link href="/datenschutz" passHref><Nav.Link>Datenschutz</Nav.Link></Link>

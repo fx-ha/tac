@@ -17,9 +17,15 @@ Next.js Frontend for Theater am Campus
 - archiv
  - design 
  - auflistung vergangener veranstaltungen
-- impressum
+- about
+ - design
+- kontakt
  - design 
-- datenschutz
+ - google maps
+ - formular? -> erfragen 
+- impressum -> footer
+ - design 
+- datenschutz -> footer
  - design 
  - e-recht24 text
 - copy schaubuehne.de
