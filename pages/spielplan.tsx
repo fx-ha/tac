@@ -8,7 +8,8 @@ export default function Spielplan() {
       <Head>
         <title>{siteTitle} | Spieplan</title>
       </Head>
-      <main>Hier kommt der Spielplan</main>
+      <h1>Spielplan</h1>
+      <div>Auflistung aller Aufführungen für das Semester</div>
     </Layout>
   )
 }

@@ -8,7 +8,8 @@ export default function Theaterinitiativen() {
       <Head>
         <title>{siteTitle} | Theaterinitiativen</title>
       </Head>
-      <main>Hier kommen die Theaterinitiativen</main>
+      <h1>Theaterinitiativen</h1>
+      <div>visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können</div>
     </Layout>
   )
 }

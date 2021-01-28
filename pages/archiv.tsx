@@ -8,7 +8,8 @@ export default function Archiv() {
       <Head>
         <title>{siteTitle} | Archiv</title>
       </Head>
-      <main>Hier kommt das Archiv</main>
+      <h1>Archiv</h1>
+      <div>Auflistung vergangener Aufführungen</div>
     </Layout>
   )
 }
