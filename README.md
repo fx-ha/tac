@@ -2,6 +2,9 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
+- refactor event list/listing, wiedeverwenden für spielplan & archiv, param: spielplan/archiv
+  - wenn spielplan, reihenfolge älteste zuerst
+  - wenn archiv, reihenfolge neueste zuerst
 - design layout
 - index
  - design
@@ -10,13 +13,14 @@ Next.js Frontend for Theater am Campus
  - kalendar
 - spielplan
  - design 
- - auflistung veranstaltungen
+ - auflistung verlinken
 - theaterinitiativen
  - design
  - cards wie auf tac-seite
+ - card text ohne p und ul
 - archiv
  - design 
- - auflistung vergangener veranstaltungen
+ - auflistung verlinken
 - about
  - design
 - kontakt
@@ -75,3 +79,7 @@ Runs the built app in production mode.
  - Impressum
  - Datenschutz
 - html lang attribute
+- spielplan
+ - auflistung veranstaltungen
+- archiv
+ - auflistung vergangener veranstaltungen
