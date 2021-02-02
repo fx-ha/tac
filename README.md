@@ -2,39 +2,42 @@
 Next.js Frontend for Theater am Campus
 
 ## TO DO
-- refactor event list/listing, wiedeverwenden für spielplan & archiv, param: spielplan/archiv
-  - wenn spielplan, reihenfolge älteste zuerst
-  - wenn archiv, reihenfolge neueste zuerst
-- design layout
+- EventList param: isArchived
+  - false: reihenfolge älteste zuerst
+  - true: reihenfolge neueste zuerst
+- refactor archiv/spielplan id page
+- .env variable mit link zu api
+- style layout component
 - index
- - design
+ - style
  - infobox als card? (z.b. corona)
  - nächste veranstaltungen
  - kalendar
 - spielplan
- - design 
+ - style 
  - auflistung verlinken
 - theaterinitiativen
- - design
+ - style
  - cards wie auf tac-seite
  - card text ohne p und ul
 - archiv
- - design 
+ - style 
  - auflistung verlinken
 - about
- - design
+ - style
 - kontakt
- - design 
+ - style 
  - google maps
  - formular? -> erfragen 
 - impressum -> footer
- - design 
+ - style 
 - datenschutz -> footer
- - design 
+ - style 
  - e-recht24 text
 - copy schaubuehne.de
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa 
+- customize 404 page
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
@@ -83,3 +86,6 @@ Runs the built app in production mode.
  - auflistung veranstaltungen
 - archiv
  - auflistung vergangener veranstaltungen
+- redirect veranstaltungen -> spielplan
+- refactor EventList
+- EventList wiederverwenden für archiv
