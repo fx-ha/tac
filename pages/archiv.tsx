@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
 
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from '../components/Layout'
+import EventList from '../components/EventList'
 
 export default function Archiv({ events }) {
   return (
@@ -11,27 +12,19 @@ export default function Archiv({ events }) {
       </Head>
       <h1>Archiv</h1>
       <div>Auflistung vergangener Aufführungen</div>
-      <div>
-        <ul>
-          {events.items.map((event: { id: number; title: string }) =>
-            <li key={event.id}>{event.title}</li>
-          )}
-        </ul>
-      </div>
+      <EventList events={events} isArchived={true} />
     </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://127.0.0.1:8000/api/v2/pages/?child_of=4")
+  const res = await fetch("http://127.0.0.1:8000/api/v2/pages/?child_of=4") // TODO pagination w/ limit + offset
   const events = await res.json()
 
   return {
     props: {
       events
     },
-    revalidate: 1 // revalidate once per second
+    revalidate: 10
   }
 }
-
-// TODO getStaticPaths
