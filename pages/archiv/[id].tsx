@@ -11,7 +11,7 @@ export default function Event({ event }) {
         <title>{siteTitle} | {event.title}</title>
       </Head>
       <h1>{event.title}</h1>
-      <div dangerouslySetInnerHTML={{__html: event.body}}></div>
+      <div dangerouslySetInnerHTML={{ __html: event.body }}></div>
       <br />
       <Link href="/archiv">Zurück</Link>
     </Layout>
@@ -23,7 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const events = await res.json()
   const paths = events.items.map((event: { id: string }) => `/archiv/${event.id}`)
 
-  return { paths, fallback: false }
+  return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
