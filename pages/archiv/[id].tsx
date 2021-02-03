@@ -19,7 +19,7 @@ export default function Event({ event }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://127.0.0.1:8000/api/v2/pages/?child_of=4")
+  const res = await fetch(`${process.env.API_URL}?child_of=4`)
   const events = await res.json()
   const paths = events.items.map((event: { id: string }) => `/archiv/${event.id}`)
 
@@ -27,7 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const res = await fetch(`http://127.0.0.1:8000/api/v2/pages/${params.id as string}`)
+  const res = await fetch(`${process.env.API_URL}${params.id as string}`)
   const event = await res.json()
 
   return {

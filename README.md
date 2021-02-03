@@ -6,7 +6,7 @@ Next.js Frontend for Theater am Campus
   - false: reihenfolge älteste zuerst
   - true: reihenfolge neueste zuerst
 - refactor archiv/spielplan id page
-- .env variable mit link zu api
+- pagination
 - style layout component
 - index
  - style
@@ -15,14 +15,12 @@ Next.js Frontend for Theater am Campus
  - kalendar
 - spielplan
  - style 
- - auflistung verlinken
 - theaterinitiativen
  - style
  - cards wie auf tac-seite
  - card text ohne p und ul
 - archiv
  - style 
- - auflistung verlinken
 - about
  - style
 - kontakt
@@ -89,3 +87,8 @@ Runs the built app in production mode.
 - redirect veranstaltungen -> spielplan
 - refactor EventList
 - EventList wiederverwenden für archiv
+- .env variable mit link zu api
+- spielplan
+ - auflistung verlinken
+- archiv
+  - auflistung verlinken

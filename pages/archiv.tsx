@@ -18,7 +18,7 @@ export default function Archiv({ events }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://127.0.0.1:8000/api/v2/pages/?child_of=4") // TODO pagination w/ limit + offset
+  const res = await fetch(`${process.env.API_URL}?child_of=4`) // TODO pagination w/ limit + offset
   const events = await res.json()
 
   return {
