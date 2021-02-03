@@ -18,7 +18,7 @@ export default function Spielplan({ events }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.API_URL}?child_of=3`) // TODO pagination w/ limit + offset
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?child_of=3`) // TODO pagination w/ limit + offset
   const events = await res.json()
 
   return {
