@@ -36,7 +36,6 @@ Next.js Frontend for Theater am Campus
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa 
 - customize 404 page
-- preview mode
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
