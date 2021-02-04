@@ -8,7 +8,6 @@ export default function Impressum() {
       <Head>
         <title>{siteTitle} | Impressum</title>
       </Head>
-      <h1>Impressum</h1>
       <div>
         <h2>Angaben gemäß § 5 TMG:</h2>
         Universität Bayreuth<br />

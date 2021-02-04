@@ -6,9 +6,8 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Startseite</title>
+        <title>{siteTitle} | Home</title>
       </Head>
-      <h1>Theater am Campus</h1>
       <div>
         Das Theater am Campus der Universität Bayreuth ist einer der größten durchlaufenden Spielbetriebe der Region.
         Dieses umfassende Kulturangebot ist fest in der Lehre verankert, wodurch eine diverse und experimentierfreudige

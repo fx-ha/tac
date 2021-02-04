@@ -10,7 +10,6 @@ export default function Archiv({ events }) {
       <Head>
         <title>{siteTitle} | Archiv</title>
       </Head>
-      <h1>Archiv</h1>
       <div>Auflistung vergangener Aufführungen</div>
       <EventList events={events} isArchived={true} />
     </Layout>

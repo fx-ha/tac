@@ -10,7 +10,6 @@ export default function Spielplan({ events }) {
       <Head>
         <title>{siteTitle} | Spieplan</title>
       </Head>
-      <h1>Spielplan</h1>
       <div>Auflistung aller Aufführungen für das Semester</div>
       <EventList events={events} isArchived={false} />
     </Layout>

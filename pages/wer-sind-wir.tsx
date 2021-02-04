@@ -8,7 +8,6 @@ export default function WerSindWir() {
       <Head>
         <title>{siteTitle} | Wer sind wir?</title>
       </Head>
-      <h1>Wer sind wir?</h1>
       <div>
         Als einer der Arbeitskreise des Studierendenparlaments an der Universität Bayreuth repräsentiert 
         der AK Theater am Campus die Theaterprojekte der Studierendenschaft in der politischen Landschaft 

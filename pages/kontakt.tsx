@@ -8,7 +8,6 @@ export default function Kontakt() {
       <Head>
         <title>{siteTitle} | Kontakt</title>
       </Head>
-      <h1>Kontakt</h1>
       <div>
         Adresse<br />
         AK Theater am Campus<br />

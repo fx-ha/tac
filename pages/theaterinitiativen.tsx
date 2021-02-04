@@ -10,7 +10,6 @@ export default function Theaterinitiativen() {
       <Head>
         <title>{siteTitle} | Theaterinitiativen</title>
       </Head>
-      <h1>Theaterinitiativen</h1>
       <p>
         Das Theater an der Universität Bayreuth ist größtenteils studentisch und vollständig ehrenamtlich organisiert. Ob ihr einfach 
         nur ein Stück sehen wollt, selber mitspielen wollt oder vielleicht sogar darüber nachdenkt, Theater mit in euer Studium einzubauen, 
