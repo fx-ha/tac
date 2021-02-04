@@ -21,12 +21,16 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header>
-        <Navbar bg="light" expand="lg">
+        {/* TODO media query desktop only */}
+        {/* TODO desktop only component */}
+        {/* TODO media query mobile only */}
+        {/* TODO mobile only component */}
+        <Navbar bg="light" expand={false}>
           <Link href="/" passHref><Navbar.Brand>Theater am Campus</Navbar.Brand></Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link href="/" passHref><Nav.Link>Startseite</Nav.Link></Link>
+              <Link href="/" passHref><Nav.Link>Home</Nav.Link></Link>
               <Link href="/spielplan" passHref><Nav.Link>Spielplan</Nav.Link></Link>
               <Link href="/theaterinitiativen" passHref><Nav.Link>Theaterinitiativen</Nav.Link></Link>
               <Link href="/archiv" passHref><Nav.Link>Archiv</Nav.Link></Link>
