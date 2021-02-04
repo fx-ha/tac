@@ -1,6 +1,16 @@
 # tac-frontend
 Next.js Frontend for Theater am Campus
 
+## tac style
+- tac schriftart 1  (real head pro medium italic)
+- tac schriftart 2  (real head pro book)
+- #e94e1b (rot-orange)
+- #2f4899 (dunkelblau)
+- #f08048 (hellorange)
+- #2c98d5 (hellblau)
+- #000000 (schwarz)
+- #ffffff (weiß)
+
 ## TO DO
 - EventList param: isArchived
   - false: reihenfolge älteste zuerst
@@ -37,6 +47,10 @@ Next.js Frontend for Theater am Campus
 - pwa 
 - customize 404 page
 - preview mode
+- title as slug
+- seo
+  - description with body < 140 chars
+  - image
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
