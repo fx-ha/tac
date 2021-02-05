@@ -1,12 +1,25 @@
-// overwrite bootstrap variables here like so:
-// $theme-colors: (
-//   "info": tomato,
-//   "danger": teal
-// )
+// overwrite bootstrap variables here
 
 $light: #ffffff
 
-.navbar-toggler
-    border: none !important
-
 @import "~bootstrap/scss/bootstrap"
+
+// overwrite bootstrap classes, add sass here
+
+.navbar-toggler
+  border: none
+  padding: 0.25rem 0rem 0.25rem 0.75rem
+
+.desktop-brand
+  font-size: 3.5rem
+
+hr
+  border: 1px solid black
+
+.desktop-container
+  width: 992px
+
+@media screen and (min-width: 992px)
+  html
+      margin-left: calc(100vw - 100%)
+      margin-right: 0
