@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { GetStaticProps, GetStaticPaths } from 'next'
-import Link from 'next/link'
 
 import Layout, { siteTitle } from '../../components/Layout'
 
@@ -12,8 +11,6 @@ export default function Event({ event }) {
       </Head>
       <h1>{event.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: event.body }}></div>
-      <br />
-      <Link href="/archiv">Zurück</Link>
     </Layout>
   )
 }
