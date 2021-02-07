@@ -4,11 +4,11 @@ import { Card } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Theaterinitiativen() {
+export default function Mitmachen() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Theaterinitiativen</title>
+        <title>{siteTitle} | Mitmachen!</title>
       </Head>
       <p>
         Das Theater an der Universität Bayreuth ist größtenteils studentisch und vollständig ehrenamtlich organisiert. Ob ihr einfach 

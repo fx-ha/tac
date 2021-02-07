@@ -2,11 +2,11 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function WerSindWir() {
+export default function UeberDasTac() {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Wer sind wir?</title>
+        <title>{siteTitle} | Über das TaC</title>
       </Head>
       <div>
         Als einer der Arbeitskreise des Studierendenparlaments an der Universität Bayreuth repräsentiert 
