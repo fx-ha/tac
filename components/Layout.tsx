@@ -42,22 +42,31 @@ export default function Layout({
           </Row>
           
           <Row>
-            <Col className="ml-auto">
+            <Col lg="auto">
               <Link href="/spielplan"><a className="text-body">Spielplan</a></Link>
             </Col>
-            <Col className="ml-auto">
-              <Link href="/theaterinitiativen"><a className="text-body">Theaterinitiativen</a></Link>
+            <Col></Col>
+            <Col lg="auto">
+              <Link href="/mitmachen"><a className="text-body">Mitmachen!</a></Link>
             </Col>
-            <Col className="ml-auto">
+            <Col></Col>
+            <Col lg="auto">
+              <Link href="/ueber-das-tac"><a className="text-body">Über das TaC</a></Link>
+            </Col>
+            <Col></Col>
+            <Col lg="auto">
+              <Link href="/karten"><a className="text-body">Karten</a></Link>
+            </Col>
+            <Col></Col>
+            <Col lg="auto">
               <Link href="/archiv"><a className="text-body">Archiv</a></Link>
-            </Col>
-            <Col className="ml-auto">
-              <Link href="/wer-sind-wir"><a className="text-body">Über uns</a></Link>
-            </Col>
-            <Col className="ml-auto">
+            </Col>     
+            <Col></Col>       
+            <Col lg="auto">
               <Link href="/impressum"><a className="text-body">Impressum</a></Link>
             </Col>
-            <Col className="ml-auto">
+            <Col></Col>
+            <Col lg="auto">
               <Link href="/datenschutz"><a className="text-body">Datenschutz</a></Link>
             </Col>
           </Row>
@@ -75,9 +84,10 @@ export default function Layout({
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Link href="/spielplan" passHref><Nav.Link>Spielplan</Nav.Link></Link>
-              <Link href="/theaterinitiativen" passHref><Nav.Link>Theaterinitiativen</Nav.Link></Link>
+              <Link href="/mitmachen" passHref><Nav.Link>Mitmachen!</Nav.Link></Link>
+              <Link href="/ueber-das-tac" passHref><Nav.Link>Über das TaC</Nav.Link></Link>
+              <Link href="/karten" passHref><Nav.Link>Karten</Nav.Link></Link>
               <Link href="/archiv" passHref><Nav.Link>Archiv</Nav.Link></Link>
-              <Link href="/wer-sind-wir" passHref><Nav.Link>Über uns</Nav.Link></Link>
               <Link href="/kontakt" passHref><Nav.Link>Kontakt</Nav.Link></Link>
               <Link href="/impressum" passHref><Nav.Link>Impressum</Nav.Link></Link>
               <Link href="/datenschutz" passHref><Nav.Link>Datenschutz</Nav.Link></Link>

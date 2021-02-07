@@ -18,30 +18,35 @@ Next.js Frontend for Theater am Campus
 - refactor archiv/spielplan id page
 - pagination
 - style layout component
+  - bestimmte Schrift verwenden, die charakteristisch für die Marke "theater am campus" stehen soll (siehe anhang)
+  - Designerin würde schriftzug "theater am campus" erstellen für Header der Website -> auf unser aktuelles logo beziehen
+  - social icons instagram-account und facebook-seite verlinken
+  - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - index
- - style
- - infobox als card? (z.b. corona)
- - nächste veranstaltungen
- - kalendar
+  - style
+  - infobox als card? (z.b. corona)
+  - nächste veranstaltungen
+  - kalendar
+  - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
 - spielplan
- - style 
+  - style 
 - theaterinitiativen
- - style
- - cards wie auf tac-seite
- - card text ohne p und ul
+  - style
+  - cards wie auf tac-seite
+  - card text ohne p und ul
 - archiv
- - style 
+  - style 
 - about
- - style
+  - style
 - kontakt
- - style 
- - google maps
- - formular? -> erfragen 
+  - style 
+  - google maps
+  - formular? -> erfragen 
 - impressum -> footer
- - style 
+  - style 
 - datenschutz -> footer
- - style 
- - e-recht24 text
+  - style 
+  - e-recht24 text
 - copy schaubuehne.de
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa 
@@ -107,3 +112,7 @@ Runs the built app in production mode.
  - auflistung verlinken
 - archiv
   - auflistung verlinken
+- Rubrik 'Theaterinitiativen' umbenennen in 'mitmachen!'
+- Rubrik 'über uns' in 'über den tac' umbenennen
+- neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
+- Rubrik 'archiv' rechts von 'karten' packen
