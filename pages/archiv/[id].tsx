@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import Layout, { siteTitle } from '../../components/Layout'
+import EventBody from '../../components/EventBody'
 
 export default function Event({ event }) {
   return (
@@ -10,7 +11,7 @@ export default function Event({ event }) {
         <title>{siteTitle} | {event.title}</title>
       </Head>
       <h1>{event.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: event.body }}></div>
+      <EventBody body={event.body} />
     </Layout>
   )
 }
