@@ -11,7 +11,7 @@ export default function Archiv({ events }): JSX.Element {
         <title>{siteTitle} | Archiv</title>
       </Head>
       <div>Auflistung vergangener Aufführungen</div>
-      <EventList events={events} isArchived={true} />
+      <EventList events={events.items} isArchived={true} />
     </Layout>
   )
 }
