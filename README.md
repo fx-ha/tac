@@ -12,6 +12,10 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
+- schriftart manrope
+- header image (tac logo)
+- recherche: schriftart selbst wählbar?
+- kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
   - false: reihenfolge älteste zuerst
   - true: reihenfolge neueste zuerst
