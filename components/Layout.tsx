@@ -28,7 +28,7 @@ export default function Layout({
           <Row className="mt-3">
             <Col lg={9}>
               <Link href="/kontakt">
-                <a className="text-body">Kontakt</a>
+                <a className="text-body">kontakt</a>
               </Link>
             </Col>
             <Col lg={3} className="text-right">
@@ -48,43 +48,43 @@ export default function Layout({
           <Row>
             <Col lg="auto">
               <Link href="/spielplan">
-                <a className="text-body">Spielplan</a>
+                <a className="text-body">spielplan</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/mitmachen">
-                <a className="text-body">Mitmachen!</a>
+                <a className="text-body">mitmachen!</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/ueber-das-tac">
-                <a className="text-body">Über das TaC</a>
+                <a className="text-body">über das tac</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/karten">
-                <a className="text-body">Karten</a>
+                <a className="text-body">karten</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/archiv">
-                <a className="text-body">Archiv</a>
+                <a className="text-body">archiv</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/impressum">
-                <a className="text-body">Impressum</a>
+                <a className="text-body">impressum</a>
               </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
               <Link href="/datenschutz">
-                <a className="text-body">Datenschutz</a>
+                <a className="text-body">datenschutz</a>
               </Link>
             </Col>
           </Row>
@@ -104,28 +104,28 @@ export default function Layout({
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Link href="/spielplan" passHref>
-                <Nav.Link>Spielplan</Nav.Link>
+                <Nav.Link>spielplan</Nav.Link>
               </Link>
               <Link href="/mitmachen" passHref>
-                <Nav.Link>Mitmachen!</Nav.Link>
+                <Nav.Link>mitmachen!</Nav.Link>
               </Link>
               <Link href="/ueber-das-tac" passHref>
-                <Nav.Link>Über das TaC</Nav.Link>
+                <Nav.Link>über das tac</Nav.Link>
               </Link>
               <Link href="/karten" passHref>
-                <Nav.Link>Karten</Nav.Link>
+                <Nav.Link>karten</Nav.Link>
               </Link>
               <Link href="/archiv" passHref>
-                <Nav.Link>Archiv</Nav.Link>
+                <Nav.Link>archiv</Nav.Link>
               </Link>
               <Link href="/kontakt" passHref>
-                <Nav.Link>Kontakt</Nav.Link>
+                <Nav.Link>kontakt</Nav.Link>
               </Link>
               <Link href="/impressum" passHref>
-                <Nav.Link>Impressum</Nav.Link>
+                <Nav.Link>impressum</Nav.Link>
               </Link>
               <Link href="/datenschutz" passHref>
-                <Nav.Link>Datenschutz</Nav.Link>
+                <Nav.Link>datenschutz</Nav.Link>
               </Link>
             </Nav>
           </Navbar.Collapse>
