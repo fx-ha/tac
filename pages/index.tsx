@@ -7,8 +7,6 @@ import { Card, Col, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const dateOptions = { month: 'long', day: 'numeric' }
-
 export default function Home({ events }): JSX.Element {
   return (
     <Layout>
@@ -56,13 +54,19 @@ export default function Home({ events }): JSX.Element {
                   <p>
                     {convertToJsDate(event.start_date).toLocaleDateString(
                       'de-DE',
-                      dateOptions
+                      {
+                        month: 'long',
+                        day: 'numeric',
+                      }
                     )}
                     {(() => {
                       if (event.end_date !== '') {
                         return ` bis ${convertToJsDate(
                           event.end_date
-                        ).toLocaleDateString('de-DE', dateOptions)}`
+                        ).toLocaleDateString('de-DE', {
+                          month: 'long',
+                          day: 'numeric',
+                        })}`
                       }
                     })()}
                   </p>
