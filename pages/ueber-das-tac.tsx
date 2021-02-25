@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
@@ -8,57 +9,56 @@ export default function UeberDasTac(): JSX.Element {
       <Head>
         <title>{siteTitle} | Über das TaC</title>
       </Head>
-      <div>
-        Als einer der Arbeitskreise des Studierendenparlaments an der
-        Universität Bayreuth repräsentiert der AK Theater am Campus die
-        Theaterprojekte der Studierendenschaft in der politischen Landschaft der
-        der Universität. Es ist unsere Mission, Theater- und Musiktheaterkultur
-        jeglicher Art am Campus zu vertreten und zu ermöglichen. Der
-        Arbeitskreis „Theater am Campus“ möchte die Theaterkultur auf dem Campus
-        mit Leben zu erfüllen und unter den Studierenden bekannter zu machen.
-        Damit soll das Bestehen der Theaterkultur gesichert und um vielseitige
-        Projekte erweitert werden. Mitunter konnten wir beobachten, wie die
-        Projekte so sehr auf Begeisterung und Anklang gestoßen sind, dass
-        Aufführungen und Installationen überfüllt waren und die Kapazitäten
-        Besucherplätze zu ermöglichen mehr als erschöpft waren. Durch die daraus
-        resultierende Vielzahl an Produktionen kam es in Folge zusätzlich zu
-        einem Engpass für Probenräume. Wir möchten uns nun natürlich dafür
-        einsetzen, dass einer bestehenden kulturellen Kraft von Seite der
-        Studierenden eine möglichst freie Bahn geboten werden kann, damit sich
-        alle Studierenden kreativ entfalten können. Wir sind in dieser Hinsicht
-        über das Sommersemester 2018 aktiv geworden, haben uns bereits an
-        verschiedenen Stellen nach Proben- und Aufführungsorten erkundigt und
-        viele neue Möglichkeiten eröffnet. Um die Vielfalt am Campus der Uni
-        Bayreuth zu erhalten und aktiv zu fördern, arbeiten wir eng mit den
-        Projektleitern zusammen und sind bei fast allen Sitzungen des
-        Studierendenparlaments anwesend. Neben der Erschließung neuer Spielorte
-        und dem Planen und Einfädeln projektübergreifender Theaterarbeit,
-        befassen wir uns außerdem mit der Vermittlung zwischen den Projekten und
-        offiziellen Uni-Stellen, sowie der Erstellung von Spielplänen, die
-        regelmäßig auf dem Campus ausgehangen werden. Das breite Spektrum der
-        verschiedenen Arbeiten des Theaterraums zeichnet sich dabei mit
-        gesellschaftskritischer Performancekunst, unterhaltsamen Stücken oder
-        auch Problemstellungen mit philosophischem und/oder psychologischem
-        Bezug aus. Häufig finden auch Veranstaltungen statt, die versuchen
-        etablierte Genrebegriffe zu brechen und neue zu erschließen. Weiter hat
-        hier am Campus die Interaktion mit dem Publikum oft einen hohen
-        Stellenwert, sodass die Besucher nicht als Zuschauer, sondern als
-        Teilnehmer in die Veranstaltungen eingebunden werden. Damit der
-        Arbeitskreis weiterhin so engagiert arbeiten kann, braucht es natürlich
-        tatkräftige motivierte Studierende, die bereit sind ihre Zeit zu
-        investieren, um sich ehrenamtlich zu betätigenn. Arbeitskreistreffen
-        finden dabei monatlich während der Vorlesungszeit statt und sind für
-        alle offen. Die Daten und Uhrzeiten publizieren wir regelmäßig vorab auf
-        unseren Social Media Seiten, ebenso wie spannende Beiträge und
-        Ankündigungen zu anstehenden Projekten. Und natürlich auch für etwaige
-        Fragen stehen wir dort immer zeitnah zur Verfügung. Also haltet die
-        Augen am Campus offen nach unseren Farben!
-      </div>
-      <hr />
-      <div>
-        Donata Hörr - Vorstand <br />
-        Lisa-Michelle Helten - Vorstand
-      </div>
+      <section>
+        <p>
+          Das theater am campus (tac) ist eine feste Anlaufstelle und
+          Aufführungsort für verschiedenste Aktivitäten der performativen Künste
+          auf dem Campus der Universität Bayreuth. Es versteht sich als
+          experimentierfreudige Bühne der studentischen Kultur abseits der
+          traditionellen Theaterbetriebe und bietet ganzjährig ein breites
+          Programm von Inszenierungen klassischer Theatertexte und
+          Gegenwartsdramatik bis hin zu Live-Hörspielen, Performance Art und
+          Tanz. Du möchtest gerne an einem dieser Theaterprojekte vor oder
+          hinter der Bühne mitmachen?{' '}
+          <Link href="/mitmachen">
+            <a>Hier</a>
+          </Link>{' '}
+          findest du die neuesten Ausschreibungen und Kontakte zu
+          Theatergruppen, aber auch die Initiativen, welche die Theaterkultur am
+          Campus ermöglichen.
+        </p>
+      </section>
+      <section>
+        <h3>TEAM</h3>
+        <h4>Öffentlichkeitsarbeit</h4>
+        <p>
+          Donata Hörr
+          <br />
+          Elena Arnold
+          <br />
+          Nathan Herzfeld
+        </p>
+        <h4>Technik</h4>
+        <p>
+          Jonas Würdinger
+          <br />
+          Matthias Ebert
+        </p>
+        <h4>Disposition</h4>
+        <p>Melanie Klos</p>
+        <h4>Leitung</h4>
+        <p>Daniel Schauf</p>
+      </section>
+      <section>
+        <p>
+          Das theater am campus wird ermöglicht durch die Professuren für
+          Theaterwissenschaft (Prof. Wolf-Dieter Ernst) und Theaterdidaktik
+          (Prof. Gabriela Paule). Es wird im Studierenparlament vertreten durch
+          den Arbeitskreis TaC und entsteht in enger Zusammenarbeit mit
+          Schaulust e.V. Das theater am campus wird gefördert vom Studentenwerk
+          der Universität und dem Kulturamt der Stadt Bayreuth.
+        </p>
+      </section>
     </Layout>
   )
 }
