@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Datenschutz() {
+export default function Datenschutz(): JSX.Element {
   return (
     <Layout>
       <Head>

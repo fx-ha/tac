@@ -7,10 +7,10 @@ import MediaQuery from 'react-responsive'
 export const siteTitle = 'Theater am Campus'
 
 export default function Layout({
-  children
+  children,
 }: {
   children: React.ReactNode
-}) {
+}): JSX.Element {
   return (
     <>
       <Head>
@@ -27,7 +27,9 @@ export default function Layout({
         <Container as="nav" className="desktop-container">
           <Row className="mt-3">
             <Col lg={9}>
-              <Link href="/kontakt"><a className="text-body">Kontakt</a></Link>
+              <Link href="/kontakt">
+                <a className="text-body">Kontakt</a>
+              </Link>
             </Col>
             <Col lg={3} className="text-right">
               (social icons)
@@ -36,38 +38,54 @@ export default function Layout({
 
           <Row>
             <Col className="desktop-brand">
-              <Link href="/"><a className="text-body">Theater am Campus</a></Link>
+              <Link href="/">
+                <a className="text-body">Theater am Campus</a>
+              </Link>
               <hr className="mt-0 pt-0" />
             </Col>
           </Row>
-          
+
           <Row>
             <Col lg="auto">
-              <Link href="/spielplan"><a className="text-body">Spielplan</a></Link>
+              <Link href="/spielplan">
+                <a className="text-body">Spielplan</a>
+              </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
-              <Link href="/mitmachen"><a className="text-body">Mitmachen!</a></Link>
+              <Link href="/mitmachen">
+                <a className="text-body">Mitmachen!</a>
+              </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
-              <Link href="/ueber-das-tac"><a className="text-body">Über das TaC</a></Link>
+              <Link href="/ueber-das-tac">
+                <a className="text-body">Über das TaC</a>
+              </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
-              <Link href="/karten"><a className="text-body">Karten</a></Link>
+              <Link href="/karten">
+                <a className="text-body">Karten</a>
+              </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
-              <Link href="/archiv"><a className="text-body">Archiv</a></Link>
-            </Col>     
-            <Col></Col>       
-            <Col lg="auto">
-              <Link href="/impressum"><a className="text-body">Impressum</a></Link>
+              <Link href="/archiv">
+                <a className="text-body">Archiv</a>
+              </Link>
             </Col>
             <Col></Col>
             <Col lg="auto">
-              <Link href="/datenschutz"><a className="text-body">Datenschutz</a></Link>
+              <Link href="/impressum">
+                <a className="text-body">Impressum</a>
+              </Link>
+            </Col>
+            <Col></Col>
+            <Col lg="auto">
+              <Link href="/datenschutz">
+                <a className="text-body">Datenschutz</a>
+              </Link>
             </Col>
           </Row>
         </Container>
@@ -79,18 +97,36 @@ export default function Layout({
       {/* mobile */}
       <MediaQuery maxWidth={991}>
         <Navbar bg="light" expand={false} sticky="top">
-          <Link href="/" passHref><Navbar.Brand>Theater am Campus</Navbar.Brand></Link>
+          <Link href="/" passHref>
+            <Navbar.Brand>Theater am Campus</Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Link href="/spielplan" passHref><Nav.Link>Spielplan</Nav.Link></Link>
-              <Link href="/mitmachen" passHref><Nav.Link>Mitmachen!</Nav.Link></Link>
-              <Link href="/ueber-das-tac" passHref><Nav.Link>Über das TaC</Nav.Link></Link>
-              <Link href="/karten" passHref><Nav.Link>Karten</Nav.Link></Link>
-              <Link href="/archiv" passHref><Nav.Link>Archiv</Nav.Link></Link>
-              <Link href="/kontakt" passHref><Nav.Link>Kontakt</Nav.Link></Link>
-              <Link href="/impressum" passHref><Nav.Link>Impressum</Nav.Link></Link>
-              <Link href="/datenschutz" passHref><Nav.Link>Datenschutz</Nav.Link></Link>
+              <Link href="/spielplan" passHref>
+                <Nav.Link>Spielplan</Nav.Link>
+              </Link>
+              <Link href="/mitmachen" passHref>
+                <Nav.Link>Mitmachen!</Nav.Link>
+              </Link>
+              <Link href="/ueber-das-tac" passHref>
+                <Nav.Link>Über das TaC</Nav.Link>
+              </Link>
+              <Link href="/karten" passHref>
+                <Nav.Link>Karten</Nav.Link>
+              </Link>
+              <Link href="/archiv" passHref>
+                <Nav.Link>Archiv</Nav.Link>
+              </Link>
+              <Link href="/kontakt" passHref>
+                <Nav.Link>Kontakt</Nav.Link>
+              </Link>
+              <Link href="/impressum" passHref>
+                <Nav.Link>Impressum</Nav.Link>
+              </Link>
+              <Link href="/datenschutz" passHref>
+                <Nav.Link>Datenschutz</Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

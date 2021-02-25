@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Karten() {
+export default function Karten(): JSX.Element {
   return (
     <Layout>
       <Head>

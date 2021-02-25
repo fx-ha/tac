@@ -9,7 +9,7 @@ import Layout, { siteTitle } from '../components/Layout'
 
 const dateOptions = { month: 'long', day: 'numeric' }
 
-export default function Home({ events }) {
+export default function Home({ events }): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -34,26 +34,43 @@ export default function Home({ events }) {
         </Card.Body>
       </Card>
       <Row className="mt-3">
-        {events.items.map((event: { id: string; title: string; short_description: string, start_date: string, end_date: string }) =>
-          <Col key={event.id} sm={12} lg={6}>
-            <Row>
-              <Col sm={3} lg={12}>(Image)</Col>
-              <Col>
-                <Link href={"/spielplan/[id]"} as={`/spielplan/${event.id}`}>
-                  <a className="text-body"><h3>{event.title}</h3></a>
-                </Link>
-                <p>
-                {convertToJsDate(event.start_date).toLocaleDateString('de-DE', dateOptions)}
-                  {(() => {
-                    if (event.end_date !== "") {
-                      return ` bis ${convertToJsDate(event.end_date).toLocaleDateString('de-DE', dateOptions)}`
-                    }
-                  })()}
-                </p>
-                <p>{event.short_description}</p>
-              </Col>
-            </Row>
-          </Col>
+        {events.items.map(
+          (event: {
+            id: string
+            title: string
+            short_description: string
+            start_date: string
+            end_date: string
+          }) => (
+            <Col key={event.id} sm={12} lg={6}>
+              <Row>
+                <Col sm={3} lg={12}>
+                  (Image)
+                </Col>
+                <Col>
+                  <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
+                    <a className="text-body">
+                      <h3>{event.title}</h3>
+                    </a>
+                  </Link>
+                  <p>
+                    {convertToJsDate(event.start_date).toLocaleDateString(
+                      'de-DE',
+                      dateOptions
+                    )}
+                    {(() => {
+                      if (event.end_date !== '') {
+                        return ` bis ${convertToJsDate(
+                          event.end_date
+                        ).toLocaleDateString('de-DE', dateOptions)}`
+                      }
+                    })()}
+                  </p>
+                  <p>{event.short_description}</p>
+                </Col>
+              </Row>
+            </Col>
+          )
         )}
       </Row>
       <div className="mt-3">Kalender wie Schaubühne</div>
@@ -65,15 +82,16 @@ function convertToJsDate(dateString) {
   return new Date(dateString)
 }
 
-
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description`)
+  const res = await fetch(
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description`
+  )
   const events = await res.json()
 
   return {
     props: {
-      events
+      events,
     },
-    revalidate: 60
+    revalidate: 60,
   }
 }

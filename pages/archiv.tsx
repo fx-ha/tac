@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next'
 import Layout, { siteTitle } from '../components/Layout'
 import EventList from '../components/EventList'
 
-export default function Archiv({ events }) {
+export default function Archiv({ events }): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -17,13 +17,15 @@ export default function Archiv({ events }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.API_URL}?type=event.EventPage&child_of=4&fields=start_date,end_date,weitere,short_description`) // TODO pagination w/ limit + offset
+  const res = await fetch(
+    `${process.env.API_URL}?type=event.EventPage&child_of=4&fields=start_date,end_date,weitere,short_description`
+  ) // TODO pagination w/ limit + offset
   const events = await res.json()
 
   return {
     props: {
-      events
+      events,
     },
-    revalidate: 10
+    revalidate: 10,
   }
 }

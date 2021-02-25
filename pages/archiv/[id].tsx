@@ -4,11 +4,13 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import Layout, { siteTitle } from '../../components/Layout'
 import EventBody from '../../components/EventBody'
 
-export default function Event({ event }) {
+export default function Event({ event }): JSX.Element {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | {event.title}</title>
+        <title>
+          {siteTitle} | {event.title}
+        </title>
       </Head>
       <h1>{event.title}</h1>
       <EventBody body={event.body} />
@@ -19,7 +21,9 @@ export default function Event({ event }) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch(`${process.env.API_URL}?child_of=4`)
   const events = await res.json()
-  const paths = events.items.map((event: { id: string }) => `/archiv/${event.id}`)
+  const paths = events.items.map(
+    (event: { id: string }) => `/archiv/${event.id}`
+  )
 
   return { paths, fallback: 'blocking' }
 }
@@ -30,8 +34,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      event
+      event,
     },
-    revalidate: 10
+    revalidate: 10,
   }
 }
