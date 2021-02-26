@@ -40,12 +40,14 @@ export default function Layout({
           <Row className="mt-2">
             <Col>
               <Link href="/">
-                <Image
-                  src="/images/tac_headline_website_transparent_resize.png"
-                  alt="Theater am Campus Logo"
-                  width={4248}
-                  height={532}
-                />
+                <a>
+                  <Image
+                    src="/images/tac_headline_website_transparent_resize.png"
+                    alt="Theater am Campus Logo"
+                    width={4248}
+                    height={532}
+                  />
+                </a>
               </Link>
             </Col>
             <Col lg={1}></Col>
