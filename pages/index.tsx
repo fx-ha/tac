@@ -82,7 +82,7 @@ export default function Home({ events }): JSX.Element {
   )
 }
 
-function convertToJsDate(dateString) {
+const convertToJsDate = (dateString) => {
   return new Date(dateString)
 }
 
