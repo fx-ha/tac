@@ -13,7 +13,6 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - schriftart manrope
-- header image (tac logo)
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -21,9 +20,7 @@ Next.js Frontend for Theater am Campus
   - true: reihenfolge neueste zuerst
 - refactor archiv/spielplan id page
 - pagination
-- style layout component
   - bestimmte Schrift verwenden, die charakteristisch für die Marke "theater am campus" stehen soll (siehe anhang)
-  - Designerin würde schriftzug "theater am campus" erstellen für Header der Website -> auf unser aktuelles logo beziehen
   - social icons instagram-account und facebook-seite verlinken
   - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - index
@@ -120,3 +117,6 @@ Runs the built app in production mode.
 - Rubrik 'über uns' in 'über den tac' umbenennen
 - neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
 - Rubrik 'archiv' rechts von 'karten' packen
+- header image (tac logo)
+- style layout component
+  - Designerin würde schriftzug "theater am campus" erstellen für Header der Website -> auf unser aktuelles logo beziehen
