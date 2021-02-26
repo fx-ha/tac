@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
@@ -36,15 +37,20 @@ export default function Layout({
             </Col>
           </Row>
 
-          <Row>
-            <Col className="desktop-brand">
+          <Row className="mt-2">
+            <Col>
               <Link href="/">
-                <a className="text-body">Theater am Campus</a>
+                <Image
+                  src="/images/tac_headline_website_transparent_resize.png"
+                  alt="Theater am Campus Logo"
+                  width={4248}
+                  height={532}
+                />
               </Link>
-              <hr className="mt-0 pt-0" />
             </Col>
+            <Col lg={1}></Col>
           </Row>
-
+          <hr className="mt-0 pt-0" />
           <Row>
             <Col lg="auto">
               <Link href="/spielplan">
@@ -97,10 +103,24 @@ export default function Layout({
       {/* mobile */}
       <MediaQuery maxWidth={991}>
         <Navbar bg="light" expand={false} sticky="top">
-          <Link href="/" passHref>
-            <Navbar.Brand>Theater am Campus</Navbar.Brand>
-          </Link>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Row>
+            <Col xs={8} sm={6} md={4}>
+              <Link href="/" passHref>
+                <Navbar.Brand>
+                  <Image
+                    src="/images/tac_headline_website_transparent_resize.png"
+                    alt="Theater am Campus Logo"
+                    width={4248}
+                    height={532}
+                  />
+                </Navbar.Brand>
+              </Link>
+            </Col>
+            <Col></Col>
+            <Col xs="auto">
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            </Col>
+          </Row>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Link href="/spielplan" passHref>
