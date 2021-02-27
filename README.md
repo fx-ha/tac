@@ -12,6 +12,9 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
+- navigation
+  - social icons instagram-account und facebook-seite verlinken
+  - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - schriftart manrope
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
@@ -20,9 +23,6 @@ Next.js Frontend for Theater am Campus
   - true: reihenfolge neueste zuerst
 - refactor archiv/spielplan id page
 - pagination
-  - bestimmte Schrift verwenden, die charakteristisch für die Marke "theater am campus" stehen soll (siehe anhang)
-  - social icons instagram-account und facebook-seite verlinken
-  - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - index
   - style
   - infobox als card? (z.b. corona)
@@ -113,10 +113,11 @@ Runs the built app in production mode.
  - auflistung verlinken
 - archiv
   - auflistung verlinken
-- Rubrik 'Theaterinitiativen' umbenennen in 'mitmachen!'
-- Rubrik 'über uns' in 'über den tac' umbenennen
-- neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
-- Rubrik 'archiv' rechts von 'karten' packen
-- header image (tac logo)
-- style layout component
+- navigation
+  - header image (tac logo)  
   - Designerin würde schriftzug "theater am campus" erstellen für Header der Website -> auf unser aktuelles logo beziehen
+  - bestimmte Schrift verwenden, die charakteristisch für die Marke "theater am campus" stehen soll (siehe anhang)
+  - Rubrik 'Theaterinitiativen' umbenennen in 'mitmachen!'
+  - Rubrik 'über uns' in 'über den tac' umbenennen
+  - neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
+  - Rubrik 'archiv' rechts von 'karten' packen
