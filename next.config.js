@@ -1,8 +1,8 @@
 module.exports = {
   /* config options here */
-  // experimental: {
-  //   optimizeFonts: true,
-  // },
+  experimental: {
+    optimizeFonts: true,
+  },
   async redirects() {
     return [
       {
