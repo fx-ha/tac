@@ -39,7 +39,7 @@ export default function Layout({
           <Row className="mt-2">
             <Col>
               <Link href="/">
-                <a>
+                <a title="startseite" aria-label="startseite">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.0"
