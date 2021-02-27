@@ -13,9 +13,7 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - navigation
-  - social icons instagram-account und facebook-seite verlinken
   - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
-- schriftart manrope
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -48,7 +46,6 @@ Next.js Frontend for Theater am Campus
 - datenschutz -> footer
   - style 
   - e-recht24 text
-- copy schaubuehne.de
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa 
 - customize 404 page
@@ -121,3 +118,6 @@ Runs the built app in production mode.
   - Rubrik 'über uns' in 'über den tac' umbenennen
   - neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
   - Rubrik 'archiv' rechts von 'karten' packen
+  - social icons instagram-account und facebook-seite verlinken
+- schriftart manrope
+- copy schaubuehne.de
