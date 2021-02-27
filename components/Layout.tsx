@@ -107,7 +107,7 @@ export default function Layout({
       <MediaQuery maxWidth={991}>
         <Navbar bg="light" expand={false} sticky="top">
           <Link href="/" passHref>
-            <Navbar.Brand>
+            <Navbar.Brand title="startseite" aria-label="startseite">
               <svg
                 width="200"
                 height="30"
