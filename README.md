@@ -12,6 +12,7 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
+- upgrade to next 10.0.8 to fix sharp error
 - navigation
   - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - recherche: schriftart selbst wählbar?
