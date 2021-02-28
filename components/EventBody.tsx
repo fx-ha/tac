@@ -1,11 +1,11 @@
-export default function EventBody({
+const EventBody = ({
   body,
 }: {
   body: {
     id: string
     value: string
   }[]
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <div>
       {body.map((item: { id: string; value: string }) => (
@@ -18,3 +18,5 @@ export default function EventBody({
     </div>
   )
 }
+
+export default EventBody

@@ -1,4 +1,4 @@
-export default function InstaIcon(): JSX.Element {
+const InstaIcon = (): JSX.Element => {
   return (
     <a
       href="https://www.instagram.com/TacBayreuth/"
@@ -20,3 +20,5 @@ export default function InstaIcon(): JSX.Element {
     </a>
   )
 }
+
+export default InstaIcon

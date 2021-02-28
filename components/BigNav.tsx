@@ -6,7 +6,7 @@ import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
 import TacHeader from './TacHeader'
 
-export default function BigNav(): JSX.Element {
+const BigNav = (): JSX.Element => {
   return (
     <Container as="nav" className="desktop-container">
       <Row className="mt-3">
@@ -78,3 +78,5 @@ export default function BigNav(): JSX.Element {
     </Container>
   )
 }
+
+export default BigNav

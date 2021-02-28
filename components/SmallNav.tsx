@@ -6,7 +6,7 @@ import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
 import TacHeader from './TacHeader'
 
-export default function SmallNav(): JSX.Element {
+const SmallNav = (): JSX.Element => {
   return (
     <Navbar bg="light" expand={false} sticky="top" onToggle={toggleShadow}>
       <Link href="/" passHref>
@@ -57,3 +57,5 @@ export default function SmallNav(): JSX.Element {
       : nav.classList.remove('shadow-sm')
   }
 }
+
+export default SmallNav

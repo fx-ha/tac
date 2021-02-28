@@ -7,7 +7,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Home({ events }): JSX.Element {
+const Home = ({ events }): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -99,3 +99,5 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 60,
   }
 }
+
+export default Home

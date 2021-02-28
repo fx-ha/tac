@@ -81,6 +81,8 @@ Builds the app for production.
 npm start
 Runs the built app in production mode.
 
+rafce snippet for pages/components
+
 ## Done
 - install typescript
 - install sass

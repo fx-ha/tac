@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Impressum(): JSX.Element {
+const Impressum = (): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -64,3 +64,5 @@ export default function Impressum(): JSX.Element {
     </Layout>
   )
 }
+
+export default Impressum

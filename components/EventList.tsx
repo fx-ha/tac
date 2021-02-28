@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function EventList({
+const EventList = ({
   events,
   isArchived,
 }: {
@@ -9,7 +9,7 @@ export default function EventList({
     title: string
   }[]
   isArchived: boolean
-}): JSX.Element {
+}): JSX.Element => {
   const href = isArchived ? '/archiv/[id]' : '/spielplan/[id]'
   const slug = isArchived ? 'archiv' : 'spielplan'
 
@@ -27,3 +27,5 @@ export default function EventList({
     </div>
   )
 }
+
+export default EventList

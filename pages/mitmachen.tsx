@@ -4,7 +4,7 @@ import { Col, Card, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Mitmachen(): JSX.Element {
+const Mitmachen = (): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -205,3 +205,5 @@ export default function Mitmachen(): JSX.Element {
     </Layout>
   )
 }
+
+export default Mitmachen

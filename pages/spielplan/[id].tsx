@@ -4,7 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import Layout, { siteTitle } from '../../components/Layout'
 import EventBody from '../../components/EventBody'
 
-export default function Event({ event }): JSX.Element {
+const Event = ({ event }): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -39,3 +39,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     revalidate: 10,
   }
 }
+
+export default Event

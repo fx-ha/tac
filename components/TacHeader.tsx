@@ -1,10 +1,10 @@
-export default function TacHeader({
+const TacHeader = ({
   width,
   height,
 }: {
   width?: string
   height?: string
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <svg
       width={width}
@@ -18,3 +18,5 @@ export default function TacHeader({
     </svg>
   )
 }
+
+export default TacHeader

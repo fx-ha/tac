@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function UeberDasTac(): JSX.Element {
+const UeberDasTac = (): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -62,3 +62,5 @@ export default function UeberDasTac(): JSX.Element {
     </Layout>
   )
 }
+
+export default UeberDasTac

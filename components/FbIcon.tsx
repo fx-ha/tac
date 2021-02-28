@@ -1,4 +1,4 @@
-export default function FbIcon(): JSX.Element {
+const FbIcon = (): JSX.Element => {
   return (
     <a
       href="https://www.facebook.com/TaCBayreuth"
@@ -19,3 +19,5 @@ export default function FbIcon(): JSX.Element {
     </a>
   )
 }
+
+export default FbIcon

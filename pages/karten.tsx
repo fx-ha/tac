@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-export default function Karten(): JSX.Element {
+const Karten = (): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -11,3 +11,5 @@ export default function Karten(): JSX.Element {
     </Layout>
   )
 }
+
+export default Karten

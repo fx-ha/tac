@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next'
 import Layout, { siteTitle } from '../components/Layout'
 import EventList from '../components/EventList'
 
-export default function Archiv({ events }): JSX.Element {
+const Archiv = ({ events }): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -29,3 +29,5 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 10,
   }
 }
+
+export default Archiv
