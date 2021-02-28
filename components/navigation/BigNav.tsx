@@ -5,15 +5,15 @@ import { Col, Container, Row } from 'react-bootstrap'
 import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
 import TacHeader from './TacHeader'
+import BigNavLink from './BigNavLink'
 
 const BigNav = (): JSX.Element => {
+
   return (
     <Container as="nav" className="desktop-container">
       <Row className="mt-3">
         <Col lg={9}>
-          <Link href="/kontakt">
-            <a className="text-body">kontakt</a>
-          </Link>
+          <BigNavLink targetUrl="/kontakt" targetName="kontakt" />
         </Col>
         <Col lg={3} className="text-right">
           <FbIcon />
@@ -34,45 +34,31 @@ const BigNav = (): JSX.Element => {
       <hr className="mt-1 pt-0" />
       <Row>
         <Col lg="auto">
-          <Link href="/spielplan">
-            <a className="text-body">spielplan</a>
-          </Link>
+          <BigNavLink targetUrl="/spielplan" targetName="spielplan" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/mitmachen">
-            <a className="text-body">mitmachen!</a>
-          </Link>
+          <BigNavLink targetUrl="/mitmachen" targetName="mitmachen!" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/ueber-das-tac">
-            <a className="text-body">über das tac</a>
-          </Link>
+          <BigNavLink targetUrl="/ueber-das-tac" targetName="über das tac" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/karten">
-            <a className="text-body">karten</a>
-          </Link>
+          <BigNavLink targetUrl="/karten" targetName="karten" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/archiv">
-            <a className="text-body">archiv</a>
-          </Link>
+          <BigNavLink targetUrl="/archiv" targetName="archiv" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/impressum">
-            <a className="text-body">impressum</a>
-          </Link>
+          <BigNavLink targetUrl="/impressum" targetName="impressum" />
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <Link href="/datenschutz">
-            <a className="text-body">datenschutz</a>
-          </Link>
+          <BigNavLink targetUrl="/datenschutz" targetName="datenschutz" />
         </Col>
       </Row>
     </Container>

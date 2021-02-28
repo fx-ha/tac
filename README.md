@@ -13,8 +13,6 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - upgrade to next 10.0.8 to fix sharp error
-- navigation
-  - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -122,5 +120,6 @@ rafce snippet for pages/components
   - neue Rubrik: 'karten'. bitte neben 'über das tac' packen. weitere infos dazu folgen bald!
   - Rubrik 'archiv' rechts von 'karten' packen
   - social icons instagram-account und facebook-seite verlinken
+  - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - schriftart manrope
 - copy schaubuehne.de

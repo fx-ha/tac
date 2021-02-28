@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { Container } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
 
-import SmallNav from './SmallNav'
-import BigNav from './BigNav'
+import SmallNav from './navigation/SmallNav'
+import BigNav from './navigation/BigNav'
 
 export const siteTitle = 'Theater am Campus'
 

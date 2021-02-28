@@ -1,6 +1,7 @@
 // overwrite bootstrap variables here
 
 $light: #ffffff
+$primary: #2f4899
 
 // complete bootstrap
 //@import "~bootstrap/scss/bootstrap"
@@ -63,3 +64,12 @@ hr
   html
     margin-left: calc(100vw - 100%)
     margin-right: 0
+
+.active-nav
+  color: $primary !important
+
+nav
+  a
+    &:hover
+      color: $primary !important
+      text-decoration: none
