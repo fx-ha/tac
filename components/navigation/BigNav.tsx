@@ -8,7 +8,6 @@ import TacHeader from './TacHeader'
 import BigNavLink from './BigNavLink'
 
 const BigNav = (): JSX.Element => {
-
   return (
     <Container as="nav" className="desktop-container">
       <Row className="mt-3">

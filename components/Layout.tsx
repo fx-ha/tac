@@ -8,11 +8,7 @@ import BigNav from './navigation/BigNav'
 
 export const siteTitle = 'Theater am Campus'
 
-const Layout = ({
-  children,
-}: {
-  children: React.ReactNode
-}): JSX.Element => {
+const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
     <>
       <Head>
