@@ -10,15 +10,14 @@ const EventList = ({
   }[]
   isArchived: boolean
 }): JSX.Element => {
-  const href = isArchived ? '/archiv/[id]' : '/spielplan/[id]'
-  const slug = isArchived ? 'archiv' : 'spielplan'
+  const path = isArchived ? 'archiv' : 'spielplan'
 
   return (
     <div>
       <ul>
         {events.map((event: { id: string; title: string }) => (
           <li key={event.id}>
-            <Link href={href} as={`/${slug}/${event.id}`}>
+            <Link href={`/${path}/${event.id}`}>
               <a>{event.title}</a>
             </Link>
           </li>
