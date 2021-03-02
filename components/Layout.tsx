@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 
       <MediaQuery minWidth={992}>
         <BigNav />
-        <Container as="main" className="mt-3 desktop-container">
+        <Container as="main" className="mt-4 desktop-container">
           {children}
         </Container>
       </MediaQuery>
