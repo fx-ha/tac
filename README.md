@@ -24,7 +24,7 @@ Next.js Frontend for Theater am Campus
   - style
   - infobox als card? (z.b. corona)
   - nächste veranstaltungen
-  - kalendar
+  - kalendar https://www.npmjs.com/package/react-calendar
   - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
 - spielplan
   - style 
