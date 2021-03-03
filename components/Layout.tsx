@@ -23,7 +23,6 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 
       <MediaQuery minWidth={992}>
         <div className="bgImg">
-          <p>test</p>
           <Image
             alt="Campus"
             src="/images/RS1424_uni_bay-9017.jpg"
