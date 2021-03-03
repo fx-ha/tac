@@ -14,10 +14,10 @@ const Home = ({ events }): JSX.Element => {
         <title>{siteTitle} | Home</title>
       </Head>
       <Image
-        src="/images/KonTaCt_sm.jpg"
-        alt="Theater am Campus"
-        width={1920}
-        height={1080}
+        src="/images/Titelbild-tacwebsite_upper.JPG"
+        alt="TaC Bühne oben"
+        width={4000}
+        height={2240}
       />
       {/* <div>
         Das Theater am Campus der Universität Bayreuth ist einer der größten durchlaufenden Spielbetriebe der Region.
@@ -77,7 +77,14 @@ const Home = ({ events }): JSX.Element => {
           )
         )}
       </Row>
-      <div className="mt-3">Kalender wie Schaubühne</div>
+      <div className="mt-2">Kalender wie Schaubühne</div>
+      <Image
+        src="/images/Titelbild-tacwebsite_lower.JPG"
+        alt="TaC Bühne unten"
+        width={4000}
+        height={2629}
+        className="mt-3"
+      />
     </Layout>
   )
 }

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { Container } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
@@ -21,10 +22,23 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
       </Head>
 
       <MediaQuery minWidth={992}>
-        <BigNav />
-        <Container as="main" className="mt-4 desktop-container">
-          {children}
-        </Container>
+        <div className="bgImg">
+          <p>test</p>
+          <Image
+            alt="Campus"
+            src="/images/RS1424_uni_bay-9017.jpg"
+            priority={true}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
+        </div>
+        <div className="desktop-container shadow-lg">
+          <BigNav />
+          <Container as="main" className="mt-4">
+            {children}
+          </Container>
+        </div>
       </MediaQuery>
 
       <MediaQuery maxWidth={991}>

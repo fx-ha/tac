@@ -9,7 +9,7 @@ import BigNavLink from './BigNavLink'
 
 const BigNav = (): JSX.Element => {
   return (
-    <Container as="nav" className="desktop-container">
+    <Container as="nav">
       <Row className="mt-3">
         <Col lg={9}>
           <BigNavLink targetUrl="/kontakt" targetName="kontakt" />
