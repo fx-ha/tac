@@ -64,7 +64,7 @@ const Karten = ({ events }): JSX.Element => {
             </Row>
 
             <Button variant="outline-primary" type="submit">
-              Senden
+              Reservieren
             </Button>
           </Form>
         </Col>
