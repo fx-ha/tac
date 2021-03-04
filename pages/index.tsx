@@ -77,7 +77,6 @@ const Home = ({ events }): JSX.Element => {
           )
         )}
       </Row>
-      <div className="mt-2">Kalender wie Schaubühne</div>
       <Image
         src="/images/Titelbild-tacwebsite_lower.JPG"
         alt="TaC Bühne unten"
