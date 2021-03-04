@@ -8,7 +8,6 @@ const Datenschutz = (): JSX.Element => {
       <Head>
         <title>{siteTitle} | Datenschutz</title>
       </Head>
-      <div>am Ende mithilfe e-recht24.de ausfüllen</div>
     </Layout>
   )
 }
