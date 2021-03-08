@@ -69,12 +69,13 @@ const Karten = ({ events }): JSX.Element => {
           </Form>
         </Col>
         <Col>
-          <MediaQuery minWidth={992}>
+          <MediaQuery minWidth={768}>
             <Image
               src="/images/KonTaCt_sm.jpg"
               alt="Theater am Campus"
               width={1920}
               height={1080}
+              layout="responsive"
             />
           </MediaQuery>
         </Col>

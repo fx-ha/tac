@@ -18,6 +18,7 @@ const Home = ({ events }): JSX.Element => {
         alt="TaC Bühne oben"
         width={4000}
         height={2240}
+        layout="responsive"
       />
       {/* <div>
         Das Theater am Campus der Universität Bayreuth ist einer der größten durchlaufenden Spielbetriebe der Region.
@@ -82,6 +83,7 @@ const Home = ({ events }): JSX.Element => {
         alt="TaC Bühne unten"
         width={4000}
         height={2629}
+        layout="responsive"
         className="mt-3"
       />
     </Layout>

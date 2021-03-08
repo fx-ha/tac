@@ -27,9 +27,10 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
             alt="Campus"
             src="/images/RS1424_uni_bay-9017.jpg"
             priority={true}
+            loading="eager"
             layout="fill"
             objectFit="cover"
-            quality={100}
+            quality={75}
           />
         </div>
         <div className="desktop-container shadow-lg">
