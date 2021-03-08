@@ -12,7 +12,6 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
-- upgrade to next 10.0.8 to fix sharp error
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -123,3 +122,4 @@ rafce snippet for pages/components
   - kleine farbakzente: Rubriken mouseover statt underline blau oder orange färben (farbschema siehe anhang)
 - schriftart manrope
 - copy schaubuehne.de
+- upgrade to next 10.0.8 to fix sharp error

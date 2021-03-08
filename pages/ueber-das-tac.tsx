@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Head from 'next/head'
 
+import { Col, Row } from 'react-bootstrap'
+
 import Layout, { siteTitle } from '../components/Layout'
 
 const UeberDasTac = (): JSX.Element => {
@@ -28,26 +30,36 @@ const UeberDasTac = (): JSX.Element => {
           Campus ermöglichen.
         </p>
       </section>
-      <section>
-        <h3>TEAM</h3>
-        <h4>Öffentlichkeitsarbeit</h4>
-        <p>
-          Donata Hörr
-          <br />
-          Elena Arnold
-          <br />
-          Nathan Herzfeld
-        </p>
-        <h4>Technik</h4>
-        <p>
-          Jonas Würdinger
-          <br />
-          Matthias Ebert
-        </p>
-        <h4>Disposition</h4>
-        <p>Melanie Klos</p>
-        <h4>Leitung</h4>
-        <p>Daniel Schauf</p>
+      <section className="mt-4 mb-3">
+        <h3 className="text-uppercase">Team</h3>
+        <Row>
+          <Col md={6}>
+            <h4>Öffentlichkeitsarbeit</h4>
+            <p>
+              Donata Hörr
+              <br />
+              Elena Arnold
+              <br />
+              Nathan Herzfeld
+            </p>
+          </Col>
+          <Col md={6}>
+            <h4>Technik</h4>
+            <p>
+              Jonas Würdinger
+              <br />
+              Matthias Ebert
+            </p>
+          </Col>
+          <Col md={6}>
+            <h4>Disposition</h4>
+            <p>Melanie Klos</p>
+          </Col>
+          <Col md={6}>
+            <h4>Leitung</h4>
+            <p>Daniel Schauf</p>
+          </Col>
+        </Row>
       </section>
       <section>
         <p>

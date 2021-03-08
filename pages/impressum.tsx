@@ -14,7 +14,9 @@ const Impressum = (): JSX.Element => {
         <br />
         Universitätsstraße 30
         <br />
-        95447 Bayreuth <br />
+        95447 Bayreuth
+      </div>
+      <div className="mt-3">
         <h2>Vertreten durch:</h2>
         Der Präsident der Universität Bayreuth
         <br />
@@ -31,7 +33,8 @@ const Impressum = (): JSX.Element => {
         Universitätsstraße 30
         <br />
         95447 Bayreuth
-        <br />
+      </div>
+      <div className="mt-3">
         <h2>Kontakt:</h2>
         Tel.: 0921 / 55-0
         <br />
@@ -39,15 +42,18 @@ const Impressum = (): JSX.Element => {
         <br />
         E-Mail:info@uni-bayreuth.de
         <br />
+      </div>
+      <div className="mt-3">
         <h2>Umsatzsteuer-ID:</h2>
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
         <br />
         DE 811 264 317
-        <br />
+      </div>
+      <div className="mt-3">
         <h2>Aufsichtsbehörde:</h2>
-        <br />
         Bayerisches Staatsministerium für Wissenschaft und Kunst
-        <br />
+      </div>
+      <div className="mt-3">
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
         Universität Bayreuth
         <br />

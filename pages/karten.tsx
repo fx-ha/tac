@@ -16,9 +16,11 @@ const Karten = ({ events }): JSX.Element => {
       <Row>
         <Col md={6} className="mb-4">
           <Form>
-            <Row className="mb-3">
+            <Row className="mb-4">
               <Col>
-                <Form.Label htmlFor="eventSelect">Veranstaltung</Form.Label>
+                <Form.Label htmlFor="eventSelect" srOnly>
+                  Veranstaltung
+                </Form.Label>
                 <Form.Control as="select" id="eventSelect" custom>
                   {events.items.map((event: { id: string; title: string }) => (
                     <option key={event.id} value={event.id}>
@@ -30,18 +32,21 @@ const Karten = ({ events }): JSX.Element => {
             </Row>
             <Row className="mb-4">
               <Col>
-                <Form.Label htmlFor="ticketSelect">Karten</Form.Label>
+                <Form.Label htmlFor="ticketSelect" srOnly>
+                  Karten
+                </Form.Label>
                 <Form.Control as="select" id="ticketSelect" custom>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
+                  <option>Karten...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
                 </Form.Control>
               </Col>
             </Row>
