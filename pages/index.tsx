@@ -16,29 +16,30 @@ const Home = ({ events, infoBox }): JSX.Element => {
       <Head>
         <title>{siteTitle} | Home</title>
       </Head>
-      <Image
-        src="/images/Titelbild-tacwebsite.JPG"
-        alt="TaC Bühne oben"
-        width={4000}
-        height={6000}
-        layout="responsive"
-      />
-      {/* <div>
-        Das Theater am Campus der Universität Bayreuth ist einer der größten durchlaufenden Spielbetriebe der Region.
-        Dieses umfassende Kulturangebot ist fest in der Lehre verankert, wodurch eine diverse und experimentierfreudige
-        Theaterlandschaft entsteht. Von Dramen über Live-Hörspiele bis hin zu Performance Art und Tanz-Shows ist hier
-        alles zu finden. Wir freuen uns auf euren Besuch!
-      </div> */}
-      <Row className="mt-3">
-        <Col>
-          <Card>
-            <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
-          </Card>
+      <Row>
+        <Col lg={8}>
+          <Image
+            src="/images/Titelbild-tacwebsite.JPG"
+            alt="TaC Bühne oben"
+            width={4000}
+            height={6000}
+            layout="responsive"
+          />
         </Col>
-        <Col lg={6} className="mt-3 mt-lg-0">
-          <Calendar />
+        <Col>
+          <Row className="mt-3 mt-lg-0">
+            <Col>
+              <Card>
+                <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
+              </Card>
+            </Col>
+            <Col className="mt-3 mt-md-0 mt-lg-3">
+              <Calendar />
+            </Col>
+          </Row>
         </Col>
       </Row>
+      <h2 className="mt-3">Programm</h2>
       <Row className="mt-3">
         {events.map(
           (event: {
