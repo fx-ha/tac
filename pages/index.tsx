@@ -14,10 +14,10 @@ const Home = ({ events }): JSX.Element => {
         <title>{siteTitle} | Home</title>
       </Head>
       <Image
-        src="/images/Titelbild-tacwebsite_upper.JPG"
+        src="/images/Titelbild-tacwebsite.JPG"
         alt="TaC Bühne oben"
         width={4000}
-        height={2240}
+        height={6000}
         layout="responsive"
       />
       {/* <div>
@@ -26,12 +26,23 @@ const Home = ({ events }): JSX.Element => {
         Theaterlandschaft entsteht. Von Dramen über Live-Hörspiele bis hin zu Performance Art und Tanz-Shows ist hier
         alles zu finden. Wir freuen uns auf euren Besuch!
       </div> */}
-      <Card className="mt-3">
-        <Card.Body>
-          <Card.Title>(optionale Infobox)</Card.Title>
-          <Card.Text>(z.B. mit Informationen bezüglich Corona)</Card.Text>
-        </Card.Body>
-      </Card>
+      <Row className="mt-3">
+        <Col>
+          <Card>
+            <Card.Body>
+              <Card.Title>(optionale Infobox)</Card.Title>
+              <Card.Text>(z.B. mit Informationen bezüglich Corona)</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col lg={6} className="mt-3 mt-lg-0">
+          <Card>
+            <Card.Body>
+              <Card.Text>(Kalendar)</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
       <Row className="mt-3">
         {events.items.map(
           (event: {
@@ -40,11 +51,23 @@ const Home = ({ events }): JSX.Element => {
             short_description: string
             start_date: string
             end_date: string
+            preview_image: { meta: { download_url: string }; title: string }
           }) => (
             <Col key={event.id} sm={12} lg={6}>
               <Row>
-                <Col sm={3} lg={12}>
-                  (Image)
+                <Col sm={3} lg={12} className="mb-lg-2">
+                  <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
+                    <a>
+                      <Image
+                        src={event.preview_image.meta.download_url}
+                        alt={event.preview_image.title}
+                        width={1600}
+                        height={900}
+                        layout="responsive"
+                        className="vorschaubild"
+                      />
+                    </a>
+                  </Link>
                 </Col>
                 <Col>
                   <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
@@ -52,7 +75,7 @@ const Home = ({ events }): JSX.Element => {
                       <h3>{event.title}</h3>
                     </a>
                   </Link>
-                  <p>
+                  {/* <p>
                     {convertToJsDate(event.start_date).toLocaleDateString(
                       'de-DE',
                       {
@@ -70,7 +93,7 @@ const Home = ({ events }): JSX.Element => {
                         })}`
                       }
                     })()}
-                  </p>
+                  </p> */}
                   <p>{event.short_description}</p>
                 </Col>
               </Row>
@@ -78,14 +101,6 @@ const Home = ({ events }): JSX.Element => {
           )
         )}
       </Row>
-      <Image
-        src="/images/Titelbild-tacwebsite_lower.JPG"
-        alt="TaC Bühne unten"
-        width={4000}
-        height={2629}
-        layout="responsive"
-        className="mt-3"
-      />
     </Layout>
   )
 }
@@ -96,7 +111,7 @@ const convertToJsDate = (dateString) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    `${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description`
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description,preview_image`
   )
   const events = await res.json()
 
