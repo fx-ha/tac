@@ -5,6 +5,9 @@ import { GetStaticProps } from 'next'
 
 import { Card, Col, Row } from 'react-bootstrap'
 
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css'
+
 import Layout, { siteTitle } from '../components/Layout'
 
 const Home = ({ events, infoBox }): JSX.Element => {
@@ -33,11 +36,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
           </Card>
         </Col>
         <Col lg={6} className="mt-3 mt-lg-0">
-          <Card>
-            <Card.Body>
-              <Card.Text>(Kalendar)</Card.Text>
-            </Card.Body>
-          </Card>
+          <Calendar />
         </Col>
       </Row>
       <Row className="mt-3">
