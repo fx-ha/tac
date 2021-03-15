@@ -7,7 +7,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const Home = ({ events }): JSX.Element => {
+const Home = ({ events, infoBox }): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -29,10 +29,7 @@ const Home = ({ events }): JSX.Element => {
       <Row className="mt-3">
         <Col>
           <Card>
-            <Card.Body>
-              <Card.Title>(optionale Infobox)</Card.Title>
-              <Card.Text>(z.B. mit Informationen bezüglich Corona)</Card.Text>
-            </Card.Body>
+            <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
           </Card>
         </Col>
         <Col lg={6} className="mt-3 mt-lg-0">
@@ -44,7 +41,7 @@ const Home = ({ events }): JSX.Element => {
         </Col>
       </Row>
       <Row className="mt-3">
-        {events.items.map(
+        {events.map(
           (event: {
             id: string
             title: string
@@ -105,21 +102,33 @@ const Home = ({ events }): JSX.Element => {
   )
 }
 
-const convertToJsDate = (dateString) => {
-  return new Date(dateString)
-}
+// const convertToJsDate = (dateString) => {
+//   return new Date(dateString)
+// }
+
+// TODO
+// if events.length === 3 || event.length === 1
+//  add spielplan link (card/button)
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(
+  const eventRes = await fetch(
     `${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description,preview_image`
   )
-  const events = await res.json()
+  const eventJson = await eventRes.json()
+  const events = eventJson.items
+
+  const infoRes = await fetch(
+    `${process.env.API_URL}?type=core.Infobox&fields=text`
+  )
+  const infoJson = await infoRes.json()
+  const infoBox = infoJson.items[0]
 
   return {
     props: {
       events,
+      infoBox,
     },
-    revalidate: 60,
+    revalidate: 10,
   }
 }
 
