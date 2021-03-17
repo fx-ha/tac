@@ -6,7 +6,6 @@ import { GetStaticProps } from 'next'
 import { Card, Col, Row } from 'react-bootstrap'
 
 import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css'
 
 import Layout, { siteTitle } from '../components/Layout'
 

@@ -4,6 +4,7 @@ $light: #ffffff
 $primary: #2f4899
 $enable-rounded: false
 
+$calendar-bgcolor: lighten(rgb(220, 220, 0), 30%)
 // complete bootstrap
 //@import "~bootstrap/scss/bootstrap"
 
@@ -96,4 +97,77 @@ nav
   object-fit: cover
 
 .react-calendar
-  width: 100% !important  
+  width: 100%
+  background: black
+  color: white
+  border: 1px solid rgb(160, 160, 150)
+  line-height: 1.125em
+  // &--doubleView
+  //   width: 700px
+  //   .react-calendar__viewContainer
+  //     display: flex
+  //     margin: -.5em    
+  button
+    margin: 0
+    border: 0
+    outline: none
+    color: white
+    background: black
+  &__navigation
+    height: 44px
+    margin-bottom: 1em
+    button
+      min-width: 44px
+      background: none
+      &:enabled
+        &:hover, &:focus          
+          background-color: grey
+  &__month-view
+    &__weekdays
+      text-align: center
+      font-weight: bold
+      font-size: .75em
+      &__weekday
+        padding: .5em
+    &__days
+      &__day
+        &--weekend
+          color: red
+        &--neighboringMonth
+          color: red
+          background-color: green
+  &__year-view,
+  &__decade-view,
+  &__century-view
+    .react-calendar__tile
+      padding: 2em .5em
+  &__tile 
+    max-width: 100%
+    text-align: center
+    padding: .75em .5em
+    background: none
+    &:enabled 
+      &:hover, &:focus 
+        background-color: grey
+    &--now 
+      background: $calendar-bgcolor
+      &:enabled 
+        &:hover, &:focus 
+          background: lighten($calendar-bgcolor, 10%)
+  //   &--hasActive 
+  //     @bgcolor: lighten(rgb(0, 110, 220), 30%)
+  //     background: @bgcolor
+  //     &:enabled 
+  //       &:hover, &:focus 
+  //         background: lighten(@bgcolor, 10%)
+  //   &--active 
+  //     @bgcolor: rgb(0, 110, 220)
+  //     background: @bgcolor
+  //     color: white
+  //     &:enabled 
+  //       &:hover, &:focus 
+  //         background: lighten(@bgcolor, 10%)
+  // &--selectRange 
+  //   .react-calendar__tile
+  //     &--hover
+  //       background-color: rgb(230, 230, 230)
