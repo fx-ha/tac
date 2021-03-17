@@ -16,26 +16,24 @@ const Home = ({ events, infoBox }): JSX.Element => {
         <title>{siteTitle} | Home</title>
       </Head>
       <Row>
-        <Col lg={8}>
+        <Col>
           <Image
-            src="/images/Titelbild-tacwebsite.JPG"
+            src="/images/dragwalk.jpg"
             alt="TaC Bühne oben"
-            width={4000}
-            height={6000}
+            width={5865}
+            height={4000}
             layout="responsive"
           />
         </Col>
-        <Col>
-          <Row className="mt-3 mt-lg-0">
-            <Col>
-              <Card>
-                <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
-              </Card>
-            </Col>
-            <Col className="mt-3 mt-md-0 mt-lg-3">
-              <Calendar />
-            </Col>
-          </Row>
+      </Row>
+      <Row className="mt-3">
+        <Col md={6}>
+          <Card className="infobox">
+            <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
+          </Card>
+        </Col>
+        <Col className="mt-3 mt-md-0">
+          <Calendar />
         </Col>
       </Row>
       <h2 className="mt-3">Programm</h2>

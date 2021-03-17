@@ -10,7 +10,7 @@ import BigNavLink from './BigNavLink'
 const BigNav = (): JSX.Element => {
   return (
     <Container as="nav">
-      <Row className="mt-2">
+      <Row className="mt-3">
         <Col>
           <Link href="/">
             <a title="startseite" aria-label="startseite">

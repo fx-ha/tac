@@ -15,13 +15,18 @@ const UeberDasTac = (): JSX.Element => {
         <p>
           Das theater am campus (tac) ist eine feste Anlaufstelle und
           Aufführungsort für verschiedenste Aktivitäten der performativen Künste
-          auf dem Campus der Universität Bayreuth. Es versteht sich als
-          experimentierfreudige Bühne der studentischen Kultur abseits der
-          traditionellen Theaterbetriebe und bietet ganzjährig ein breites
-          Programm von Inszenierungen klassischer Theatertexte und
-          Gegenwartsdramatik bis hin zu Live-Hörspielen, Performance Art und
-          Tanz. Du möchtest gerne an einem dieser Theaterprojekte vor oder
-          hinter der Bühne mitmachen?{' '}
+          auf dem Campus der Universität Bayreuth.
+        </p>
+        <p>
+          Es versteht sich als experimentierfreudige Bühne der studentischen
+          Kultur abseits der traditionellen Theaterbetriebe und bietet
+          ganzjährig ein breites Programm von Inszenierungen klassischer
+          Theatertexte und Gegenwartsdramatik bis hin zu Live-Hörspielen,
+          Performance Art und Tanz.
+        </p>
+        <p>
+          Du möchtest gerne an einem dieser Theaterprojekte vor oder hinter der
+          Bühne mitmachen?{' '}
           <Link href="/mitmachen">
             <a>Hier</a>
           </Link>{' '}
@@ -67,8 +72,11 @@ const UeberDasTac = (): JSX.Element => {
           Theaterwissenschaft (Prof. Wolf-Dieter Ernst) und Theaterdidaktik
           (Prof. Gabriela Paule). Es wird im Studierenparlament vertreten durch
           den Arbeitskreis TaC und entsteht in enger Zusammenarbeit mit
-          Schaulust e.V. Das theater am campus wird gefördert vom Studentenwerk
-          der Universität und dem Kulturamt der Stadt Bayreuth.
+          Schaulust e.V.
+        </p>
+        <p>
+          Das theater am campus wird gefördert vom Studentenwerk der Universität
+          und dem Kulturamt der Stadt Bayreuth.
         </p>
       </section>
     </Layout>

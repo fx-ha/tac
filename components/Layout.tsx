@@ -35,7 +35,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
         </div>
         <div className="desktop-container">
           <BigNav />
-          <Container as="main" className="mt-4">
+          <Container as="main" className="mt-4 mb-3">
             {children}
           </Container>
         </div>
