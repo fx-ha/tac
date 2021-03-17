@@ -74,6 +74,7 @@ hr
   margin: 34px auto
   padding: 11px 15px 20px 15px
   background: white
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 70%)
 
 .bgImg
   position: fixed
@@ -82,7 +83,10 @@ hr
   height: 100vh
   width: 100vw
   overflow: hidden
-  z-index: -1  
+  z-index: -1
+  filter: blur(2px)
+  opacity: 0.85
+  transform: scale(1.05)
 
 .active-nav
   color: $primary !important
@@ -106,7 +110,7 @@ nav
   //   width: 700px
   //   .react-calendar__viewContainer
   //     display: flex
-  //     margin: -.5em    
+  //     margin: -.5em
   button
     margin: 0
     border: 0
@@ -120,7 +124,7 @@ nav
       min-width: 44px
       background: none
       &:enabled
-        &:hover, &:focus          
+        &:hover, &:focus
           background-color: grey
   &__month-view
     &__weekdays
@@ -141,33 +145,33 @@ nav
   &__century-view
     .react-calendar__tile
       padding: 2em .5em
-  &__tile 
+  &__tile
     max-width: 100%
     text-align: center
     padding: .75em .5em
     background: none
-    &:enabled 
-      &:hover, &:focus 
+    &:enabled
+      &:hover, &:focus
         background-color: grey
-    &--now 
+    &--now
       background: $calendar-bgcolor
-      &:enabled 
-        &:hover, &:focus 
+      &:enabled
+        &:hover, &:focus
           background: lighten($calendar-bgcolor, 10%)
-  //   &--hasActive 
+  //   &--hasActive
   //     @bgcolor: lighten(rgb(0, 110, 220), 30%)
   //     background: @bgcolor
-  //     &:enabled 
-  //       &:hover, &:focus 
+  //     &:enabled
+  //       &:hover, &:focus
   //         background: lighten(@bgcolor, 10%)
-  //   &--active 
+  //   &--active
   //     @bgcolor: rgb(0, 110, 220)
   //     background: @bgcolor
   //     color: white
-  //     &:enabled 
-  //       &:hover, &:focus 
+  //     &:enabled
+  //       &:hover, &:focus
   //         background: lighten(@bgcolor, 10%)
-  // &--selectRange 
+  // &--selectRange
   //   .react-calendar__tile
   //     &--hover
   //       background-color: rgb(230, 230, 230)

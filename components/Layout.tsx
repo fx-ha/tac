@@ -33,7 +33,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
             quality={75}
           />
         </div>
-        <div className="desktop-container shadow-lg">
+        <div className="desktop-container">
           <BigNav />
           <Container as="main" className="mt-4">
             {children}
