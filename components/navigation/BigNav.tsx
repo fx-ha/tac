@@ -10,16 +10,6 @@ import BigNavLink from './BigNavLink'
 const BigNav = (): JSX.Element => {
   return (
     <Container as="nav">
-      <Row className="mt-3">
-        <Col lg={9}>
-          <BigNavLink targetUrl="/kontakt" targetName="kontakt" />
-        </Col>
-        <Col lg={3} className="text-right">
-          <FbIcon />
-          <InstaIcon />
-        </Col>
-      </Row>
-
       <Row className="mt-2">
         <Col>
           <Link href="/">
@@ -28,7 +18,10 @@ const BigNav = (): JSX.Element => {
             </a>
           </Link>
         </Col>
-        <Col lg={2}></Col>
+        <Col lg={2} className="text-right mt-auto mb-4">
+          <FbIcon />
+          <InstaIcon />
+        </Col>
       </Row>
       <hr className="mt-1 pt-0" />
       <Row>
@@ -38,6 +31,10 @@ const BigNav = (): JSX.Element => {
         <Col></Col>
         <Col lg="auto">
           <BigNavLink targetUrl="/mitmachen" targetName="mitmachen!" />
+        </Col>
+        <Col></Col>
+        <Col lg="auto">
+          <BigNavLink targetUrl="/studieren" targetName="studieren" />
         </Col>
         <Col></Col>
         <Col lg="auto">
@@ -53,11 +50,7 @@ const BigNav = (): JSX.Element => {
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <BigNavLink targetUrl="/impressum" targetName="impressum" />
-        </Col>
-        <Col></Col>
-        <Col lg="auto">
-          <BigNavLink targetUrl="/datenschutz" targetName="datenschutz" />
+          <BigNavLink targetUrl="/kontakt" targetName="kontakt" />
         </Col>
       </Row>
     </Container>

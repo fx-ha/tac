@@ -27,12 +27,11 @@ const SmallNav = (): JSX.Element => {
         <Nav className="mr-auto">
           <SmallNavLink targetUrl="/spielplan" targetName="spielplan" />
           <SmallNavLink targetUrl="/mitmachen" targetName="mitmachen!" />
+          <SmallNavLink targetUrl="/studieren" targetName="studieren" />
           <SmallNavLink targetUrl="/ueber-das-tac" targetName="über das tac" />
           <SmallNavLink targetUrl="/karten" targetName="karten" />
           <SmallNavLink targetUrl="/archiv" targetName="archiv" />
           <SmallNavLink targetUrl="/kontakt" targetName="kontakt" />
-          <SmallNavLink targetUrl="/impressum" targetName="impressum" />
-          <SmallNavLink targetUrl="/datenschutz" targetName="datenschutz" />
           <span>
             <FbIcon />
             <InstaIcon />
