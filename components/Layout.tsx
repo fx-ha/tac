@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Container } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
@@ -34,10 +35,16 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
           />
         </div>
         <div className="desktop-container">
-          <BigNav />
-          <Container as="main" className="mt-4 mb-3">
-            {children}
-          </Container>
+          <div className="desktop-container-content">
+            <BigNav />
+            <Container as="main" className="mt-4 mb-3">
+              {children}
+            </Container>
+          </div>
+          <footer>
+            <Link href="/impressum">impressum</Link> /{' '}
+            <Link href="/datenschutz">datenschutz</Link>
+          </footer>
         </div>
       </MediaQuery>
 

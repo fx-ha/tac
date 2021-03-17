@@ -32,6 +32,8 @@ const SmallNav = (): JSX.Element => {
           <SmallNavLink targetUrl="/karten" targetName="karten" />
           <SmallNavLink targetUrl="/archiv" targetName="archiv" />
           <SmallNavLink targetUrl="/kontakt" targetName="kontakt" />
+          <SmallNavLink targetUrl="/impressum" targetName="impressum" />
+          <SmallNavLink targetUrl="/datenschutz" targetName="datenschutz" />
           <span>
             <FbIcon />
             <InstaIcon />
