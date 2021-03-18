@@ -13,14 +13,6 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
->Text für 'karten':
->
->die meisten theaterprojekte verlangen kein eintrittsgeld für ihre aufführungen.
-damit aber klar wird, wie viele leute kommen werden (vor allem jetzt zu coronazeiten eine notwendige info!), ist es wichtig, karten zu reservieren.
-wichtig! bitte die eigene mail-adresse angeben, damit eine bestätigung der reservierung zurückgeschickt werden kann.
->
->eine veranstaltung findet sich nicht in der auswahl?
-dann einfach ne mail an ak.tac@uni-bayreuth.de schreiben und wir helfen!
 - vorläufiger Text für 'archiv':
 >an der uni bayreuth ist in den letzten jahren schon sehr viel theaterkultur entstanden.
 hier gibt es einblicke in die bereits entstandenen projekte unserer studierenden!
@@ -106,6 +98,8 @@ rafce snippet for pages/components
     - style
   - kontakt
     - text für 'kontakt'
+  - karten
+    - Text für 'karten'
   - Impressum
   - Datenschutz
 - html lang attribute

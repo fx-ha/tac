@@ -85,6 +85,28 @@ const Karten = ({ events }): JSX.Element => {
           </MediaQuery>
         </Col>
       </Row>
+      <Row>
+        <Col>
+          <p>
+            die meisten theaterprojekte verlangen kein eintrittsgeld für ihre
+            aufführungen.
+            <br />
+            damit aber klar wird, wie viele leute kommen werden (vor allem jetzt
+            zu coronazeiten eine notwendige info!), ist es wichtig, karten zu
+            reservieren.
+          </p>
+          <p>
+            wichtig! bitte die eigene mail-adresse angeben, damit eine
+            bestätigung der reservierung zurückgeschickt werden kann.
+          </p>
+          <p>
+            eine veranstaltung findet sich nicht in der auswahl?
+            <br />
+            dann einfach ne mail an ak.tac@uni-bayreuth.de schreiben und wir
+            helfen!
+          </p>
+        </Col>
+      </Row>
     </Layout>
   )
 }
