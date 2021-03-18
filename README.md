@@ -13,9 +13,6 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
-- vorläufiger Text für 'archiv':
->an der uni bayreuth ist in den letzten jahren schon sehr viel theaterkultur entstanden.
-hier gibt es einblicke in die bereits entstandenen projekte unserer studierenden!
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -94,6 +91,7 @@ rafce snippet for pages/components
   - Archiv
     - auflistung vergangener veranstaltungen
     - auflistung verlinken
+    - vorläufiger Text für 'archiv':
   - about
     - style
   - kontakt

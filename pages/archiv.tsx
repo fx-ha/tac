@@ -10,7 +10,13 @@ const Archiv = ({ events }): JSX.Element => {
       <Head>
         <title>{siteTitle} | Archiv</title>
       </Head>
-      <div>Auflistung vergangener Aufführungen</div>
+      <p>
+        an der uni bayreuth ist in den letzten jahren schon sehr viel
+        theaterkultur entstanden.
+        <br />
+        hier gibt es einblicke in die bereits entstandenen projekte unserer
+        studierenden!
+      </p>
       <EventList events={events.items} isArchived={true} />
     </Layout>
   )
