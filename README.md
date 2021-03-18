@@ -12,6 +12,31 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
+- 'mitmachen' designidee umsetzen
+- aktualisiere 'theater am campus'-schriftzug
+- kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
+- text für 'kontakt':
+>bei fragen zum programm, zur arbeit des 'theater am campus' oder auch für mögliche kooperationen kann über folgende mailadresse kontakt zu uns aufgenommen werden:
+>
+>ak.tac@uni-bayreuth.de
+>ansprechpartnerin: donata hörr
+>
+>Für mehr einblicke in die studentischen theaterprojekte gehts hier entlang:
+>
+>(facebooksymbol) @tacbayreuth -> bitte verlinken!
+>
+>(Instagramsymbol) @tacbayreuth -> bitte verlinken!
+>Text für 'karten':
+>
+>die meisten theaterprojekte verlangen kein eintrittsgeld für ihre aufführungen.
+damit aber klar wird, wie viele leute kommen werden (vor allem jetzt zu coronazeiten eine notwendige info!), ist es wichtig, karten zu reservieren.
+wichtig! bitte die eigene mail-adresse angeben, damit eine bestätigung der reservierung zurückgeschickt werden kann.
+>
+>eine veranstaltung findet sich nicht in der auswahl?
+dann einfach ne mail an ak.tac@uni-bayreuth.de schreiben und wir helfen!
+- vorläufiger Text für 'archiv':
+>an der uni bayreuth ist in den letzten jahren schon sehr viel theaterkultur entstanden.
+hier gibt es einblicke in die bereits entstandenen projekte unserer studierenden!
 - recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
@@ -20,11 +45,7 @@ Next.js Frontend for Theater am Campus
 - refactor archiv/spielplan id page
 - pagination
 - index
-  - style
-  - infobox als card? (z.b. corona)
-  - nächste veranstaltungen
   - kalendar https://www.npmjs.com/package/react-calendar
-  - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
 - spielplan
   - style 
 - theaterinitiativen
@@ -90,6 +111,10 @@ rafce snippet for pages/components
   - kurze Vorstellung Theater am Campus
   - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
   - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
+  - style
+  - infobox als card? (z.b. corona)
+  - nächste veranstaltungen
+  - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
  - Spielplan
   - Auflistung aller Aufführungen für das Semester
  - Theaterinitiativen
