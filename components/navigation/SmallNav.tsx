@@ -35,7 +35,7 @@ const SmallNav = (): JSX.Element => {
           <SmallNavLink targetUrl="/impressum" targetName="impressum" />
           <SmallNavLink targetUrl="/datenschutz" targetName="datenschutz" />
           <span>
-            <FbIcon />
+            <FbIcon className="mr-2" />
             <InstaIcon />
           </span>
         </Nav>

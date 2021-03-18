@@ -13,7 +13,7 @@ const BigNavLink = ({
   return (
     <Link href={targetUrl}>
       <a
-        className={`big-nav-link ${
+        className={`${
           router.pathname === targetUrl ? 'active-nav' : 'text-body'
         }`}
       >

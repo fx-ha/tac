@@ -19,7 +19,7 @@ const BigNav = (): JSX.Element => {
           </Link>
         </Col>
         <Col lg={2} className="text-right mt-auto mb-4">
-          <FbIcon />
+          <FbIcon className="mr-2" />
           <InstaIcon />
         </Col>
       </Row>

@@ -12,20 +12,7 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
-- 'mitmachen' designidee umsetzen
-- aktualisiere 'theater am campus'-schriftzug
 - kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
-- text für 'kontakt':
->bei fragen zum programm, zur arbeit des 'theater am campus' oder auch für mögliche kooperationen kann über folgende mailadresse kontakt zu uns aufgenommen werden:
->
->ak.tac@uni-bayreuth.de
->ansprechpartnerin: donata hörr
->
->Für mehr einblicke in die studentischen theaterprojekte gehts hier entlang:
->
->(facebooksymbol) @tacbayreuth -> bitte verlinken!
->
->(Instagramsymbol) @tacbayreuth -> bitte verlinken!
 >Text für 'karten':
 >
 >die meisten theaterprojekte verlangen kein eintrittsgeld für ihre aufführungen.
@@ -46,27 +33,19 @@ hier gibt es einblicke in die bereits entstandenen projekte unserer studierenden
 - pagination
 - index
   - kalendar https://www.npmjs.com/package/react-calendar
-- spielplan
-  - style 
+- spielplan & archiv
+  - style
 - theaterinitiativen
-  - style
-  - cards wie auf tac-seite
-  - card text ohne p und ul
-- archiv
-  - style 
-- about
-  - style
+  - 'mitmachen' designidee umsetzen
 - kontakt
-  - style 
   - google maps
-  - formular? -> erfragen 
-- impressum -> footer
-  - style 
-- datenschutz -> footer
-  - style 
+- impressum
+  - style
+- datenschutz
+  - style
   - e-recht24 text
 - Cookie Consent https://www.osano.com/cookieconsent/download/
-- pwa 
+- pwa
 - customize 404 page
 - preview mode
 - title as slug
@@ -87,7 +66,7 @@ hier gibt es einblicke in die bereits entstandenen projekte unserer studierenden
   - React Bootstrap
    - https://react-bootstrap.github.io/
    - https://github.com/vercel/next.js/tree/master/examples/with-react-bootstrap
-  - PWA 
+  - PWA
    - https://github.com/vercel/next.js/tree/master/examples/progressive-web-app
 
 npm run dev
@@ -107,36 +86,35 @@ rafce snippet for pages/components
 - install react bootstrap
 - publish to vercel
 - seiten:
- - Startseite
-  - kurze Vorstellung Theater am Campus
-  - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
-  - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
-  - style
-  - infobox als card? (z.b. corona)
-  - nächste veranstaltungen
-  - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
- - Spielplan
-  - Auflistung aller Aufführungen für das Semester
- - Theaterinitiativen
-  - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können  
- - Archiv
- - Impressum
- - Datenschutz
+  - Startseite
+    - kurze Vorstellung Theater am Campus
+    - aktuelle Informationen - bezüglich Corona sowie zeitnahen Veranstaltungen
+    - möglicherweise einen Kalender - wie etwa auch bei der Schaubühne zu sehen ist
+    - style
+    - infobox als card? (z.b. corona)
+    - nächste veranstaltungen
+    - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
+  - Spielplan
+    - Auflistung aller Aufführungen für das Semester
+    - auflistung verlinken
+  - Theaterinitiativen
+    - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können
+  - Archiv
+    - auflistung vergangener veranstaltungen
+    - auflistung verlinken
+  - about
+    - style
+  - kontakt
+    - text für 'kontakt'
+  - Impressum
+  - Datenschutz
 - html lang attribute
-- spielplan
- - auflistung veranstaltungen
-- archiv
- - auflistung vergangener veranstaltungen
-- redirect veranstaltungen -> spielplan
 - refactor EventList
 - EventList wiederverwenden für archiv
 - .env variable mit link zu api
-- spielplan
- - auflistung verlinken
-- archiv
-  - auflistung verlinken
 - navigation
-  - header image (tac logo)  
+  - header image (tac logo)
+  - aktualisiere 'theater am campus'-schriftzug
   - Designerin würde schriftzug "theater am campus" erstellen für Header der Website -> auf unser aktuelles logo beziehen
   - bestimmte Schrift verwenden, die charakteristisch für die Marke "theater am campus" stehen soll (siehe anhang)
   - Rubrik 'Theaterinitiativen' umbenennen in 'mitmachen!'

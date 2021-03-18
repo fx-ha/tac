@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
+import FBIcon from '../components/navigation/FbIcon'
+import InstaIcon from '../components/navigation/InstaIcon'
 
 const Kontakt = (): JSX.Element => {
   return (
@@ -9,38 +11,41 @@ const Kontakt = (): JSX.Element => {
         <title>{siteTitle} | Kontakt</title>
       </Head>
       <div>
-        <h2>Adresse</h2>
         <p>
-          AK Theater am Campus
-          <br />
-          Arbeitskreis des Studierendenparlaments
-          <br />
-          Universität Bayreuth
-          <br />
-          Universitätsstraße 30
-          <br />
-          95440 Bayreuth
-          <br />
-          Glasmittelbau, Zi. 1.42
+          bei fragen zum programm, zur arbeit des 'theater am campus' oder auch
+          für mögliche kooperationen kann über folgende mailadresse kontakt zu
+          uns aufgenommen werden:
         </p>
-        <h2>Ansprechpartner</h2>
         <p>
-          Lisa-Michelle Helten
+          ak.tac@uni-bayreuth.de
           <br />
-          Donata Hörr
-          <br />
-          E-Mail und Social Media Kanäle
-          <br />
-          AK.TaC@Uni-Bayreuth.de
-          <br />
+          ansprechpartnerin: donata hörr
         </p>
-        <h2>Für aktuelle Informationen</h2>
         <p>
-          facebook.com/TaCBayreuth
+          Für mehr einblicke in die studentischen theaterprojekte geht's hier
+          entlang:
           <br />
-          instagram.com/TacBayreuth
+          <FBIcon />{' '}
+          <a
+            href="https://www.facebook.com/TaCBayreuth"
+            title="tac auf facebook"
+            target="_blank"
+            rel="noopener"
+            className="text-reset"
+          >
+            @tacbayreuth
+          </a>
           <br />
-          Verantwortlich für die Redaktion: Jonas Würdinger
+          <InstaIcon />{' '}
+          <a
+            href="https://www.instagram.com/TacBayreuth/"
+            title="tac auf instagram"
+            target="_blank"
+            rel="noopener"
+            className="text-reset"
+          >
+            @tacbayreuth
+          </a>
         </p>
       </div>
     </Layout>
