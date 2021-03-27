@@ -24,15 +24,12 @@ Next.js Frontend for Theater am Campus
   - kalendar https://www.npmjs.com/package/react-calendar
 - spielplan & archiv
   - style
-- theaterinitiativen
-  - 'mitmachen' designidee umsetzen
 - kontakt
   - google maps
-- impressum
-  - style
 - datenschutz
-  - style
   - e-recht24 text
+- studieren
+  - content
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa
 - customize 404 page
@@ -48,15 +45,17 @@ Next.js Frontend for Theater am Campus
 ## Development
 - Tools:
   - React
-   - https://reactjs.org/docs/getting-started.html
+    - https://reactjs.org/docs/getting-started.html
   - Next.js
-   - https://nextjs.org/docs/getting-started
-   - https://nextjs.org/learn/basics/create-nextjs-app
+    - https://nextjs.org/docs/getting-started
+    - https://nextjs.org/learn/basics/create-nextjs-app
   - React Bootstrap
-   - https://react-bootstrap.github.io/
-   - https://github.com/vercel/next.js/tree/master/examples/with-react-bootstrap
+    - https://react-bootstrap.github.io/
+    - https://github.com/vercel/next.js/tree/master/examples/with-react-bootstrap
+  - React Calendar
+    - https://github.com/wojtekmaj/react-calendar#readme
   - PWA
-   - https://github.com/vercel/next.js/tree/master/examples/progressive-web-app
+    - https://github.com/vercel/next.js/tree/master/examples/progressive-web-app
 
 npm run dev
 Starts the development server.
@@ -118,3 +117,5 @@ rafce snippet for pages/components
 - schriftart manrope
 - copy schaubuehne.de
 - upgrade to next 10.0.8 to fix sharp error
+- theaterinitiativen
+  - 'mitmachen' designidee umsetzen
