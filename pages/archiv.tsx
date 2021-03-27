@@ -8,7 +8,7 @@ const Archiv = ({ events }): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Archiv</title>
+        <title>{siteTitle} | archiv</title>
       </Head>
       <p>
         an der uni bayreuth ist in den letzten jahren schon sehr viel

@@ -13,7 +13,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Home</title>
+        <title>{siteTitle} | startseite</title>
       </Head>
       <Row>
         <Col>

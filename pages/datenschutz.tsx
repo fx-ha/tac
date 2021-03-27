@@ -6,7 +6,7 @@ const Datenschutz = (): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Datenschutz</title>
+        <title>{siteTitle} | datenschutz</title>
       </Head>
     </Layout>
   )

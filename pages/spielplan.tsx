@@ -8,7 +8,7 @@ const Spielplan = ({ events }): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Spieplan</title>
+        <title>{siteTitle} | spieplan</title>
       </Head>
       <div>Auflistung aller Aufführungen für das Semester</div>
       <EventList events={events.items} isArchived={false} />

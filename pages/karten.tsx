@@ -11,7 +11,7 @@ const Karten = ({ events }): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Karten</title>
+        <title>{siteTitle} | karten</title>
       </Head>
       <Row>
         <Col md={6} className="mb-4">

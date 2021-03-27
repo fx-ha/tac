@@ -8,7 +8,7 @@ const Kontakt = (): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Kontakt</title>
+        <title>{siteTitle} | kontakt</title>
       </Head>
       <div>
         <p>

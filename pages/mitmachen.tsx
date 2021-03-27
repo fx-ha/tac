@@ -8,7 +8,7 @@ const Mitmachen = (): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Mitmachen!</title>
+        <title>{siteTitle} | mitmachen!</title>
       </Head>
       <p>
         Das Theater an der Universität Bayreuth ist größtenteils studentisch und

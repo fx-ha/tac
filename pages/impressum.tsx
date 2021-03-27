@@ -6,7 +6,7 @@ const Impressum = (): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Impressum</title>
+        <title>{siteTitle} | impressum</title>
       </Head>
       <div>
         <h2>Angaben gemäß § 5 TMG:</h2>

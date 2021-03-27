@@ -9,7 +9,7 @@ const UeberDasTac = (): JSX.Element => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle} | Über das TaC</title>
+        <title>{siteTitle} | über das tac</title>
       </Head>
       <section>
         <p>

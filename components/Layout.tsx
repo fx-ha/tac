@@ -8,7 +8,7 @@ import MediaQuery from 'react-responsive'
 import SmallNav from './navigation/SmallNav'
 import BigNav from './navigation/BigNav'
 
-export const siteTitle = 'Theater am Campus'
+export const siteTitle = 'theater am campus'
 
 const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
