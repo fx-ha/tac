@@ -11,22 +11,27 @@ const Mitmachen = (): JSX.Element => {
       <Head>
         <title>{siteTitle} | mitmachen!</title>
       </Head>
+
       <div>
         Hey! Du willst mitmachen, wie gut! Es kommt jetzt natürlich darauf an,
-        was genau du machen möchtest. Um dir eine Übersicht zu geben, haben wir
-        die verschiedenen Anlaufstellen farbig markiert, je nachdem ob du{' '}
+        <span className="font-italic"> was genau du machen möchtest</span>.
+        <br />
+        Um dir eine Übersicht zu geben, haben wir die verschiedenen
+        Anlaufstellen farbig markiert, je nachdem ob du{' '}
+        <br className="d-none d-lg-block" />
         <span className="theater-spielen">Theater spielen </span>{' '}
         <span className="dot theater-spielen-bg" title="theater spielen" />,{' '}
         <span className="theater-ansehen">Theater ansehen</span>{' '}
-        <span className="dot theater-ansehen-bg" title="theater ansehen" />,{' '}
-        oder <span className="theater-organisieren">Theater organisieren</span>{' '}
+        <span className="dot theater-ansehen-bg" title="theater ansehen" /> oder{' '}
+        <span className="theater-organisieren">Theater organisieren</span>{' '}
         <span
           className="dot theater-organisieren-bg"
           title="theater organisieren"
-        />
-        , willst.
+        />{' '}
+        willst.
       </div>
-      <Row className="mt-4">
+
+      <Row className="mt-5">
         <Col sm={4}>
           <Image
             src="/images/schaulustv2.png"
@@ -38,7 +43,7 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             Schaulust e.V.
           </div>
-          <div>Ist ein Theaterförderverein</div>
+          <div>Ist ein Theaterförderverein.</div>
           <div>
             <span
               className="dot theater-ansehen-bg mr-2"
