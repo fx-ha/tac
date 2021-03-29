@@ -26,7 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
         <div className="bgImg">
           <Image
             alt="Campus"
-            src="/images/RS1424_uni_bay-9017.jpg"
+            src="/images/bg_v15.png"
             priority={true}
             loading="eager"
             layout="fill"
