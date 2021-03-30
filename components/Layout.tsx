@@ -31,7 +31,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
             loading="eager"
             layout="fill"
             objectFit="cover"
-            quality={75}
+            quality={100}
           />
         </div>
         <div className="desktop-container">
