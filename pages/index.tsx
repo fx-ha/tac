@@ -26,17 +26,17 @@ const Home = ({ events, infoBox }): JSX.Element => {
           />
         </Col>
       </Row>
-      <Row className="mt-3">
+      <Row className="mt-4">
         <Col md={6}>
           <Card className="infobox">
             <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
           </Card>
         </Col>
-        <Col className="mt-3 mt-md-0">
+        <Col className="mt-4 mt-md-0">
           <Calendar />
         </Col>
       </Row>
-      <h2 className="mt-3">Programm</h2>
+      <h2 className="mt-4">Programm</h2>
       <Row className="mt-3">
         {events.map(
           (event: {
@@ -48,7 +48,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
             preview_image: { meta: { download_url: string }; title: string }
           }) => (
             <Col key={event.id} sm={12} lg={6}>
-              <Row>
+              <Row className="mb-md-3 mb-lg-0">
                 <Col sm={3} lg={12} className="mb-lg-2">
                   <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
                     <a>
@@ -63,7 +63,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
                     </a>
                   </Link>
                 </Col>
-                <Col>
+                <Col className="mt-2 mt-sm-0">
                   <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
                     <a className="text-body">
                       <h3>{event.title}</h3>

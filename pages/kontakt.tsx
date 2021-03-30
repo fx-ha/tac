@@ -24,28 +24,32 @@ const Kontakt = (): JSX.Element => {
         <p>
           Für mehr einblicke in die studentischen theaterprojekte geht's hier
           entlang:
-          <br />
-          <FBIcon />{' '}
-          <a
-            href="https://www.facebook.com/TaCBayreuth"
-            title="tac auf facebook"
-            target="_blank"
-            rel="noopener"
-            className="text-reset"
-          >
-            @tacbayreuth
+        </p>
+        <p>
+          <div className="mb-1">
+            <FBIcon />{' '}
+            <a
+              href="https://www.facebook.com/TaCBayreuth"
+              title="tac auf facebook"
+              target="_blank"
+              rel="noopener"
+              className="text-reset"
+            >
+              @tacbayreuth
+            </a>
+          </div>
+          <div>
+            <InstaIcon />{' '}
+            <a
+              href="https://www.instagram.com/TacBayreuth/"
+              title="tac auf instagram"
+              target="_blank"
+              rel="noopener"
+              className="text-reset"
+            >
+              @tacbayreuth
           </a>
-          <br />
-          <InstaIcon />{' '}
-          <a
-            href="https://www.instagram.com/TacBayreuth/"
-            title="tac auf instagram"
-            target="_blank"
-            rel="noopener"
-            className="text-reset"
-          >
-            @tacbayreuth
-          </a>
+          </div>
         </p>
       </div>
     </Layout>
