@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { Col, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
+import FBIcon from '../components/navigation/FbIcon'
+import InstaIcon from '../components/navigation/InstaIcon'
 
 const Mitmachen = (): JSX.Element => {
   return (
@@ -43,7 +45,55 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             Schaulust e.V.
           </div>
-          <div>Ist ein Theaterförderverein.</div>
+          <div>
+            ist eine theaterplattform, die von studierenden der uni bayreuth
+            gegründet wurde, um projekte im theater am campus der universität
+            auf organisatorischer, künstlerischer und vor allem finanzieller
+            ebene zu unterstützen. Wenn du irgendwelche fragen zur umsetzung
+            deines projekts hast, sind wir deine ansprechpersonen!
+          </div>
+          <div>
+            <div>
+              <FBIcon
+                href="https://www.facebook.com/Schaulust.eV"
+                title="schaulust auf facebook"
+              />{' '}
+              <a
+                href="https://www.facebook.com/Schaulust.eV"
+                title="schaulust auf facebook"
+                target="_blank"
+                rel="noopener"
+                className="text-reset"
+              >
+                @schaulust.ev
+              </a>
+            </div>
+            <div>
+              <InstaIcon
+                href="https://www.instagram.com/e.v.schaulust/"
+                title="schaulust auf instagram"
+              />{' '}
+              <a
+                href="https://www.instagram.com/e.v.schaulust/"
+                title="schaulust auf instagram"
+                target="_blank"
+                rel="noopener"
+                className="text-reset"
+              >
+                @e.v.schaulust
+              </a>
+            </div>
+            <div>
+              mail:{' '}
+              <a
+                className="text-reset"
+                href="mailto:info@schaulustev.de"
+                title="mail an schaulust senden"
+              >
+                info@schaulustev.de
+              </a>
+            </div>
+          </div>
           <div>
             <span
               className="dot theater-ansehen-bg mr-2"
@@ -65,11 +115,16 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            AK theater am campus
+            arbeitskreis theater am campus
           </div>
           <div>
-            Kümmert sich um Öffentlichkeitsarbeit, Marketing und gehört zum
-            StuPa.
+            kümmert sich um die öffentlichkeitsarbeit der studentischen
+            theaterkultur der uni bayreuth. wir erstellen jedes semester neue
+            spielpläne, vertreten die theaterkultur im studierendenparlament und
+            durch uns bekommt ihr auch immer die neusten infos zu
+            theaterprojekten!
+            <br />
+            (diese coole website hier ist auch von uns erstellt ;) )
           </div>
           <div>
             <span
@@ -93,11 +148,40 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            SCHWARZE SCHAFE e.V.
+            die schwarzen schafe
           </div>
           <div>
-            Ist ein Theaterverein. Hier wird vor allem klassisches Theater
-            gemacht.
+            sind eine studentische Theatergruppe unter dem dach der katholischen
+            hochschulgemeinde bayreuth. 1x pro semester findet eine produktion
+            von meist klassischen stücken statt, wie etwa 'gott des gemetzels',
+            'dracula' oder auch 'besuch der alten dame'.
+          </div>
+          <div>
+            <div>
+              <FBIcon
+                href="https://www.facebook.com/schwarzeschafebayreuth/"
+                title="schwarze schafe auf facebook"
+              />{' '}
+              <a
+                href="https://www.facebook.com/schwarzeschafebayreuth/"
+                title="schwarze schafe auf facebook"
+                target="_blank"
+                rel="noopener"
+                className="text-reset"
+              >
+                @schwarzeschafebayreuth
+              </a>
+            </div>
+            <div>
+              mail:{' '}
+              <a
+                className="text-reset"
+                href="mailto:schafevorstand@gmail.com"
+                title="mail an schwarze schafe senden"
+              >
+                schafevorstand@gmail.com
+              </a>
+            </div>
           </div>
           <div>
             <span
@@ -126,7 +210,35 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             American British Drama Club
           </div>
-          <div>Ist eine englische Theatergruppe.</div>
+          <div>
+            ist eine studentische theatergruppe, die englischsprachige stücke
+            auf die bühne bringt.
+          </div>
+          <div>
+            <FBIcon
+              href="https://www.facebook.com/abdcbayreuth"
+              title="american british drama club auf facebook"
+            />{' '}
+            <a
+              href="https://www.facebook.com/abdcbayreuth"
+              title="american british drama club auf facebook"
+              target="_blank"
+              rel="noopener"
+              className="text-reset"
+            >
+              @abcdbayreuth
+            </a>
+          </div>
+          <div>
+            mail:{' '}
+            <a
+              className="text-reset"
+              href="mailto:abdc.bayreuth@gmx.de"
+              title="mail an abdc senden"
+            >
+              abdc.bayreuth@gmx.de
+            </a>
+          </div>
           <div>
             <span
               className="dot theater-spielen-bg mr-2"

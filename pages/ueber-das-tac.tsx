@@ -46,6 +46,12 @@ const UeberDasTac = (): JSX.Element => {
               Elena Arnold
               <br />
               Nathan Herzfeld
+              <br />
+              Lennart Schmidt
+              <br />
+              Julia Schutt
+              <br />
+              Annabell Strohl
             </p>
           </Col>
           <Col md={6}>
