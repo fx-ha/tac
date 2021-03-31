@@ -1,8 +1,16 @@
-const FbIcon = ({ className }: { className?: string }): JSX.Element => {
+const FbIcon = ({
+  className,
+  href,
+  title,
+}: {
+  className?: string
+  href: string
+  title: string
+}): JSX.Element => {
   return (
     <a
-      href="https://www.facebook.com/TaCBayreuth"
-      title="tac auf facebook"
+      href={href}
+      title={title}
       target="_blank"
       rel="noopener"
       className={className}

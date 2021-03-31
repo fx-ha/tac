@@ -27,7 +27,7 @@ const SmallNav = (): JSX.Element => {
         <Nav className="mr-auto">
           <SmallNavLink targetUrl="/spielplan" targetName="spielplan" />
           <SmallNavLink targetUrl="/mitmachen" targetName="mitmachen!" />
-          <SmallNavLink targetUrl="/studieren" targetName="studieren" />
+          <SmallNavLink targetUrl="/studium" targetName="studium" />
           <SmallNavLink targetUrl="/ueber-das-tac" targetName="über das tac" />
           <SmallNavLink targetUrl="/karten" targetName="karten" />
           <SmallNavLink targetUrl="/archiv" targetName="archiv" />
@@ -35,8 +35,15 @@ const SmallNav = (): JSX.Element => {
           <SmallNavLink targetUrl="/impressum" targetName="impressum" />
           <SmallNavLink targetUrl="/datenschutz" targetName="datenschutz" />
           <span>
-            <FbIcon className="mr-2" />
-            <InstaIcon />
+            <FbIcon
+              href="https://www.facebook.com/TaCBayreuth"
+              title="tac auf facebook"
+              className="mr-2"
+            />
+            <InstaIcon
+              href="https://www.instagram.com/TacBayreuth/"
+              title="tac auf instagram"
+            />
           </span>
         </Nav>
       </Navbar.Collapse>

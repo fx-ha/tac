@@ -19,8 +19,15 @@ const BigNav = (): JSX.Element => {
           </Link>
         </Col>
         <Col lg={2} className="text-right mt-auto mb-4">
-          <FbIcon className="mr-2" />
-          <InstaIcon />
+          <FbIcon
+            href="https://www.facebook.com/TaCBayreuth"
+            title="tac auf facebook"
+            className="mr-2"
+          />
+          <InstaIcon
+            href="https://www.instagram.com/TacBayreuth/"
+            title="tac auf instagram"
+          />
         </Col>
       </Row>
       <hr className="mt-1 pt-0" />
@@ -34,7 +41,7 @@ const BigNav = (): JSX.Element => {
         </Col>
         <Col></Col>
         <Col lg="auto">
-          <BigNavLink targetUrl="/studieren" targetName="studieren" />
+          <BigNavLink targetUrl="/studium" targetName="studium" />
         </Col>
         <Col></Col>
         <Col lg="auto">
