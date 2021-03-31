@@ -25,11 +25,10 @@ Next.js Frontend for Theater am Campus
 - spielplan & archiv
   - style
 - kontakt
-  - google maps
+  - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
+  - google maps (?)
 - datenschutz
   - e-recht24 text
-- studieren
-  - content
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - pwa
 - customize 404 page
@@ -119,3 +118,5 @@ rafce snippet for pages/components
 - upgrade to next 10.0.8 to fix sharp error
 - theaterinitiativen
   - 'mitmachen' designidee umsetzen
+- studieren
+  - content
