@@ -22,8 +22,10 @@ Next.js Frontend for Theater am Campus
 - pagination
 - index
   - kalendar https://www.npmjs.com/package/react-calendar
+- mitmachen
+  - replace schaulust logo
 - spielplan & archiv
-  - style
+  - style (see pdf)
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
   - google maps (?)
