@@ -19,7 +19,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
         <Col>
           <Image
             src="/images/dragwalk.jpg"
-            alt="TaC Bühne oben"
+            alt="TaC Bühne"
             width={5865}
             height={4000}
             layout="responsive"

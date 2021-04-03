@@ -56,7 +56,12 @@ const Karten = ({ events }): JSX.Element => {
                 <Form.Label htmlFor="name" srOnly>
                   Name
                 </Form.Label>
-                <Form.Control id="name" type="text" placeholder="Name" />
+                <Form.Control
+                  id="name"
+                  type="text"
+                  placeholder="Name"
+                  autoComplete="name"
+                />
               </Col>
             </Row>
             <Row className="mb-4">
@@ -64,7 +69,12 @@ const Karten = ({ events }): JSX.Element => {
                 <Form.Label htmlFor="email" srOnly>
                   E-Mail
                 </Form.Label>
-                <Form.Control id="email" type="email" placeholder="E-Mail" />
+                <Form.Control
+                  id="email"
+                  type="email"
+                  placeholder="E-Mail"
+                  autoComplete="email"
+                />
               </Col>
             </Row>
 
