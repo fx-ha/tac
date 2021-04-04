@@ -8,8 +8,15 @@ import { Card, Col, Row } from 'react-bootstrap'
 import Calendar from 'react-calendar'
 
 import Layout, { siteTitle } from '../components/Layout'
+import { EventType } from '../lib/types'
 
-const Home = ({ events, infoBox }): JSX.Element => {
+const Home = ({
+  events,
+  infoBox,
+}: {
+  events: EventType[]
+  infoBox: { text: string }
+}): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -38,15 +45,10 @@ const Home = ({ events, infoBox }): JSX.Element => {
       </Row>
       <h2 className="mt-4">Programm</h2>
       <Row className="mt-3">
-        {events.map(
-          (event: {
-            id: string
-            title: string
-            short_description: string
-            start_date: string
-            end_date: string
-            preview_image: { meta: { download_url: string }; title: string }
-          }) => (
+        {events.length === 0 ? (
+          <Col>demnächst sind keine veranstaltungen geplant.</Col>
+        ) : (
+          events.map((event: EventType) => (
             <Col key={event.id} sm={12} lg={6}>
               <Row className="mb-md-3 mb-lg-0">
                 <Col sm={3} lg={12} className="mb-lg-2">
@@ -92,7 +94,7 @@ const Home = ({ events, infoBox }): JSX.Element => {
                 </Col>
               </Row>
             </Col>
-          )
+          ))
         )}
       </Row>
     </Layout>
