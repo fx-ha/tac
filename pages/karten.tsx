@@ -6,8 +6,9 @@ import { Col, Button, Form, Row } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
 
 import Layout, { siteTitle } from '../components/Layout'
+import { EventType } from '../lib/types'
 
-const Karten = ({ events }): JSX.Element => {
+const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
   const reserveTickets = async (e) => {
     e.preventDefault() // don't redirect the page
     console.log(e.target.eventSelect.value)
@@ -47,7 +48,7 @@ const Karten = ({ events }): JSX.Element => {
                   Veranstaltung
                 </Form.Label>
                 <Form.Control as="select" id="eventSelect" custom>
-                  {events.items.map((event: { id: string; title: string }) => (
+                  {events.map((event: EventType) => (
                     <option key={event.id} value={event.id}>
                       {event.title}
                     </option>
@@ -150,7 +151,8 @@ const Karten = ({ events }): JSX.Element => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(`${process.env.API_URL}?child_of=3`)
-  const events = await res.json()
+  const eventJson = await res.json()
+  const events = eventJson.items
 
   return {
     props: {

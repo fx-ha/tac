@@ -3,8 +3,9 @@ import { GetStaticProps } from 'next'
 
 import Layout, { siteTitle } from '../components/Layout'
 import EventList from '../components/EventList'
+import { EventType } from '../lib/types'
 
-const Archiv = ({ events }): JSX.Element => {
+const Archiv = ({ events }: { events: EventType[] }): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -17,7 +18,7 @@ const Archiv = ({ events }): JSX.Element => {
         hier gibt es einblicke in die bereits entstandenen projekte unserer
         studierenden!
       </p>
-      <EventList events={events.items} isArchived={true} />
+      <EventList events={events} isArchived={true} />
     </Layout>
   )
 }
@@ -26,7 +27,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
     `${process.env.API_URL}?type=event.EventPage&child_of=4&fields=start_date,end_date,weitere,short_description`
   ) // TODO pagination w/ limit + offset
-  const events = await res.json()
+  const eventJson = await res.json()
+  const events = eventJson.items
 
   return {
     props: {
