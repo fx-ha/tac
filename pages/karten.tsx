@@ -8,6 +8,31 @@ import MediaQuery from 'react-responsive'
 import Layout, { siteTitle } from '../components/Layout'
 
 const Karten = ({ events }): JSX.Element => {
+  const reserveTickets = async (e) => {
+    e.preventDefault() // don't redirect the page
+    console.log(e.target.eventSelect.value)
+    console.log(e.target.ticketSelect.value)
+    console.log(e.target.name.value)
+    console.log(e.target.email.value)
+
+    //   const res = await fetch(
+    //     'https://hooks.zapier.com/hooks/catch/123456/abcde',
+    //     {
+    //       body: JSON.stringify({
+    //         name: e.target.name.value,
+    //       }),
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       method: 'POST',
+    //     }
+    //   )
+
+    //   const result = await res.json()
+    //   // result.user => 'Ada Lovelace'
+    // e.target.reset() clear form
+  }
+
   return (
     <Layout>
       <Head>
@@ -15,7 +40,7 @@ const Karten = ({ events }): JSX.Element => {
       </Head>
       <Row>
         <Col md={6} className="mb-4">
-          <Form>
+          <Form onSubmit={reserveTickets}>
             <Row className="mb-4">
               <Col>
                 <Form.Label htmlFor="eventSelect" srOnly>
@@ -61,6 +86,7 @@ const Karten = ({ events }): JSX.Element => {
                   type="text"
                   placeholder="Name"
                   autoComplete="name"
+                  required
                 />
               </Col>
             </Row>
@@ -74,6 +100,7 @@ const Karten = ({ events }): JSX.Element => {
                   type="email"
                   placeholder="E-Mail"
                   autoComplete="email"
+                  required
                 />
               </Col>
             </Row>
