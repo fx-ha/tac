@@ -14,7 +14,7 @@ const InstaIcon = ({
         viewBox="0 0 72 72"
       >
         <defs />
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <path fill="#000" d="M0 72h72V0H0z" />
           <path
             fill="#FFF"
