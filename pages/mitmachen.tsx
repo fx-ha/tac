@@ -36,7 +36,7 @@ const Mitmachen = (): JSX.Element => {
       <Row className="mt-5">
         <Col sm={4}>
           <Image
-            src="/images/schaulustv2.png"
+            src="/images/schaulustv3.png"
             alt="Schaulust Logo"
             width={688}
             height={420}

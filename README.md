@@ -22,8 +22,6 @@ Next.js Frontend for Theater am Campus
 - pagination
 - index
   - kalendar https://www.npmjs.com/package/react-calendar
-- mitmachen
-  - replace schaulust logo
 - spielplan & archiv
   - style (see pdf)
 - kontakt
@@ -86,8 +84,12 @@ rafce snippet for pages/components
   - Spielplan
     - Auflistung aller Aufführungen für das Semester
     - auflistung verlinken
-  - Theaterinitiativen
+  - mitmachen
     - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können
+    - 'mitmachen' designidee umsetzen
+    - replace schaulust logo
+  - studieren
+    - content
   - Archiv
     - auflistung vergangener veranstaltungen
     - auflistung verlinken
@@ -118,7 +120,3 @@ rafce snippet for pages/components
 - schriftart manrope
 - copy schaubuehne.de
 - upgrade to next 10.0.8 to fix sharp error
-- theaterinitiativen
-  - 'mitmachen' designidee umsetzen
-- studieren
-  - content
