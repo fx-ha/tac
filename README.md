@@ -38,6 +38,19 @@ Next.js Frontend for Theater am Campus
   - description with body < 140 chars
   - image
 
+## kalendar-logik
+- getstaticprops: upcoming events mit start_date, end_date, weitere
+- for event in events
+  - activeDates.push(event.start_date, end_date)
+  - for date in weitere
+    - activeDates.push(date)
+- uniqueActiveDates = [...new Set(activateDates)]
+- calendar color active tiles if tile exists in uniqueActiveDates
+- if tile has active date
+  - onHover
+    - overlay window
+    - list events for specific date
+
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
 
