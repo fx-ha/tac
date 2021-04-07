@@ -104,7 +104,7 @@ const Home = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const eventRes = await fetch(
-    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,end_date,weitere,short_description,preview_image`
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere,short_description,preview_image`
   )
   const eventJson = await eventRes.json()
   const events = eventJson.items

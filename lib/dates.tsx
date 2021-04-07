@@ -5,9 +5,6 @@ export const getEventDates = (events: EventType[]): Date[] => {
   const eventDates = []
   events.map((event) => {
     eventDates.push(new Date(event.start_date))
-    if (event.end_date !== null) {
-      eventDates.push(new Date(event.end_date))
-    }
     event.weitere.map((date) => {
       eventDates.push(new Date(date.value))
     })
