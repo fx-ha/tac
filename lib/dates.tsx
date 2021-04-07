@@ -1,18 +1,18 @@
 import { EventType } from './types'
 //import { formatDistance, subDays } from 'date-fns'
 
-export const getPlayDates = (events: EventType[]): Date[] => {
-  const playDates = []
+export const getEventDates = (events: EventType[]): Date[] => {
+  const eventDates = []
   events.map((event) => {
-    playDates.push(new Date(event.start_date))
+    eventDates.push(new Date(event.start_date))
     if (event.end_date !== null) {
-      playDates.push(new Date(event.end_date))
+      eventDates.push(new Date(event.end_date))
     }
     event.weitere.map((date) => {
-      playDates.push(new Date(date.value))
+      eventDates.push(new Date(date.value))
     })
   })
-  return playDates
+  return eventDates
 }
 
 // get unique play dates

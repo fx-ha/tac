@@ -13,23 +13,28 @@ Next.js Frontend for Theater am Campus
 
 ## TO DO
 - kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
-- recherche: schriftart selbst wählbar?
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
   - false: reihenfolge älteste zuerst
   - true: reihenfolge neueste zuerst
-- refactor archiv/spielplan id page
-- pagination
-- index
-  - kalendar https://www.npmjs.com/package/react-calendar
-- spielplan & archiv
+- startseite
+  - calendar
+    - onHover
+      - overlay window
+      - list events for specific date
+- spielplan
   - style (see pdf)
+  - pagination
+archiv
+  - simple list w/ pagination
+- eventseite
+  - preview bild anzeigen
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
-  - google maps (?)
 - datenschutz
   - e-recht24 text
 - Cookie Consent https://www.osano.com/cookieconsent/download/
+- refactor archiv/spielplan id page
 - pwa
 - customize 404 page
 - preview mode
@@ -37,14 +42,7 @@ Next.js Frontend for Theater am Campus
 - seo
   - description with body < 140 chars
   - image
-
-## kalendar-logik
-- index: getstaticprops: all upcoming events mit start_date, end_date, weitere
-- calendar color active tiles if tile date exists in playDates
-- if tile has active date
-  - onHover
-    - overlay window
-    - list events for specific date
+- recherche: schriftart selbst wählbar?
 
 ## spielplan-logik
 - if unique play dates has month
@@ -98,6 +96,7 @@ rafce snippet for pages/components
     - infobox als card? (z.b. corona)
     - nächste veranstaltungen
     - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
+    - kalendar https://www.npmjs.com/package/react-calendar
   - Spielplan
     - Auflistung aller Aufführungen für das Semester
     - auflistung verlinken
@@ -143,3 +142,6 @@ rafce snippet for pages/components
     - for date in weitere
       - playDates.push(date)
   - return [...new Set(playDates)]
+- index: getstaticprops: all upcoming events mit start_date, end_date, weitere
+- calendar highlight tiles if tile date exists in playDates
+  - if tile has event date

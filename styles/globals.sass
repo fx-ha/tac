@@ -160,14 +160,15 @@ nav
     text-align: center
     padding: .75em .5em
     background: none
-    &:enabled
-      &:hover, &:focus
-        background-color: grey
-    &--now
-      background: $calendar-bgcolor
-      &:enabled
-        &:hover, &:focus
-          background: lighten($calendar-bgcolor, 10%)
+    cursor: default !important
+    // &:enabled
+    //   &:hover, &:focus
+    //     background-color: grey
+    // &--now
+    //   background: $calendar-bgcolor
+    //   &:enabled
+    //     &:hover, &:focus
+    //       background: lighten($calendar-bgcolor, 10%)
   //   &--hasActive
   //     @bgcolor: lighten(rgb(0, 110, 220), 30%)
   //     background: @bgcolor
@@ -185,6 +186,10 @@ nav
   //   .react-calendar__tile
   //     &--hover
   //       background-color: rgb(230, 230, 230)
+
+.event-date
+  background: #f08048 !important
+  cursor: pointer !important
 
 .theater-spielen
   color: #e83820

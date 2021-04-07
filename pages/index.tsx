@@ -2,14 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
 
 import { Card, Col, Row } from 'react-bootstrap'
-
 import Calendar from 'react-calendar'
+import { isSameDay } from 'date-fns'
 
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
-import { getPlayDates } from '../lib/dates'
+import { getEventDates } from '../lib/dates'
 
 const Home = ({
   events,
@@ -18,7 +19,20 @@ const Home = ({
   events: EventType[]
   infoBox: { text: string }
 }): JSX.Element => {
-  console.log(getPlayDates(events))
+  const router = useRouter()
+
+  const tileClassName = ({ date, view }) => {
+    if (view === 'month') {
+      if (getEventDates(events).find((eDate) => isSameDay(eDate, date))) {
+        return 'event-date'
+      }
+    }
+  }
+
+  const gotoSpielplan = () => {
+    router.push('/spielplan')
+  }
+
   return (
     <Layout>
       <Head>
@@ -42,7 +56,7 @@ const Home = ({
           </Card>
         </Col>
         <Col className="mt-4 mt-md-0">
-          <Calendar />
+          <Calendar tileClassName={tileClassName} onClickDay={gotoSpielplan} />
         </Col>
       </Row>
       <h2 className="mt-4">Programm</h2>
@@ -50,7 +64,7 @@ const Home = ({
         {events.length === 0 ? (
           <Col>demnächst sind keine veranstaltungen geplant.</Col>
         ) : (
-          events.map((event) => (
+          events.slice(0, 4).map((event) => (
             <Col key={event.id} sm={12} lg={6}>
               <Row className="mb-md-3 mb-lg-0">
                 <Col sm={3} lg={12} className="mb-lg-2">
@@ -90,7 +104,7 @@ const Home = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const eventRes = await fetch(
-    `${process.env.API_URL}?type=event.EventPage&child_of=3&limit=4&fields=start_date,end_date,weitere,short_description,preview_image`
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,end_date,weitere,short_description,preview_image`
   )
   const eventJson = await eventRes.json()
   const events = eventJson.items
