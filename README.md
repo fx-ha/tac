@@ -19,7 +19,8 @@ Next.js Frontend for Theater am Campus
   - true: reihenfolge neueste zuerst
 - startseite
   - calendar
-    - onHover
+    - disable all days except event days
+    - onHover/onClick
       - overlay window
       - list events for specific date
 - spielplan
