@@ -9,6 +9,7 @@ import Calendar from 'react-calendar'
 
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
+import { getPlayDates } from '../lib/dates'
 
 const Home = ({
   events,
@@ -17,6 +18,7 @@ const Home = ({
   events: EventType[]
   infoBox: { text: string }
 }): JSX.Element => {
+  console.log(getPlayDates(events))
   return (
     <Layout>
       <Head>
@@ -48,7 +50,7 @@ const Home = ({
         {events.length === 0 ? (
           <Col>demnächst sind keine veranstaltungen geplant.</Col>
         ) : (
-          events.map((event: EventType) => (
+          events.map((event) => (
             <Col key={event.id} sm={12} lg={6}>
               <Row className="mb-md-3 mb-lg-0">
                 <Col sm={3} lg={12} className="mb-lg-2">
@@ -71,25 +73,6 @@ const Home = ({
                       <h3>{event.title}</h3>
                     </a>
                   </Link>
-                  {/* <p>
-                    {convertToJsDate(event.start_date).toLocaleDateString(
-                      'de-DE',
-                      {
-                        month: 'long',
-                        day: 'numeric',
-                      }
-                    )}
-                    {(() => {
-                      if (event.end_date !== '') {
-                        return ` bis ${convertToJsDate(
-                          event.end_date
-                        ).toLocaleDateString('de-DE', {
-                          month: 'long',
-                          day: 'numeric',
-                        })}`
-                      }
-                    })()}
-                  </p> */}
                   <p>{event.short_description}</p>
                 </Col>
               </Row>
@@ -100,10 +83,6 @@ const Home = ({
     </Layout>
   )
 }
-
-// const convertToJsDate = (dateString) => {
-//   return new Date(dateString)
-// }
 
 // TODO
 // if events.length === 3 || event.length === 1

@@ -4,6 +4,6 @@ export type EventType = {
   short_description: string
   start_date: string
   end_date: string
-  weitere: string
+  weitere: { type: string; value: string; id: string }[]
   preview_image: { meta: { download_url: string }; title: string }
 }

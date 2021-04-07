@@ -38,14 +38,6 @@ Next.js Frontend for Theater am Campus
   - description with body < 140 chars
   - image
 
-## reusable logic
-- get play dates
-  - for event in events
-    - playDates.push(event.start_date, end_date)
-    - for date in weitere
-      - playDates.push(date)
-  - return [...new Set(playDates)]
-
 ## kalendar-logik
 - index: getstaticprops: all upcoming events mit start_date, end_date, weitere
 - calendar color active tiles if tile date exists in playDates
@@ -58,7 +50,6 @@ Next.js Frontend for Theater am Campus
 - if unique play dates has month
   - activeMonth.push(month)
   - add month heading
--
 
 ## archiv-logik
 - sort by start_date (latest to earliest)
@@ -146,3 +137,9 @@ rafce snippet for pages/components
 - schriftart manrope
 - copy schaubuehne.de
 - upgrade to next 10.0.8 to fix sharp error
+- get play dates
+  - for event in events
+    - playDates.push(event.start_date, end_date)
+    - for date in weitere
+      - playDates.push(date)
+  - return [...new Set(playDates)]
