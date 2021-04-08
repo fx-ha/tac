@@ -16,18 +16,20 @@ const Event = ({ event }: { event: EventType }): JSX.Element => {
           {siteTitle} | {event.title}
         </title>
       </Head>
-      <Row>
-        <Col>
-          <Image
-            src={event.preview_image.meta.download_url}
-            alt={event.preview_image.title}
-            width={16}
-            height={7}
-            layout="responsive"
-            className="vorschaubild"
-          />
-        </Col>
-      </Row>
+      {event.preview_image !== null && (
+        <Row>
+          <Col>
+            <Image
+              src={event.preview_image.meta.download_url}
+              alt={event.preview_image.title}
+              width={16}
+              height={7}
+              layout="responsive"
+              className="vorschaubild"
+            />
+          </Col>
+        </Row>
+      )}
       <Row className="mt-2">
         <Col>
           <h1>{event.title}</h1>

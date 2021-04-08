@@ -65,29 +65,40 @@ const Home = ({
           <Col>demnächst sind keine veranstaltungen geplant.</Col>
         ) : (
           events.slice(0, 4).map((event) => (
-            <Col key={event.id} sm={12} lg={6}>
-              <Row className="mb-md-3 mb-lg-0">
-                <Col sm={3} lg={12} className="mb-lg-2">
-                  <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
+            <Col key={event.id} sm={12} className="mb-4">
+              <Row>
+                <Col sm={3} className="mb-lg-2">
+                  <Link href={`/spielplan/${event.id}`}>
                     <a>
-                      <Image
-                        src={event.preview_image.meta.download_url}
-                        alt={event.preview_image.title}
-                        width={16}
-                        height={9}
-                        layout="responsive"
-                        className="vorschaubild"
-                      />
+                      {event.preview_image !== null ? (
+                        <Image
+                          src={event.preview_image.meta.download_url}
+                          alt={event.preview_image.title}
+                          width={16}
+                          height={9}
+                          layout="responsive"
+                          className="vorschaubild"
+                        />
+                      ) : (
+                        <Image
+                          src="/images/TaCLogo_transparent.png"
+                          alt="tac logo"
+                          width={16}
+                          height={9}
+                          layout="responsive"
+                          className="vorschaubild"
+                        />
+                      )}
                     </a>
                   </Link>
                 </Col>
                 <Col className="mt-2 mt-sm-0">
-                  <Link href={'/spielplan/[id]'} as={`/spielplan/${event.id}`}>
+                  <Link href={`/spielplan/${event.id}`}>
                     <a className="text-body">
                       <h3>{event.title}</h3>
                     </a>
                   </Link>
-                  <p>{event.short_description}</p>
+                  <div>{event.short_description}</div>
                 </Col>
               </Row>
             </Col>
@@ -97,10 +108,6 @@ const Home = ({
     </Layout>
   )
 }
-
-// TODO
-// if events.length === 3 || event.length === 1
-//  add spielplan link (card/button)
 
 export const getStaticProps: GetStaticProps = async () => {
   const eventRes = await fetch(

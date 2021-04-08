@@ -27,9 +27,7 @@ Next.js Frontend for Theater am Campus
   - style (see pdf)
   - pagination
 archiv
-  - simple list w/ pagination
-- eventseite
-  - preview bild anzeigen
+  - pagination
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - datenschutz
@@ -111,6 +109,8 @@ rafce snippet for pages/components
     - auflistung vergangener veranstaltungen
     - auflistung verlinken
     - vorläufiger Text für 'archiv':
+  - eventseite
+    - preview bild anzeigen
   - about
     - style
   - kontakt

@@ -25,7 +25,7 @@ const Archiv = ({ events }: { events: EventType[] }): JSX.Element => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    `${process.env.API_URL}?type=event.EventPage&child_of=4&fields=start_date,weitere,short_description`
+    `${process.env.API_URL}?type=event.EventPage&child_of=4&fields=start_date,short_description,preview_image`
   ) // TODO pagination w/ limit + offset
   const eventJson = await res.json()
   const events = eventJson.items
