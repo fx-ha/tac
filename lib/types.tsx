@@ -5,4 +5,5 @@ export type EventType = {
   start_date: string
   weitere: { type: string; value: string; id: string }[]
   preview_image: { meta: { download_url: string }; title: string }
+  body: []
 }

@@ -73,8 +73,8 @@ const Home = ({
                       <Image
                         src={event.preview_image.meta.download_url}
                         alt={event.preview_image.title}
-                        width={1600}
-                        height={900}
+                        width={16}
+                        height={9}
                         layout="responsive"
                         className="vorschaubild"
                       />
