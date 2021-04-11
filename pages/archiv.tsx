@@ -12,11 +12,11 @@ const Archiv = ({ events }: { events: EventType[] }): JSX.Element => {
         <title>{siteTitle} | archiv</title>
       </Head>
       <p className="mb-4">
-        an der uni bayreuth ist in den letzten jahren schon sehr viel
-        theaterkultur entstanden.
+        An der Uni Bayreuth ist in den letzten Jahren schon sehr viel
+        Theaterkultur entstanden.
         <br />
-        hier gibt es einblicke in die bereits entstandenen projekte unserer
-        studierenden!
+        Hier gibt es Einblicke in die bereits entstandenen Projekte unserer
+        Studierenden!
       </p>
       <EventList events={events} isArchived={true} />
     </Layout>

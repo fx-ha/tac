@@ -38,6 +38,7 @@ const Home = ({
       <Head>
         <title>{siteTitle} | startseite</title>
       </Head>
+
       <Row>
         <Col>
           <Image
@@ -49,20 +50,23 @@ const Home = ({
           />
         </Col>
       </Row>
+
       <Row className="mt-4">
         <Col md={6}>
           <Card className="infobox">
             <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
           </Card>
         </Col>
+
         <Col className="mt-4 mt-md-0">
           <Calendar tileClassName={tileClassName} onClickDay={gotoSpielplan} />
         </Col>
       </Row>
+
       <h2 className="mt-4">Programm</h2>
       <Row className="mt-3">
         {events.length === 0 ? (
-          <Col>demnächst sind keine veranstaltungen geplant.</Col>
+          <Col>Demnächst sind keine Veranstaltungen geplant.</Col>
         ) : (
           events.slice(0, 4).map((event) => (
             <Col key={event.id} sm={12} className="mb-4">

@@ -8,29 +8,29 @@ const studium = (): JSX.Element => {
       <Head>
         <title>{siteTitle} | studieren</title>
       </Head>
-      <h2 className="h5 mb-3">musiktheaterwissenschaft (b.a.)</h2>
+      <h2 className="h5 mb-3">Musiktheaterwissenschaft (B.A.)</h2>
       <p>
-        das bachelorstudium der musiktheaterwissenschaft bietet dir eine solide
-        grundausbildung für verschiedene berufe im bereich musiktheater
-        (dramaturgie, regie, regieassistenz, kulturadministration,
-        musikjournalismus oder musikverlagswesen).
+        Das Bachelorstudium der Musiktheaterwissenschaft bietet dir eine solide
+        Grundausbildung für verschiedene Berufe im Bereich Musiktheater
+        (Dramaturgie, Regie, Regieassistenz, Kulturadministration,
+        Musikjournalismus oder Musikverlagswesen).
       </p>
       <p>
-        unter musiktheater verstehen wir die unterschiedlichen ausformungen des
-        europäischen musiktheaters in sparten oper, operette, musical,
-        tanztheater und performance. im studiengang werden zunächst
-        grundkenntnisse zur geschichte, analyse und theorie musiktheatraler
-        formen vermittelt. diese können weiterführend nach eigenen
-        interessensschwerpunkten beispielsweise in schauspiel, tanz, konzert und
-        oper vertieft werden. das studium des B.A. musiktheaterwissenschaft
-        vermittelt somit ein grundverständnis für aufführungsbezogene aspekte im
-        musiktheater und darüber hinaus.
+        Unter Musiktheater verstehen wir die unterschiedlichen Ausformungen des
+        europäischen Musiktheaters in Sparten Oper, Operette, Musical,
+        Tanztheater und Performance. Im Studiengang werden zunächst
+        Grundkenntnisse zur Geschichte, Analyse und Theorie musiktheatraler
+        Formen vermittelt. Diese können weiterführend nach eigenen
+        interessensschwerpunkten beispielsweise in Schauspiel, Tanz, Konzert und
+        Oper vertieft werden. Das Studium des B.A. Musiktheaterwissenschaft
+        vermittelt somit ein Grundverständnis für aufführungsbezogene Aspekte im
+        Musiktheater und darüber hinaus.
       </p>
       <p>
-        zudem bieten wir einblicke in die praxis: im alltäglichen unterricht
-        selbst, aber auch bei exkursionen, aufführungsbesuchen, in der
-        zusammenarbeit mit spezialistinnen und spezialisten aus der praxis und
-        bei selbständigen praktika in musiktheaterbezogenen betrieben.
+        Zudem bieten wir Einblicke in die Praxis: im alltäglichen Unterricht
+        selbst, aber auch bei Exkursionen, Aufführungsbesuchen, in der
+        Zusammenarbeit mit Spezialistinnen und Spezialisten aus der Praxis und
+        bei selbständigen Praktika in musiktheaterbezogenen Betrieben.
       </p>
     </Layout>
   )

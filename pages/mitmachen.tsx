@@ -46,11 +46,11 @@ const Mitmachen = (): JSX.Element => {
             Schaulust e.V.
           </div>
           <div>
-            ist eine theaterplattform, die von studierenden der uni bayreuth
-            gegründet wurde, um projekte im theater am campus der universität
+            ist eine Theaterplattform, die von Studierenden der Uni Bayreuth
+            gegründet wurde, um Projekte im theater am campus der Universität
             auf organisatorischer, künstlerischer und vor allem finanzieller
-            ebene zu unterstützen. Wenn du irgendwelche fragen zur umsetzung
-            deines projekts hast, sind wir deine ansprechpersonen!
+            Ebene zu unterstützen. Wenn du irgendwelche Fragen zur Umsetzung
+            deines Projekts hast, sind wir deine Ansprechpersonen!
           </div>
           <div>
             <div>
@@ -118,13 +118,13 @@ const Mitmachen = (): JSX.Element => {
             arbeitskreis theater am campus
           </div>
           <div>
-            kümmert sich um die öffentlichkeitsarbeit der studentischen
-            theaterkultur der uni bayreuth. wir erstellen jedes semester neue
-            spielpläne, vertreten die theaterkultur im studierendenparlament und
-            durch uns bekommt ihr auch immer die neusten infos zu
-            theaterprojekten!
+            kümmert sich um die Öffentlichkeitsarbeit der studentischen
+            Theaterkultur der Uni Bayreuth. Wir erstellen jedes Semester neue
+            Spielpläne, vertreten die Theaterkultur im Studierendenparlament und
+            durch uns bekommt ihr auch immer die neusten Infos zu
+            Theaterprojekten!
             <br />
-            (diese coole website hier ist auch von uns erstellt ;) )
+            (diese coole Website hier ist auch von uns erstellt ;) )
           </div>
           <div>
             <span
@@ -151,10 +151,10 @@ const Mitmachen = (): JSX.Element => {
             die schwarzen schafe
           </div>
           <div>
-            sind eine studentische Theatergruppe unter dem dach der katholischen
-            hochschulgemeinde bayreuth. 1x pro semester findet eine produktion
-            von meist klassischen stücken statt, wie etwa 'gott des gemetzels',
-            'dracula' oder auch 'besuch der alten dame'.
+            sind eine studentische Theatergruppe unter dem Dach der katholischen
+            Hochschulgemeinde Bayreuth. 1x pro semester findet eine produktion
+            von meist klassischen stücken statt, wie etwa 'Gott des Gemetzels',
+            'Dracula' oder auch 'Besuch der alten Dame'.
           </div>
           <div>
             <div>
@@ -211,8 +211,8 @@ const Mitmachen = (): JSX.Element => {
             American British Drama Club
           </div>
           <div>
-            ist eine studentische theatergruppe, die englischsprachige stücke
-            auf die bühne bringt.
+            ist eine studentische Theatergruppe, die englischsprachige Stücke
+            auf die Bühne bringt.
           </div>
           <div>
             <FBIcon

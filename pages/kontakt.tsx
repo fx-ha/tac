@@ -12,8 +12,8 @@ const Kontakt = (): JSX.Element => {
       </Head>
       <div>
         <p>
-          ihr möchtet alle aktuellen infos zu aufführungen, castings etc. auch
-          als mail bekommen? dann meldet euch unter{' '}
+          Ihr möchtet alle aktuellen Infos zu Aufführungen, Castings etc. auch
+          als Mail bekommen? Dann meldet euch unter{' '}
           <a
             className="text-reset"
             href="mailto:info@schaulustev.de"
@@ -21,20 +21,20 @@ const Kontakt = (): JSX.Element => {
           >
             info@schaulustev.de
           </a>{' '}
-          zum newsletter an!
+          zum Newsletter an!
         </p>
         <p>
-          bei fragen zum programm, zur arbeit des 'theater am campus' oder auch
-          für mögliche kooperationen kann über folgende mailadresse kontakt zu
+          Bei Fragen zum Programm, zur Arbeit des 'theater am campus' oder auch
+          für mögliche Kooperationen kann über folgende Mailadresse Kontakt zu
           uns aufgenommen werden:
         </p>
         <p>
           ak.tac@uni-bayreuth.de
           <br />
-          ansprechpartnerin: donata hörr
+          Ansprechpartnerin: Donata Hörr
         </p>
         <p>
-          Für mehr einblicke in die studentischen theaterprojekte geht's hier
+          Für mehr Einblicke in die studentischen Theaterprojekte geht's hier
           entlang:
         </p>
         <p>
