@@ -59,7 +59,9 @@ const EventList = ({
                       day: 'numeric',
                     })}
                   </div>
-                  <div className="mt-1">{event.short_description}</div>
+                  <div className="mt-1 text-justify">
+                    {event.short_description}
+                  </div>
                 </Col>
               </Row>
             </Col>

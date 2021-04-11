@@ -12,7 +12,8 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
-- kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
+- Texte unter mitmachen! zum Bearbeiten freigeben
+- Text unter Kartenreservierung zum Bearbeiten freigeben
 - kartenreservierung mit mail an zuständiges team
 - EventList param: isArchived
   - false: reihenfolge älteste zuerst
@@ -28,20 +29,22 @@ Next.js Frontend for Theater am Campus
   - pagination
 archiv
   - pagination
+  - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - datenschutz
   - e-recht24 text
 - Cookie Consent https://www.osano.com/cookieconsent/download/
-- refactor archiv/spielplan id page
+- seo
+  - description with body < 140 chars
+  - image
 - pwa
 - customize 404 page
 - preview mode
 - title as slug
-- seo
-  - description with body < 140 chars
-  - image
 - recherche: schriftart selbst wählbar?
+- kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
+- refactor archiv/spielplan id page
 
 ## spielplan-logik
 - if unique play dates has month
@@ -146,3 +149,5 @@ rafce snippet for pages/components
 - index: getstaticprops: all upcoming events mit start_date, end_date, weitere
 - calendar highlight tiles if tile date exists in playDates
   - if tile has event date
+- Großschreibung im Fließtext, Rubriken klein
+- Blocksatz bei kürzeren Texten, insbesondere den Beschreibungen bei mitmachen!

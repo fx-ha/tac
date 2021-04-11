@@ -45,7 +45,7 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             Schaulust e.V.
           </div>
-          <div>
+          <div className="text-justify">
             ist eine Theaterplattform, die von Studierenden der Uni Bayreuth
             gegründet wurde, um Projekte im theater am campus der Universität
             auf organisatorischer, künstlerischer und vor allem finanzieller
@@ -117,12 +117,13 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             arbeitskreis theater am campus
           </div>
-          <div>
+          <div className="text-justify">
             kümmert sich um die Öffentlichkeitsarbeit der studentischen
-            Theaterkultur der Uni Bayreuth. Wir erstellen jedes Semester neue
-            Spielpläne, vertreten die Theaterkultur im Studierendenparlament und
-            durch uns bekommt ihr auch immer die neusten Infos zu
-            Theaterprojekten!
+            Theaterkultur der Uni Bayreuth.
+            <br />
+            Wir erstellen jedes Semester neue Spielpläne, vertreten die
+            Theaterkultur im Studierendenparlament und durch uns bekommt ihr
+            auch immer die neusten Infos zu Theaterprojekten!
             <br />
             (diese coole Website hier ist auch von uns erstellt ;) )
           </div>
@@ -150,9 +151,9 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             die schwarzen schafe
           </div>
-          <div>
+          <div className="text-justify">
             sind eine studentische Theatergruppe unter dem Dach der katholischen
-            Hochschulgemeinde Bayreuth. 1x pro semester findet eine produktion
+            Hochschulgemeinde Bayreuth. 1x pro Semester findet eine Produktion
             von meist klassischen stücken statt, wie etwa 'Gott des Gemetzels',
             'Dracula' oder auch 'Besuch der alten Dame'.
           </div>
@@ -210,7 +211,7 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             American British Drama Club
           </div>
-          <div>
+          <div className="text-justify">
             ist eine studentische Theatergruppe, die englischsprachige Stücke
             auf die Bühne bringt.
           </div>
@@ -268,7 +269,7 @@ const Mitmachen = (): JSX.Element => {
           <div className="font-weight-bold font-italic mt-2">
             projekte der studierenden
           </div>
-          <div>
+          <div className="text-justify">
             Die Theaterstudent*innen realisieren freie Projekte und
             Abschlussprojekte. Von Performance über Tanz bis zu Musiktheater
             gibt's hier alles!

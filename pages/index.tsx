@@ -54,7 +54,10 @@ const Home = ({
       <Row className="mt-4">
         <Col md={6}>
           <Card className="infobox">
-            <Card.Body dangerouslySetInnerHTML={{ __html: infoBox.text }} />
+            <Card.Body
+              className="text-justify"
+              dangerouslySetInnerHTML={{ __html: infoBox.text }}
+            />
           </Card>
         </Col>
 
@@ -102,7 +105,7 @@ const Home = ({
                       <h3>{event.title}</h3>
                     </a>
                   </Link>
-                  <div>{event.short_description}</div>
+                  <div className="text-justify">{event.short_description}</div>
                 </Col>
               </Row>
             </Col>
