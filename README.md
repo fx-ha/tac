@@ -26,7 +26,6 @@ Next.js Frontend for Theater am Campus
       - list events for specific date
 - spielplan
   - style (see pdf)
-  - pagination
 archiv
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
