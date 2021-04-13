@@ -15,9 +15,6 @@ Next.js Frontend for Theater am Campus
 - Texte unter mitmachen! zum Bearbeiten freigeben
 - Text unter Kartenreservierung zum Bearbeiten freigeben
 - kartenreservierung mit mail an zuständiges team
-- EventList param: isArchived
-  - false: reihenfolge älteste zuerst
-  - true: reihenfolge neueste zuerst
 - startseite
   - calendar
     - disable all days except event days
@@ -26,7 +23,9 @@ Next.js Frontend for Theater am Campus
       - list events for specific date
 - spielplan
   - style (see pdf)
-archiv
+  - refactor
+- archiv
+  - sort by start_date (latest to earliest)
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
 - kontakt
@@ -44,15 +43,6 @@ archiv
 - recherche: schriftart selbst wählbar?
 - kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
 - refactor archiv/spielplan id page
-
-## spielplan-logik
-- if unique play dates has month
-  - activeMonth.push(month)
-  - add month heading
-
-## archiv-logik
-- sort by start_date (latest to earliest)
-- paginate, limit 10
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
@@ -101,6 +91,10 @@ rafce snippet for pages/components
   - Spielplan
     - Auflistung aller Aufführungen für das Semester
     - auflistung verlinken
+    - Logik (grob)
+      - if unique play dates has month
+      - activeMonth.push(month)
+  - add month heading
   - mitmachen
     - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können
     - 'mitmachen' designidee umsetzen
