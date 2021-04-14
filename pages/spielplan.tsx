@@ -29,11 +29,13 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
 
   eventMonths.sort((a, b) => a.getTime() - b.getTime())
 
-  const getDates = (event) => {
+  const getDates = (event, eventMonth) => {
     const dates = []
     dates.push(new Date(event.start_date))
     event.weitere.forEach((date) => {
-      dates.push(new Date(date.value))
+      if (isSameMonth(new Date(date.value), eventMonth)) {
+        dates.push(new Date(date.value))
+      }
     })
     return dates
   }
@@ -47,7 +49,7 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
         relatedEvents.push({
           id: event.id,
           title: event.title,
-          dates: getDates(event),
+          dates: getDates(event, eventMonth),
         })
       }
       event.weitere.forEach((date) => {
