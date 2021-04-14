@@ -95,7 +95,7 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
       {eventMonthObjects.map((eventMonthObject, index) => (
         <div
           key={index}
-          className={`mb-4 mx-5 ${index % 2 === 0 ? 'text-right' : ''}`}
+          className={`mb-4 mx-sm-5 ${index % 2 === 0 ? 'text-right' : ''}`}
         >
           <h2 className="h1">{eventMonthObject.name}</h2>
 
@@ -115,8 +115,12 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
                   </Link>{' '}
                   {event.dates.map((date, index) => (
                     <span key={index} className="h2">
-                      {date.toLocaleString('de-DE', { day: '2-digit' })}
-                      {index < event.dates.length - 1 ? <span> /</span> : ''}
+                      <Link href={`/spielplan/${event.id}`}>
+                        <a className="text-reset">
+                          {date.toLocaleString('de-DE', { day: '2-digit' })}
+                        </a>
+                      </Link>
+                      {index < event.dates.length - 1 ? <span>/</span> : ''}
                     </span>
                   ))}
                 </div>
@@ -130,20 +134,20 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
                 width={2769}
                 height={501}
                 layout="responsive"
-                className="custom-hr"
+                className="flip"
               />
               {eventMonthObject.events.map((event, index) => (
                 <div key={index}>
                   {event.dates.map((date, index) => (
                     <span key={index} className="h2">
-                      {date.toLocaleString('de-DE', { day: '2-digit' })}
-                      {index < event.dates.length - 1 ? (
-                        <span> /</span>
-                      ) : (
-                        ''
-                      )}{' '}
+                      <Link href={`/spielplan/${event.id}`}>
+                        <a className="text-reset">
+                          {date.toLocaleString('de-DE', { day: '2-digit' })}
+                        </a>
+                      </Link>
+                      {index < event.dates.length - 1 ? <span>/</span> : ''}
                     </span>
-                  ))}
+                  ))}{' '}
                   <Link href={`/spielplan/${event.id}`}>
                     <a className="text-reset">{event.title}</a>
                   </Link>
