@@ -29,23 +29,41 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
 
   eventMonths.sort((a, b) => a.getTime() - b.getTime())
 
-  const getRelatedEvents = (
-    events: EventType[],
-    eventMonth: Date
-  ): EventType[] => {
+  const getDates = (event) => {
+    const dates = []
+    dates.push(new Date(event.start_date))
+    event.weitere.forEach((date) => {
+      dates.push(new Date(date.value))
+    })
+    return dates
+  }
+
+  const getRelatedEvents = (events: EventType[], eventMonth: Date) => {
     const relatedEvents = []
     events.forEach((event) => {
       const start_date = new Date(event.start_date)
       let weitereAdded = false
       if (isSameMonth(start_date, eventMonth)) {
-        relatedEvents.push(event)
+        relatedEvents.push({
+          id: event.id,
+          title: event.title,
+          dates: getDates(event),
+        })
       }
       event.weitere.forEach((date) => {
         const weitereDate = new Date(date.value)
         if (isSameMonth(weitereDate, eventMonth)) {
           if (!isSameMonth(weitereDate, start_date)) {
             if (!weitereAdded) {
-              relatedEvents.push(event)
+              relatedEvents.push({
+                id: event.id,
+                title: event.title,
+                dates: event.weitere.map((date) => {
+                  if (isSameMonth(new Date(date.value), eventMonth)) {
+                    return new Date(date.value)
+                  }
+                }),
+              })
               weitereAdded = true
             }
           }
@@ -65,8 +83,6 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
     })
   })
 
-  // TODO add eventDates of event in eventMonthObject
-
   return (
     <Layout>
       <Head>
@@ -76,19 +92,11 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
       {eventMonthObjects.map((eventMonthObject, index) => (
         <div key={index} className="mb-4">
           <h2>{eventMonthObject.name}</h2>
-          {eventMonthObject.events.map((event: EventType, index: string) => (
+
+          {eventMonthObject.events.map((event, index) => (
             <div key={index}>
-              <span>
-                {isSameMonth(new Date(event.start_date), eventMonthObject.date)
-                  ? new Date(event.start_date).getDate()
-                  : ''}{' '}
-              </span>
-              {event.weitere.map((date) => (
-                <span>
-                  {isSameMonth(new Date(date.value), eventMonthObject.date)
-                    ? new Date(date.value).getDate()
-                    : ''}{' '}
-                </span>
+              {event.dates.map((date, index) => (
+                <span key={index}>{date.getDate()} | </span>
               ))}
               <Link href={`/spielplan/${event.id}`}>
                 <a className="text-reset">{event.title}</a>
