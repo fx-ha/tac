@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import { GetStaticProps } from 'next'
 
 import { isSameMonth, set } from 'date-fns'
@@ -92,19 +93,64 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
       </Head>
 
       {eventMonthObjects.map((eventMonthObject, index) => (
-        <div key={index} className="mb-4">
-          <h2>{eventMonthObject.name}</h2>
+        <div
+          key={index}
+          className={`mb-4 mx-5 ${index % 2 === 0 ? 'text-right' : ''}`}
+        >
+          <h2 className="h1">{eventMonthObject.name}</h2>
 
-          {eventMonthObject.events.map((event, index) => (
-            <div key={index}>
-              {event.dates.map((date, index) => (
-                <span key={index}>{date.getDate()} | </span>
+          {index % 2 === 0 ? (
+            <div>
+              <Image
+                src="/images/tac_C-19.png"
+                alt="custom horizontal rule"
+                width={2769}
+                height={501}
+                layout="responsive"
+              />
+              {eventMonthObject.events.map((event, index) => (
+                <div key={index}>
+                  <Link href={`/spielplan/${event.id}`}>
+                    <a className="text-reset">{event.title}</a>
+                  </Link>{' '}
+                  {event.dates.map((date, index) => (
+                    <span key={index} className="h2">
+                      {date.toLocaleString('de-DE', { day: '2-digit' })}
+                      {index < event.dates.length - 1 ? <span> /</span> : ''}
+                    </span>
+                  ))}
+                </div>
               ))}
-              <Link href={`/spielplan/${event.id}`}>
-                <a className="text-reset">{event.title}</a>
-              </Link>
             </div>
-          ))}
+          ) : (
+            <div>
+              <Image
+                src="/images/tac_C-19.png"
+                alt="custom horizontal rule"
+                width={2769}
+                height={501}
+                layout="responsive"
+                className="custom-hr"
+              />
+              {eventMonthObject.events.map((event, index) => (
+                <div key={index}>
+                  {event.dates.map((date, index) => (
+                    <span key={index} className="h2">
+                      {date.toLocaleString('de-DE', { day: '2-digit' })}
+                      {index < event.dates.length - 1 ? (
+                        <span> /</span>
+                      ) : (
+                        ''
+                      )}{' '}
+                    </span>
+                  ))}
+                  <Link href={`/spielplan/${event.id}`}>
+                    <a className="text-reset">{event.title}</a>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       ))}
     </Layout>
