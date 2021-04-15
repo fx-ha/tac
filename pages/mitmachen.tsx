@@ -291,7 +291,58 @@ const Mitmachen = (): JSX.Element => {
           </div>
         </Col>
       </Row>
-      <h2 className="mt-4">Castings, Aufrufe & Co.</h2>
+      <h2 className="mt-4 mb-3">Castings, Aufrufe & Co.</h2>
+      <h3>#demokratiebike</h3>
+      <p>
+        Für das DemokratiEbike der Schokofabrik Bayreuth werden noch Studierende
+        aus allen universitären Bereichen gesucht, die bei der Entwicklung eines
+        Theater - und Filmprojekts mitarbeiten. Im Zentrum dieses Prozess steht
+        die Arbeit mit verschiedenen Demokratieformen und Entscheidungsmethoden
+        nach der Betzavta - Methode, einer am AdamInstitut in Jerusalem
+        entwickelten Methode zur Demokratiebildung. Mit dem DemokratiEbike
+        werden mit einem elektronischen Lastenfahrrad und kreativen Mitteln
+        junge Menschen für künstlerische, unternehmerische und sozial engagierte
+        Projekte aktiviert, um damit einen außerschulischen politischen
+        Bildungsprozess anzustoßen. Zielgruppe sind junge Menschen zwischen + /
+        - 14- 20 Jahren.
+        <br />
+        Bewerbungen bitte per Mail an : demokratiebike@schoko-bayreuth.de
+        <br />
+        Weitere Infos
+        <br />
+        https://www.schoko-bayreuth.de/verein/projekte-kooperationenpartner/demokratiebike/
+        <br />
+        socialmedia: @demokratiebike
+      </p>
+      <h3>Hamlet-Projekt</h3>
+      <p>
+        Für eine Theaterproduktion, die sich mit dem Hamlet-Stoff frei nach
+        Shakespeare unter Einbeziehung des Textes HAMLET.KEINE SCHWERKRAFT von
+        Ewald Palmetshofer beschäftigt, werden noch Mitwirkende in allen
+        Bereichen gesucht.
+        <br />
+        HAMLET IST TOT.KEINE SCHWERKRAFT dreht sich um einem neuen Begriff von
+        Heimat, beziehungsweise um die Suche nach ihr. Wie der Titel schon
+        andeutet, zeigt sich hier eine Welt, in der alle Gesetze und
+        Übereinkünfte aufgehoben sind. Es geht um Menschen, die eben keine
+        Heimat, kein Zuhause mehr haben, weder in der Familie noch in
+        Zweierbeziehungen, weder in der Welthistorie, noch in der eigenen
+        Geschichte oder zwischen geographischen Grenzen.
+        <br />
+        Die Probezeiten werden in Absprache mit den Teilnehmenden festgelegt,
+        die Aufführung ist gegen Ende des Sommersemesters 2021 im theater am
+        campus (tac) geplant.
+        <br />
+        Keine Vorerfahrungen notwendig!
+        <br />
+        Gesucht werden Mitwirkende für Positionen sowohl auf als auch hinter der
+        Bühne.
+        <br />
+        Für mehr Informationen und Anmeldungen reicht eine kurze Mail an
+        daniel.schauf@uni-bayreuth.de
+        <br />
+        Mehr Infos zur Regie: www.danielschauf.de
+      </p>
     </Layout>
   )
 }
