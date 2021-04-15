@@ -12,22 +12,30 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
-- Texte unter mitmachen! zum Bearbeiten freigeben
-- Text unter Kartenreservierung zum Bearbeiten freigeben
-- kartenreservierung mit mail an zuständiges team
 - startseite
   - calendar
     - disable all days except event days
     - onHover/onClick
       - overlay window
       - list events for specific date
+  - links in infobox
 - spielplan
   - style (see pdf)
+  - sort by start date
   - refactor
+  - remove test events
+- mitmachen
+  - link to headings
+  - initiativen zum bearbeiten freigeben
+  - aufrufe zum bearbeiten freigeben
 - archiv
   - sort by start_date (latest to earliest)
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
+- karten
+  - kartenreservierung mit mail an zuständiges team (event in reservierung ausblenden wenn kein empfänger angegeben)
+  - Text unter Kartenreservierung zum Bearbeiten freigeben
+  - datenschutz zustimmen
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - datenschutz
@@ -36,6 +44,8 @@ Next.js Frontend for Theater am Campus
 - seo
   - description with body < 140 chars
   - image
+- studium
+  - text zum bearbeiten freigeben
 - pwa
 - customize 404 page
 - preview mode
@@ -49,6 +59,7 @@ Next.js Frontend for Theater am Campus
 
 ## Development
 - Tools:
+  - Date-Fns
   - React
     - https://reactjs.org/docs/getting-started.html
   - Next.js
