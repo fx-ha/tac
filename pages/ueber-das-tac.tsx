@@ -68,7 +68,16 @@ const UeberDasTac = (): JSX.Element => {
           </Col>
           <Col md={6}>
             <h4>Leitung</h4>
-            <p>Daniel Schauf</p>
+            <p>
+              <a
+                href="https://www.danielschauf.de/"
+                target="_blank"
+                rel="noopener"
+                className="text-reset"
+              >
+                Daniel Schauf
+              </a>
+            </p>
           </Col>
         </Row>
       </section>
