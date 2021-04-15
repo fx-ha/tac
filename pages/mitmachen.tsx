@@ -33,7 +33,8 @@ const Mitmachen = (): JSX.Element => {
         willst.
       </div>
 
-      <Row className="mt-5">
+      <h2 className="mt-4">Initiativen</h2>
+      <Row className="mt-3">
         <Col sm={4}>
           <Image
             src="/images/schaulustv3.png"
@@ -290,6 +291,7 @@ const Mitmachen = (): JSX.Element => {
           </div>
         </Col>
       </Row>
+      <h2 className="mt-4">Castings, Aufrufe & Co.</h2>
     </Layout>
   )
 }
