@@ -33,7 +33,9 @@ const Mitmachen = (): JSX.Element => {
         willst.
       </div>
 
-      <h2 className="mt-4">Initiativen</h2>
+      <h2 className="mt-4" id="initiativen">
+        Initiativen
+      </h2>
       <Row className="mt-3">
         <Col sm={4}>
           <Image
@@ -291,7 +293,9 @@ const Mitmachen = (): JSX.Element => {
           </div>
         </Col>
       </Row>
-      <h2 className="mt-4 mb-3">Castings, Aufrufe & Co.</h2>
+      <h2 className="mt-5 mb-3" id="aufrufe">
+        Castings, Aufrufe & Co.
+      </h2>
       <h3>#demokratiebike</h3>
       <p>
         Für das DemokratiEbike der Schokofabrik Bayreuth werden noch Studierende

@@ -18,7 +18,7 @@ Next.js Frontend for Theater am Campus
     - onHover/onClick
       - overlay window
       - list events for specific date
-  - links in infobox
+  - links in infobox /mitmachen#aufrufe /mitmachen#initiativen
 - spielplan
   - style (see pdf)
   - sort by start date
