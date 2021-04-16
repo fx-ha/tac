@@ -25,7 +25,6 @@ Next.js Frontend for Theater am Campus
   - refactor
   - remove test events
 - mitmachen
-  - link to headings
   - initiativen zum bearbeiten freigeben
   - aufrufe zum bearbeiten freigeben
 - archiv
@@ -35,7 +34,6 @@ Next.js Frontend for Theater am Campus
 - karten
   - kartenreservierung mit mail an zuständiges team (event in reservierung ausblenden wenn kein empfänger angegeben)
   - Text unter Kartenreservierung zum Bearbeiten freigeben
-  - datenschutz zustimmen
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - datenschutz
@@ -110,6 +108,7 @@ rafce snippet for pages/components
     - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können
     - 'mitmachen' designidee umsetzen
     - replace schaulust logo
+    - link to headings
   - studieren
     - content
   - Archiv
@@ -124,6 +123,7 @@ rafce snippet for pages/components
     - text für 'kontakt'
   - karten
     - Text für 'karten'
+    - datenschutz zustimmen
   - Impressum
   - Datenschutz
 - html lang attribute

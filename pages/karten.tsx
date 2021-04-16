@@ -1,5 +1,8 @@
+import { ChangeEvent, FormEvent, useState } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
 import { Col, Button, Form, Row } from 'react-bootstrap'
@@ -9,12 +12,48 @@ import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
 
 const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
-  const reserveTickets = async (e) => {
+  const getEventDates = (event: EventType): string[] => {
+    const eventDates = []
+    if (typeof event !== 'undefined') {
+      eventDates.push(
+        new Date(event.start_date).toLocaleDateString('de-DE', {
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+        })
+      )
+      event.weitere.forEach((date) => {
+        eventDates.push(
+          new Date(date.value).toLocaleDateString('de-DE', {
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+          })
+        )
+      })
+    }
+    return eventDates
+  }
+
+  const [selectedEventDates, setEventDates] = useState(getEventDates(events[0]))
+
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setEventDates(
+      getEventDates(
+        events.find((event) => event.id.toString() === e.currentTarget.value)
+      )
+    )
+  }
+
+  const reserveTickets = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault() // don't redirect the page
-    console.log(e.target.eventSelect.value)
-    console.log(e.target.ticketSelect.value)
-    console.log(e.target.name.value)
-    console.log(e.target.email.value)
+    console.log(e.currentTarget.eventSelect.value)
+    console.log(e.currentTarget.dateSelect.value)
+    console.log(e.currentTarget.ticketSelect.value)
+    console.log(e.currentTarget.registrant.value)
+    console.log(e.currentTarget.email.value)
 
     //   const res = await fetch(
     //     'https://hooks.zapier.com/hooks/catch/123456/abcde',
@@ -40,14 +79,19 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
         <title>{siteTitle} | karten</title>
       </Head>
       <Row>
-        <Col md={6} className="mb-4">
+        <Col md={6} lg={5} className="mb-4">
           <Form onSubmit={reserveTickets}>
             <Row className="mb-4">
               <Col>
                 <Form.Label htmlFor="eventSelect" srOnly>
                   Veranstaltung
                 </Form.Label>
-                <Form.Control as="select" id="eventSelect" custom>
+                <Form.Control
+                  as="select"
+                  id="eventSelect"
+                  custom
+                  onChange={handleChange}
+                >
                   {events.map((event: EventType) => (
                     <option key={event.id} value={event.id}>
                       {event.title}
@@ -56,6 +100,28 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
                 </Form.Control>
               </Col>
             </Row>
+
+            <Row className="mb-4">
+              <Col>
+                <Form.Label htmlFor="dateSelect" srOnly>
+                  Datum
+                </Form.Label>
+                <Form.Control as="select" id="dateSelect" custom>
+                  {selectedEventDates.length === 0 ? (
+                    <option value=""></option>
+                  ) : (
+                    <>
+                      {selectedEventDates.map((date, index) => (
+                        <option key={index} value="">
+                          {date}
+                        </option>
+                      ))}
+                    </>
+                  )}
+                </Form.Control>
+              </Col>
+            </Row>
+
             <Row className="mb-4">
               <Col>
                 <Form.Label htmlFor="ticketSelect" srOnly>
@@ -79,11 +145,11 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
 
             <Row className="mb-4">
               <Col>
-                <Form.Label htmlFor="name" srOnly>
+                <Form.Label htmlFor="registrant" srOnly>
                   Name
                 </Form.Label>
                 <Form.Control
-                  id="name"
+                  id="registrant"
                   type="text"
                   placeholder="Name"
                   autoComplete="name"
@@ -91,7 +157,8 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
                 />
               </Col>
             </Row>
-            <Row className="mb-4">
+
+            <Row className="mb-3">
               <Col>
                 <Form.Label htmlFor="email" srOnly>
                   E-Mail
@@ -103,6 +170,18 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
                   autoComplete="email"
                   required
                 />
+              </Col>
+            </Row>
+
+            <Row className="mb-3">
+              <Col>
+                <Form.Check type="checkbox">
+                  <Form.Check.Input type="checkbox" required />
+                  <Form.Check.Label>
+                    Ich stimme der{' '}
+                    <Link href="/datenschutz">Datenschutzerklärung</Link> zu.
+                  </Form.Check.Label>
+                </Form.Check>
               </Col>
             </Row>
 
@@ -150,7 +229,9 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.API_URL}?child_of=3`)
+  const res = await fetch(
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere`
+  )
   const eventJson = await res.json()
   const events = eventJson.items
 
