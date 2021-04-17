@@ -23,7 +23,6 @@ Next.js Frontend for Theater am Campus
   - style (see pdf)
   - sort by first date in array
   - refactor
-  - remove test events
 - archiv
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
@@ -99,6 +98,7 @@ rafce snippet for pages/components
     - Logik (grob)
       - if unique play dates has month
       - activeMonth.push(month)
+    - remove test events
   - add month heading
   - mitmachen
     - visuelles konzept, diese zu verstehen und voneinander unterscheiden zu können
