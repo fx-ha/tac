@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { GetStaticProps } from 'next'
 
 import { Col, Row } from 'react-bootstrap'
 
@@ -7,7 +8,13 @@ import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
 
-const Mitmachen = (): JSX.Element => {
+const Mitmachen = ({
+  castings,
+  initiatives,
+}: {
+  castings: { title: string; text: string }[]
+  initiatives: { title: string; text: string }[]
+}): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -46,15 +53,12 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            Schaulust e.V.
+            {initiatives[0].title}
           </div>
-          <div className="text-justify">
-            ist eine Theaterplattform, die von Studierenden der Uni Bayreuth
-            gegründet wurde, um Projekte im theater am campus der Universität
-            auf organisatorischer, künstlerischer und vor allem finanzieller
-            Ebene zu unterstützen. Wenn du irgendwelche Fragen zur Umsetzung
-            deines Projekts hast, sind wir deine Ansprechpersonen!
-          </div>
+          <div
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: initiatives[0].text }}
+          />
           <div>
             <div>
               <FBIcon
@@ -118,18 +122,12 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            arbeitskreis theater am campus
+            {initiatives[1].title}
           </div>
-          <div className="text-justify">
-            kümmert sich um die Öffentlichkeitsarbeit der studentischen
-            Theaterkultur der Uni Bayreuth.
-            <br />
-            Wir erstellen jedes Semester neue Spielpläne, vertreten die
-            Theaterkultur im Studierendenparlament und durch uns bekommt ihr
-            auch immer die neusten Infos zu Theaterprojekten!
-            <br />
-            (diese coole Website hier ist auch von uns erstellt ;) )
-          </div>
+          <div
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: initiatives[1].text }}
+          />
           <div>
             <span
               className="dot theater-ansehen-bg mr-2"
@@ -152,14 +150,12 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            die schwarzen schafe
+            {initiatives[2].title}
           </div>
-          <div className="text-justify">
-            sind eine studentische Theatergruppe unter dem Dach der katholischen
-            Hochschulgemeinde Bayreuth. 1x pro Semester findet eine Produktion
-            von meist klassischen stücken statt, wie etwa 'Gott des Gemetzels',
-            'Dracula' oder auch 'Besuch der alten Dame'.
-          </div>
+          <div
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: initiatives[2].text }}
+          />
           <div>
             <div>
               <FBIcon
@@ -212,12 +208,12 @@ const Mitmachen = (): JSX.Element => {
             layout="responsive"
           />
           <div className="font-weight-bold font-italic mt-2">
-            American British Drama Club
+            {initiatives[3].title}
           </div>
-          <div className="text-justify">
-            ist eine studentische Theatergruppe, die englischsprachige Stücke
-            auf die Bühne bringt.
-          </div>
+          <div
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: initiatives[3].text }}
+          />
           <div>
             <FBIcon
               href="https://www.facebook.com/abdcbayreuth"
@@ -270,13 +266,12 @@ const Mitmachen = (): JSX.Element => {
             />
           </div>
           <div className="font-weight-bold font-italic mt-2">
-            projekte der studierenden
+            {initiatives[4].title}
           </div>
-          <div className="text-justify">
-            Die Theaterstudent*innen realisieren freie Projekte und
-            Abschlussprojekte. Von Performance über Tanz bis zu Musiktheater
-            gibt's hier alles!
-          </div>
+          <div
+            className="text-justify"
+            dangerouslySetInnerHTML={{ __html: initiatives[4].text }}
+          />
           <div>
             <span
               className="dot theater-spielen-bg mr-2"
@@ -296,59 +291,36 @@ const Mitmachen = (): JSX.Element => {
       <h2 className="mt-5 mb-3" id="aufrufe">
         Castings, Aufrufe & Co.
       </h2>
-      <h3>#demokratiebike</h3>
-      <p>
-        Für das DemokratiEbike der Schokofabrik Bayreuth werden noch Studierende
-        aus allen universitären Bereichen gesucht, die bei der Entwicklung eines
-        Theater - und Filmprojekts mitarbeiten. Im Zentrum dieses Prozess steht
-        die Arbeit mit verschiedenen Demokratieformen und Entscheidungsmethoden
-        nach der Betzavta - Methode, einer am AdamInstitut in Jerusalem
-        entwickelten Methode zur Demokratiebildung. Mit dem DemokratiEbike
-        werden mit einem elektronischen Lastenfahrrad und kreativen Mitteln
-        junge Menschen für künstlerische, unternehmerische und sozial engagierte
-        Projekte aktiviert, um damit einen außerschulischen politischen
-        Bildungsprozess anzustoßen. Zielgruppe sind junge Menschen zwischen + /
-        - 14- 20 Jahren.
-        <br />
-        Bewerbungen bitte per Mail an : demokratiebike@schoko-bayreuth.de
-        <br />
-        Weitere Infos
-        <br />
-        https://www.schoko-bayreuth.de/verein/projekte-kooperationenpartner/demokratiebike/
-        <br />
-        socialmedia: @demokratiebike
-      </p>
-      <h3>Hamlet-Projekt</h3>
-      <p>
-        Für eine Theaterproduktion, die sich mit dem Hamlet-Stoff frei nach
-        Shakespeare unter Einbeziehung des Textes HAMLET.KEINE SCHWERKRAFT von
-        Ewald Palmetshofer beschäftigt, werden noch Mitwirkende in allen
-        Bereichen gesucht.
-        <br />
-        HAMLET IST TOT.KEINE SCHWERKRAFT dreht sich um einem neuen Begriff von
-        Heimat, beziehungsweise um die Suche nach ihr. Wie der Titel schon
-        andeutet, zeigt sich hier eine Welt, in der alle Gesetze und
-        Übereinkünfte aufgehoben sind. Es geht um Menschen, die eben keine
-        Heimat, kein Zuhause mehr haben, weder in der Familie noch in
-        Zweierbeziehungen, weder in der Welthistorie, noch in der eigenen
-        Geschichte oder zwischen geographischen Grenzen.
-        <br />
-        Die Probezeiten werden in Absprache mit den Teilnehmenden festgelegt,
-        die Aufführung ist gegen Ende des Sommersemesters 2021 im theater am
-        campus (tac) geplant.
-        <br />
-        Keine Vorerfahrungen notwendig!
-        <br />
-        Gesucht werden Mitwirkende für Positionen sowohl auf als auch hinter der
-        Bühne.
-        <br />
-        Für mehr Informationen und Anmeldungen reicht eine kurze Mail an
-        daniel.schauf@uni-bayreuth.de
-        <br />
-        Mehr Infos zur Regie: www.danielschauf.de
-      </p>
+      {castings.map((casting, index) => (
+        <div key={index}>
+          <h3>{casting.title}</h3>
+          <div dangerouslySetInnerHTML={{ __html: casting.text }} />
+        </div>
+      ))}
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const initiativeRes = await fetch(
+    `${process.env.API_URL}?type=participate.InitiativePage&fields=text`
+  )
+  const initiativeJson = await initiativeRes.json()
+  const initiatives = initiativeJson.items
+
+  const castingRes = await fetch(
+    `${process.env.API_URL}?type=participate.CastingPage&fields=text`
+  )
+  const castingJson = await castingRes.json()
+  const castings = castingJson.items
+
+  return {
+    props: {
+      initiatives,
+      castings,
+    },
+    revalidate: 10,
+  }
 }
 
 export default Mitmachen
