@@ -33,6 +33,11 @@ const Home = ({
     router.push('/spielplan')
   }
 
+  events.sort(
+    (a, b) =>
+      new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
+  )
+
   return (
     <Layout>
       <Head>
