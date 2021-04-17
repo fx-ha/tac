@@ -6,6 +6,11 @@ import EventList from '../components/EventList'
 import { EventType } from '../lib/types'
 
 const Archiv = ({ events }: { events: EventType[] }): JSX.Element => {
+  events.sort(
+    (a, b) =>
+      new Date(b.start_date).getTime() - new Date(a.start_date).getTime()
+  )
+
   return (
     <Layout>
       <Head>

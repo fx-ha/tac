@@ -25,7 +25,6 @@ Next.js Frontend for Theater am Campus
   - refactor
   - remove test events
 - archiv
-  - sort by start_date (latest to earliest)
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
 - karten
@@ -113,7 +112,8 @@ rafce snippet for pages/components
   - Archiv
     - auflistung vergangener veranstaltungen
     - auflistung verlinken
-    - vorläufiger Text für 'archiv':
+    - vorläufiger Text für 'archiv'
+    - sort by start_date (latest to earliest)
   - eventseite
     - preview bild anzeigen
   - about
