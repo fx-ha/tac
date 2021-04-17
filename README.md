@@ -24,9 +24,6 @@ Next.js Frontend for Theater am Campus
   - sort by first date in array
   - refactor
   - remove test events
-- mitmachen
-  - initiativen zum bearbeiten freigeben
-  - aufrufe zum bearbeiten freigeben
 - archiv
   - sort by start_date (latest to earliest)
   - pagination
@@ -109,6 +106,8 @@ rafce snippet for pages/components
     - 'mitmachen' designidee umsetzen
     - replace schaulust logo
     - link to headings
+    - initiativen zum bearbeiten freigeben
+    - aufrufe zum bearbeiten freigeben
   - studieren
     - content
   - Archiv
