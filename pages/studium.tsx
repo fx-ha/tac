@@ -86,6 +86,48 @@ const studium = (): JSX.Element => {
           https://tinyurl.com/theaterundmedien
         </a>
       </p>
+
+      <h2 className="h5 mt-4 mb-2">Theaterdidaktik / Darstellendes Spiel</h2>
+      <p>
+        Die Studiengänge Theaterdidaktik (Bachelor) und Darstellendes Spiel
+        (Lehramt) richten sich an Studierende, die an der Theaterarbeit mit
+        nicht-professionellen Darsteller/inne/n interessiert sind, also z. B.
+        mit Kindern und Jugendlichen, mit Erwachsenen, in altersgemischten
+        Gruppen, in interkulturellen oder inklusiven Kontexten.
+      </p>
+      <p>
+        Das Studium vermittelt sowohl die theoretischen als auch die praktischen
+        Qualifikationen, die angehende Spielleiter benötigen: <br />
+        Es ermöglicht den Erwerb theater­wissenschaftlicher, pädagogischer und
+        fachdidaktischer Kenntnisse und theater­praktischer Fähigkeiten, die die
+        eigene Theaterarbeit und die Gestaltung und Anleitung kreativer
+        szenischer Spielprozesse fundieren. Die einzelnen Fachteile sind
+        konzeptionell aufeinander bezogen und verknüpfen konsequent theoretische
+        Reflexion und praktische Erprobung.
+      </p>
+      <p>
+        Neben den Lehrveranstaltungen umfasst das Studium auch ein Praktikum,
+        das je nach Interesse an verschiedenen Bildungseinrichtungen absolviert
+        werden kann: z. B. im Schultheater, beim Kindermusical einer unserer
+        Partnerhochschulen, in der Abteilung Theaterpädagogik der umliegenden
+        Theaterhäuser, im Seniorenheim oder im Zentrum für Theater und
+        Integration/Inklusion Bayreuth.
+      </p>
+      <p>
+        Abgerundet wird das Studium durch ein selbstverantwortetes
+        theaterpraktisches Abschlussprojekt.
+      </p>
+      <p>
+        Website:{' '}
+        <a
+          href="https://tinyurl.com/theaterdidaktik"
+          target="_blank"
+          rel="noopener"
+          className="text-reset"
+        >
+          https://tinyurl.com/theaterdidaktik
+        </a>
+      </p>
     </Layout>
   )
 }
