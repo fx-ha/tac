@@ -18,7 +18,6 @@ Next.js Frontend for Theater am Campus
     - onHover/onClick
       - overlay window
       - list events for specific date
-  - links in infobox /mitmachen#aufrufe /mitmachen#initiativen
 - spielplan
   - style (see pdf)
   - sort by first date in array
@@ -31,8 +30,6 @@ Next.js Frontend for Theater am Campus
   - Text unter Kartenreservierung zum Bearbeiten freigeben
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
-- datenschutz
-  - e-recht24 text
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - seo
   - description with body < 140 chars
@@ -92,6 +89,7 @@ rafce snippet for pages/components
     - nächste veranstaltungen
     - Startseite header foto als slider oder nebeneinander, um sowohl das theater am campus als solches als auch die Arbeit, die entsteht, zu verdeutlichen. siehe 2.foto im anhang. (übergangsfoto und leider hochkant, aber vielleicht lässt es sich ja trotzdem kombinieren)
     - kalendar https://www.npmjs.com/package/react-calendar
+    - links in infobox /mitmachen#aufrufe /mitmachen#initiativen
   - Spielplan
     - Auflistung aller Aufführungen für das Semester
     - auflistung verlinken
@@ -125,6 +123,7 @@ rafce snippet for pages/components
     - datenschutz zustimmen
   - Impressum
   - Datenschutz
+    - e-recht24 text
 - html lang attribute
 - refactor EventList
 - EventList wiederverwenden für archiv
