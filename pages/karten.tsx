@@ -11,7 +11,13 @@ import MediaQuery from 'react-responsive'
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
 
-const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
+const Karten = ({
+  events,
+  info,
+}: {
+  events: EventType[]
+  info: { text: string }
+}): JSX.Element => {
   const getEventDates = (event: EventType): string[] => {
     const eventDates = []
     if (typeof event !== 'undefined') {
@@ -203,41 +209,29 @@ const Karten = ({ events }: { events: EventType[] }): JSX.Element => {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <p>
-            Die meisten Theaterprojekte verlangen kein Eintrittsgeld für ihre
-            Aufführungen.
-            <br />
-            Damit aber klar wird, wie viele Leute kommen werden (vor allem jetzt
-            zu Coronazeiten eine notwendige Info!), ist es wichtig, Karten zu
-            reservieren.
-          </p>
-          <p>
-            Wichtig! Bitte die eigene Mail-Adresse angeben, damit eine
-            Bestätigung der Reservierung zurückgeschickt werden kann.
-          </p>
-          <p>
-            Eine veranstaltung findet sich nicht in der Auswahl?
-            <br />
-            Dann einfach ne Mail an ak.tac@uni-bayreuth.de schreiben und wir
-            helfen!
-          </p>
-        </Col>
+        <Col dangerouslySetInnerHTML={{ __html: info.text }} />
       </Row>
     </Layout>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(
+  const eventRes = await fetch(
     `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere`
   )
-  const eventJson = await res.json()
+  const eventJson = await eventRes.json()
   const events = eventJson.items
+
+  const infoRes = await fetch(
+    `${process.env.API_URL}?type=event.TicketPage&fields=text`
+  )
+  const infoJson = await infoRes.json()
+  const info = infoJson.items[0]
 
   return {
     props: {
       events,
+      info,
     },
     revalidate: 10,
   }

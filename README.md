@@ -27,7 +27,6 @@ Next.js Frontend for Theater am Campus
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
 - karten
   - kartenreservierung mit mail an zuständiges team (event in reservierung ausblenden wenn kein empfänger angegeben)
-  - Text unter Kartenreservierung zum Bearbeiten freigeben
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - Cookie Consent https://www.osano.com/cookieconsent/download/
@@ -50,6 +49,7 @@ Next.js Frontend for Theater am Campus
 ## Development
 - Tools:
   - Date-Fns
+    - https://date-fns.org/docs/
   - React
     - https://reactjs.org/docs/getting-started.html
   - Next.js
@@ -71,8 +71,6 @@ Builds the app for production.
 
 npm start
 Runs the built app in production mode.
-
-rafce snippet for pages/components
 
 ## Done
 - install typescript
@@ -121,6 +119,7 @@ rafce snippet for pages/components
   - karten
     - Text für 'karten'
     - datenschutz zustimmen
+    - Text unter Kartenreservierung zum Bearbeiten freigeben
   - Impressum
   - Datenschutz
     - e-recht24 text
