@@ -18,6 +18,7 @@ const Karten = ({
   events: EventType[]
   info: { text: string }
 }): JSX.Element => {
+  const [show, setShow] = useState(false)
   const getEventDates = (event: EventType): string[] => {
     const eventDates = []
     if (typeof event !== 'undefined') {
@@ -55,27 +56,22 @@ const Karten = ({
 
   const reserveTickets = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault() // don't redirect the page
-    console.log(e.currentTarget.eventSelect.value)
-    console.log(e.currentTarget.dateSelect.value)
-    console.log(e.currentTarget.ticketSelect.value)
-    console.log(e.currentTarget.registrant.value)
-    console.log(e.currentTarget.email.value)
 
-    //   const res = await fetch(
-    //     'https://hooks.zapier.com/hooks/catch/123456/abcde',
-    //     {
-    //       body: JSON.stringify({
-    //         name: e.target.name.value,
-    //       }),
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       method: 'POST',
-    //     }
-    //   )
+    const res = await fetch('http://localhost:8000/reservation/', {
+      body: JSON.stringify({
+        message_name: e.currentTarget.registrant.value,
+        message_email: e.currentTarget.email.value,
+        message_event: e.currentTarget.eventSelect.value,
+        message_date: e.currentTarget.dateSelect.value,
+        message_tickets: e.currentTarget.ticketSelect.value,
+      }),
+      method: 'POST',
+    })
 
-    //   const result = await res.json()
-    //   // result.user => 'Ada Lovelace'
+    const result = await res.json()
+    if (result.result === 'success') {
+      setShow(true)
+    }
     // e.target.reset() clear form
   }
 
@@ -118,7 +114,7 @@ const Karten = ({
                   ) : (
                     <>
                       {selectedEventDates.map((date, index) => (
-                        <option key={index} value="">
+                        <option key={index} value={date}>
                           {date}
                         </option>
                       ))}
@@ -191,9 +187,18 @@ const Karten = ({
               </Col>
             </Row>
 
-            <Button variant="outline-primary" type="submit">
-              Reservieren
-            </Button>
+            <Row>
+              <Col>
+                <Button variant="outline-primary" type="submit">
+                  Reservieren
+                </Button>
+              </Col>
+              {show && (
+                <Col className="mt-2 my-sm-auto" sm={7}>
+                  Karten wurden reserviert!
+                </Col>
+              )}
+            </Row>
           </Form>
         </Col>
         <Col>
