@@ -57,16 +57,19 @@ const Karten = ({
   const reserveTickets = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault() // don't redirect the page
 
-    const res = await fetch('http://localhost:8000/reservation/', {
-      body: JSON.stringify({
-        message_name: e.currentTarget.registrant.value,
-        message_email: e.currentTarget.email.value,
-        message_event: e.currentTarget.eventSelect.value,
-        message_date: e.currentTarget.dateSelect.value,
-        message_tickets: e.currentTarget.ticketSelect.value,
-      }),
-      method: 'POST',
-    })
+    const res = await fetch(
+      'https://theater-am-campus.herokuapp.com/reservation/',
+      {
+        body: JSON.stringify({
+          message_name: e.currentTarget.registrant.value,
+          message_email: e.currentTarget.email.value,
+          message_event: e.currentTarget.eventSelect.value,
+          message_date: e.currentTarget.dateSelect.value,
+          message_tickets: e.currentTarget.ticketSelect.value,
+        }),
+        method: 'POST',
+      }
+    )
 
     const result = await res.json()
     if (result.result === 'success') {
