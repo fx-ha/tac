@@ -17,7 +17,7 @@ const EventList = ({
     <div>
       <Row>
         {events.length === 0 ? (
-          <Col>demnächst sind keine veranstaltungen geplant.</Col>
+          <Col>Es wurden noch keine Veranstaltungen eingetragen.</Col>
         ) : (
           events.map((event) => (
             <Col key={event.id} sm={12} className="mb-4">

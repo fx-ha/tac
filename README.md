@@ -25,8 +25,6 @@ Next.js Frontend for Theater am Campus
 - archiv
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
-- karten
-  - kartenreservierung mit mail an zuständiges team (event in reservierung ausblenden wenn kein empfänger angegeben)
 - kontakt
   - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - Cookie Consent https://www.osano.com/cookieconsent/download/
@@ -120,6 +118,7 @@ Runs the built app in production mode.
     - Text für 'karten'
     - datenschutz zustimmen
     - Text unter Kartenreservierung zum Bearbeiten freigeben
+    - kartenreservierung mit mail an zuständiges team (event in reservierung ausblenden wenn kein empfänger angegeben)
   - Impressum
   - Datenschutz
     - e-recht24 text
