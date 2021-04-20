@@ -25,8 +25,6 @@ Next.js Frontend for Theater am Campus
 - archiv
   - pagination
   - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
-- kontakt
-  - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
 - Cookie Consent https://www.osano.com/cookieconsent/download/
 - seo
   - description with body < 140 chars
@@ -114,6 +112,7 @@ Runs the built app in production mode.
     - style
   - kontakt
     - text für 'kontakt'
+    - Kontaktformular mit Mail-adresse verlinkt; Kästen für Betreff, Text und Mailadresse der person, die anfragt
   - karten
     - Text für 'karten'
     - datenschutz zustimmen

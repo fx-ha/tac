@@ -19,6 +19,8 @@ const Karten = ({
   info: { text: string }
 }): JSX.Element => {
   const [show, setShow] = useState(false)
+  let resultMessage = 'Karten wurden reserviert!'
+
   const getEventDates = (event: EventType): string[] => {
     const eventDates = []
     if (typeof event !== 'undefined') {
@@ -73,8 +75,11 @@ const Karten = ({
 
     const result = await res.json()
     if (result.result === 'success') {
-      setShow(true)
+      resultMessage = 'Karten wurden reserviert!'
+    } else {
+      resultMessage = 'Fehler! Bitte Admin kontaktieren.'
     }
+    setShow(true)
     // e.target.reset() clear form
   }
 
@@ -198,7 +203,7 @@ const Karten = ({
               </Col>
               {show && (
                 <Col className="mt-2 my-sm-auto" sm={7}>
-                  Karten wurden reserviert!
+                  {resultMessage}
                 </Col>
               )}
             </Row>
