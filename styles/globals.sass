@@ -207,6 +207,12 @@ nav
   height: 0.8rem
   display: inline-block
 
+
+// spielplan
+.month-block
+  margin-top: 2rem
+  margin-bottom: 7rem
+
 .flip
   transform: scaleX(-1)
 
@@ -220,26 +226,58 @@ nav
 .custom-hr-right
   width: 65%
 
-.month-title-left
+.month-title
   position: absolute
-  top: -5px
-  left: 0
-  font-size: 2.5rem
+  top: -15px
+  @media screen and ( min-width: 375px )
+    top: -12px
+    font-size: 2rem
+  @media screen and ( min-width: 440px )
+    top: -13px
+    font-size: 2.2rem
+  @media screen and ( min-width: 540px )
+    top: -11px
+    font-size: 2.4rem
+  @media screen and ( min-width: 660px )
+    top: -12px
+    font-size: 2.6rem
+  @media screen and ( min-width: 740px )
+    top: -12px
+    font-size: 2.8rem
+  @media screen and ( min-width: 960px )
+    top: -11px
+    font-size: 3.5rem
 
 .month-title-right
-  position: absolute
-  top: -5px
   right: 0
-  font-size: 2.5rem
 
 .month-content-block
   position: relativ
 
-.month-content-right
+.month-content
   position: absolute
-  top: 55px
+  top: 30px
+  @media screen and ( min-width: 440px )
+    top: 35px
+  @media screen and ( min-width: 660px )
+    top: 40px
+  @media screen and ( min-width: 740px )
+    top: 50px
+  @media screen and ( min-width: 960px )
+    top: 55px
+
+.month-content-right
   right: 0
 
-.month-content-left
-  position: absolute
-  top: 55px
+.spielplan-date
+  font-size: 1.5rem
+  @media screen and ( min-width: 440px )
+    font-size: 2rem
+  @media screen and ( min-width: 540px )
+    font-size: 2.2rem
+  @media screen and ( min-width: 660px )
+    font-size: 2.4rem
+  @media screen and ( min-width: 740px )
+    font-size: 2.6rem
+  @media screen and ( min-width: 960px )
+    font-size: 3rem
