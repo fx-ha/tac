@@ -12,32 +12,36 @@ Next.js Frontend for Theater am Campus
 - #ffffff (weiß)
 
 ## TO DO
-- startseite
-  - calendar
-    - disable all days except event days
-    - onHover/onClick
-      - overlay window
-      - list events for specific date
-- spielplan
-  - style (see pdf)
-  - sort by first date in array
-  - refactor
-- archiv
-  - pagination
-  - Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
-- Cookie Consent https://www.osano.com/cookieconsent/download/
-- seo
-  - description with body < 140 chars
-  - image
-- studium
-  - text zum bearbeiten freigeben
-- pwa
-- customize 404 page
-- preview mode
-- title as slug
-- recherche: schriftart selbst wählbar?
-- kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
-- refactor archiv/spielplan id page
+- [ ] startseite
+  - [ ] calendar
+    - [ ] disable all days except event days
+    - [ ] onHover/onClick
+      - [ ] overlay window
+      - [ ] list events for specific date
+- [ ] spielplan
+  - [ ] style (see pdf)
+  - [ ] sort by first date in array
+  - [ ] refactor
+- [ ] reservierung optional
+- [ ] reservierung absender ak@uni bayreuth; passwort siehe mail
+- [ ] text bei kontaktseite änderbar
+- [ ] datenschutzerklärung abhängig von veranstalter
+- [ ] studium
+  - [ ] text zum bearbeiten freigeben
+- [ ] archiv
+  - [ ] pagination
+  - [ ] Konzept für verschiedene Archiv-Kategorien überlegen, z.B. für Reviews
+- [ ] Cookie Consent https://www.osano.com/cookieconsent/download/
+- [ ] seo
+  - [ ] description with body < 140 chars
+  - [ ] image
+- [ ] pwa
+- [ ] customize 404 page
+- [ ] preview mode
+- [ ] title as slug
+- [ ] recherche: schriftart selbst wählbar?
+- [ ] kenntlich machen, wenn auf websiteüberschrift geklickt, man wieder zurück auf die startseite kommt
+- [ ] refactor archiv/spielplan id page
 
 ## Inspiration
 - https://www.schaubuehne.de/de/start/index.html
