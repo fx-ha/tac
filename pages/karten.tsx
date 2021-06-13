@@ -230,10 +230,10 @@ const Karten = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const eventRes = await fetch(
-    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere`
+    `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere,recipient`
   )
   const eventJson = await eventRes.json()
-  const events = eventJson.items
+  const events = eventJson.items.filter((event) => event.recipient !== null)
 
   const infoRes = await fetch(
     `${process.env.API_URL}?type=event.TicketPage&fields=text`

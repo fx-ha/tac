@@ -22,8 +22,7 @@ Next.js Frontend for Theater am Campus
   - [ ] style (see pdf)
   - [ ] sort by first date in array
   - [ ] refactor
-- [ ] reservation optional
-- [ ] set reservation recipient to ak@uni bayreuth
+- [ ] set reservation sender to ak@uni bayreuth
 - [ ] make text of contact page editable
 - [ ] link to privacy policy depending on selected event
 - [ ] studying
