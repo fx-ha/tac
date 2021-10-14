@@ -1,19 +1,17 @@
 import Link from 'next/link'
-
 import { Col, Container, Row } from 'react-bootstrap'
-
 import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
 import TacHeader from './TacHeader'
 import BigNavLink from './BigNavLink'
 
-const BigNav = (): JSX.Element => {
+const BigNav = () => {
   return (
     <Container as="nav">
       <Row className="mt-3">
         <Col>
           <Link href="/">
-            <a title="startseite" aria-label="startseite">
+            <a title="zur startseite" aria-label="zur startseite">
               <TacHeader />
             </a>
           </Link>

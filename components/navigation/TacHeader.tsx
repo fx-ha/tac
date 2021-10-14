@@ -1,10 +1,4 @@
-const TacHeader = ({
-  width,
-  height,
-}: {
-  width?: string
-  height?: string
-}): JSX.Element => {
+const TacHeader = ({ width, height }: { width?: string; height?: string }) => {
   return (
     <svg
       width={width}

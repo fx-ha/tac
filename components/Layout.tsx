@@ -1,16 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { Container } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
-
 import SmallNav from './navigation/SmallNav'
 import BigNav from './navigation/BigNav'
 
 export const siteTitle = 'theater am campus'
 
-const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Head>

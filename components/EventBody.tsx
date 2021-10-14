@@ -5,7 +5,7 @@ const EventBody = ({
     id: string
     value: string
   }[]
-}): JSX.Element => {
+}) => {
   return (
     <div>
       {body.map((item: { id: string; value: string }) => (
