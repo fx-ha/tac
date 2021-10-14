@@ -8,7 +8,7 @@ import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
 import { getEventDates } from '../lib/dates'
 
-const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
+const Spielplan = ({ events }: { events: EventType[] }) => {
   // we can't simply use an array of getMonth()
   // because it would show jan, nov, dec instead of nov, dec, jan
   // so we have to set each event date to e.g. 2nd day of month
@@ -29,22 +29,30 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
 
   eventMonths.sort((a, b) => a.getTime() - b.getTime())
 
-  const getDates = (event, eventMonth) => {
+  const getDates = (event: EventType, eventMonth: Date) => {
     const dates = []
     dates.push(new Date(event.start_date))
-    event.weitere.forEach((date) => {
+
+    for (const date of event.weitere) {
       if (isSameMonth(new Date(date.value), eventMonth)) {
         dates.push(new Date(date.value))
       }
-    })
+    }
+
     return dates
   }
 
   const getRelatedEvents = (events: EventType[], eventMonth: Date) => {
-    const relatedEvents = []
-    events.forEach((event) => {
+    const relatedEvents: {
+      id: string
+      title: string
+      dates: (Date | undefined)[]
+    }[] = []
+
+    for (const event of events) {
       const start_date = new Date(event.start_date)
       let weitereAdded = false
+
       if (isSameMonth(start_date, eventMonth)) {
         relatedEvents.push({
           id: event.id,
@@ -52,8 +60,10 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
           dates: getDates(event, eventMonth),
         })
       }
-      event.weitere.forEach((date) => {
+
+      for (const date of event.weitere) {
         const weitereDate = new Date(date.value)
+
         if (isSameMonth(weitereDate, eventMonth)) {
           if (!isSameMonth(weitereDate, start_date)) {
             if (!weitereAdded) {
@@ -70,12 +80,21 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
             }
           }
         }
-      })
-    })
+      }
+    }
+
     return relatedEvents
   }
 
-  const eventMonthObjects = []
+  const eventMonthObjects: {
+    name: string
+    date: Date
+    events: {
+      id: string
+      title: string
+      dates: (Date | undefined)[]
+    }[]
+  }[] = []
 
   eventMonths.forEach((eventMonth) => {
     eventMonthObjects.push({
@@ -120,7 +139,9 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
                         <span key={index} className="spielplan-date">
                           <Link href={`/spielplan/${event.id}`}>
                             <a className="text-reset">
-                              {date.toLocaleString('de-DE', { day: '2-digit' })}
+                              {date?.toLocaleString('de-DE', {
+                                day: '2-digit',
+                              })}
                             </a>
                           </Link>
                           {index < event.dates.length - 1 ? <span>/</span> : ''}
@@ -153,7 +174,9 @@ const Spielplan = ({ events }: { events: EventType[] }): JSX.Element => {
                         <span key={index} className="spielplan-date">
                           <Link href={`/spielplan/${event.id}`}>
                             <a className="text-reset">
-                              {date.toLocaleString('de-DE', { day: '2-digit' })}
+                              {date?.toLocaleString('de-DE', {
+                                day: '2-digit',
+                              })}
                             </a>
                           </Link>
                           {index < event.dates.length - 1 ? <span>/</span> : ''}

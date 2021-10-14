@@ -1,12 +1,6 @@
-const InstaIcon = ({
-  href,
-  title,
-}: {
-  href: string
-  title: string
-}): JSX.Element => {
+const InstaIcon = ({ href, title }: { href: string; title: string }) => {
   return (
-    <a href={href} title={title} target="_blank" rel="noopener">
+    <a href={href} title={title} target="_blank" rel="noreferrer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

@@ -1,15 +1,39 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
-
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
-
 import { Col, Button, Form, Row } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
-
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
+
+const getEventDates = (event: EventType | undefined) => {
+  const eventDates = []
+  if (typeof event !== 'undefined') {
+    eventDates.push(
+      new Date(event.start_date).toLocaleDateString('de-DE', {
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      })
+    )
+
+    for (const date of event.weitere) {
+      eventDates.push(
+        new Date(date.value).toLocaleDateString('de-DE', {
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+        })
+      )
+    }
+  }
+
+  return eventDates
+}
 
 const Karten = ({
   events,
@@ -17,34 +41,9 @@ const Karten = ({
 }: {
   events: EventType[]
   info: { text: string }
-}): JSX.Element => {
+}) => {
   const [show, setShow] = useState(false)
   let resultMessage = 'Karten wurden reserviert!'
-
-  const getEventDates = (event: EventType): string[] => {
-    const eventDates = []
-    if (typeof event !== 'undefined') {
-      eventDates.push(
-        new Date(event.start_date).toLocaleDateString('de-DE', {
-          month: 'long',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-        })
-      )
-      event.weitere.forEach((date) => {
-        eventDates.push(
-          new Date(date.value).toLocaleDateString('de-DE', {
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-          })
-        )
-      })
-    }
-    return eventDates
-  }
 
   const [selectedEventDates, setEventDates] = useState(getEventDates(events[0]))
 
@@ -233,7 +232,9 @@ export const getStaticProps: GetStaticProps = async () => {
     `${process.env.API_URL}?type=event.EventPage&child_of=3&fields=start_date,weitere,recipient`
   )
   const eventJson = await eventRes.json()
-  const events = eventJson.items.filter((event) => event.recipient !== null)
+  const events = eventJson.items.filter(
+    (event: any) => event.recipient !== null
+  )
 
   const infoRes = await fetch(
     `${process.env.API_URL}?type=event.TicketPage&fields=text`

@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { GetStaticProps } from 'next'
-
 import { Col, Row } from 'react-bootstrap'
-
 import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
@@ -14,7 +12,7 @@ const Mitmachen = ({
 }: {
   castings: { title: string; text: string }[]
   initiatives: { title: string; text: string }[]
-}): JSX.Element => {
+}) => {
   return (
     <Layout>
       <Head>
@@ -69,7 +67,7 @@ const Mitmachen = ({
                 href="https://www.facebook.com/Schaulust.eV"
                 title="schaulust auf facebook"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 @schaulust.ev
@@ -84,7 +82,7 @@ const Mitmachen = ({
                 href="https://www.instagram.com/e.v.schaulust/"
                 title="schaulust auf instagram"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 @e.v.schaulust
@@ -166,7 +164,7 @@ const Mitmachen = ({
                 href="https://www.facebook.com/schwarzeschafebayreuth/"
                 title="schwarze schafe auf facebook"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 @schwarzeschafebayreuth
@@ -223,7 +221,7 @@ const Mitmachen = ({
               href="https://www.facebook.com/abdcbayreuth"
               title="american british drama club auf facebook"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
               className="text-reset"
             >
               @abcdbayreuth

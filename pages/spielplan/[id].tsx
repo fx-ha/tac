@@ -8,7 +8,7 @@ import Layout, { siteTitle } from '../../components/Layout'
 import EventBody from '../../components/EventBody'
 import { EventType } from '../../lib/types'
 
-const Event = ({ event }: { event: EventType }): JSX.Element => {
+const Event = ({ event }: { event: EventType }) => {
   return (
     <Layout>
       <Head>
@@ -55,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const res = await fetch(`${process.env.API_URL}${params.id as string}`)
+  const res = await fetch(`${process.env.API_URL}${params?.id as string}`)
   const event = await res.json()
 
   return {
