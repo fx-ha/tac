@@ -1,8 +1,5 @@
 module.exports = {
   /* config options here */
-  experimental: {
-    optimizeFonts: true,
-  },
   images: {
     domains: ['res.cloudinary.com'],
   },
