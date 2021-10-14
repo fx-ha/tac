@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
 import { Col, Row } from 'react-bootstrap'
 import { EventType } from '../lib/types'
 
@@ -10,7 +9,7 @@ const EventList = ({
 }: {
   events: EventType[]
   isArchived: boolean
-}): JSX.Element => {
+}) => {
   const path = isArchived ? 'archiv' : 'spielplan'
 
   return (

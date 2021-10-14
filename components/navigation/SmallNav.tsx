@@ -1,13 +1,11 @@
 import Link from 'next/link'
-
 import { Nav, Navbar } from 'react-bootstrap'
-
 import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
 import TacHeader from './TacHeader'
 import SmallNavLink from './SmallNavLink'
 
-const SmallNav = (): JSX.Element => {
+const SmallNav = () => {
   const toggleShadow = (isExpanded: boolean) => {
     const nav = document.getElementsByTagName('nav')[0]
     isExpanded
@@ -18,7 +16,7 @@ const SmallNav = (): JSX.Element => {
   return (
     <Navbar bg="light" expand={false} sticky="top" onToggle={toggleShadow}>
       <Link href="/" passHref>
-        <Navbar.Brand title="startseite" aria-label="startseite">
+        <Navbar.Brand title="zur startseite" aria-label="zur startseite">
           <TacHeader width="200" height="30" />
         </Navbar.Brand>
       </Link>

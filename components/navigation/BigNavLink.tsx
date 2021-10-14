@@ -7,7 +7,7 @@ const BigNavLink = ({
 }: {
   targetUrl: string
   targetName: string
-}): JSX.Element => {
+}) => {
   const router = useRouter()
 
   return (

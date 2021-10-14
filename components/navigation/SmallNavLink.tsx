@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
 import { Nav } from 'react-bootstrap'
 
 const SmallNavLink = ({
@@ -9,7 +8,7 @@ const SmallNavLink = ({
 }: {
   targetUrl: string
   targetName: string
-}): JSX.Element => {
+}) => {
   const router = useRouter()
 
   return (
