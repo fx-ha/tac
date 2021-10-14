@@ -35,7 +35,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="desktop-container">
           <div className="desktop-container-content">
             <BigNav />
-            <Container as="main" className="mt-4 mb-3">
+            <Container as="main" className="mt-5 mb-3">
               {children}
             </Container>
           </div>
