@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const Impressum = (): JSX.Element => {
+const Impressum = () => {
   return (
     <Layout>
       <Head>

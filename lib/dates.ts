@@ -1,14 +1,17 @@
 import { EventType } from './types'
 //import { formatDistance, subDays } from 'date-fns'
 
-export const getEventDates = (events: EventType[]): Date[] => {
+export const getEventDates = (events: EventType[]) => {
   const eventDates = []
-  events.map((event) => {
+
+  for (const event of events) {
     eventDates.push(new Date(event.start_date))
-    event.weitere.map((date) => {
+
+    for (const date of event.weitere) {
       eventDates.push(new Date(date.value))
-    })
-  })
+    }
+  }
+
   return eventDates
 }
 

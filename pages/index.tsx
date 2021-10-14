@@ -21,18 +21,6 @@ const Home = ({
 }): JSX.Element => {
   const router = useRouter()
 
-  const tileClassName = ({ date, view }) => {
-    if (view === 'month') {
-      if (getEventDates(events).find((eDate) => isSameDay(eDate, date))) {
-        return 'event-date'
-      }
-    }
-  }
-
-  const gotoSpielplan = () => {
-    router.push('/spielplan')
-  }
-
   events.sort(
     (a, b) =>
       new Date(a.start_date).getTime() - new Date(b.start_date).getTime()
@@ -67,7 +55,19 @@ const Home = ({
         </Col>
 
         <Col className="mt-4 mt-md-0">
-          <Calendar tileClassName={tileClassName} onClickDay={gotoSpielplan} />
+          <Calendar
+            tileClassName={({ view, date }) => {
+              if (
+                view === 'month' &&
+                getEventDates(events).find((eDate) => isSameDay(eDate, date))
+              ) {
+                return 'event-date'
+              } else {
+                return null
+              }
+            }}
+            onClickDay={() => router.push('/spielplan')}
+          />
         </Col>
       </Row>
 

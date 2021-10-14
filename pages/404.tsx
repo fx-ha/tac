@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 
-const Custom404 = (): JSX.Element => {
+const Custom404 = () => {
   return (
     <Layout>
       <h1>404 - Page Not Found</h1>

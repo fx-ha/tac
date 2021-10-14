@@ -1,15 +1,12 @@
 import { FormEvent, useState } from 'react'
-
 import Head from 'next/head'
 import Link from 'next/link'
-
 import { Col, Button, Form, Row } from 'react-bootstrap'
-
 import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
 
-const Kontakt = (): JSX.Element => {
+const Kontakt = () => {
   const [show, setShow] = useState(false)
   let resultMessage = 'Nachricht wurde verschickt!'
 
@@ -134,8 +131,8 @@ const Kontakt = (): JSX.Element => {
       <Row className="mt-4">
         <Col>
           <p>
-            Bei Fragen zum Programm, zur Arbeit des 'theater am campus' oder
-            auch für mögliche Kooperationen kann über folgende Mailadresse
+            Bei Fragen zum Programm, zur Arbeit des &#39;theater am campus&#39;
+            oder auch für mögliche Kooperationen kann über folgende Mailadresse
             Kontakt zu uns aufgenommen werden:
           </p>
           <p>
@@ -144,8 +141,8 @@ const Kontakt = (): JSX.Element => {
             Ansprechpartnerin: Donata Hörr
           </p>
           <p>
-            Für mehr Einblicke in die studentischen Theaterprojekte geht's hier
-            entlang:
+            Für mehr Einblicke in die studentischen Theaterprojekte geht&#39;s
+            hier entlang:
           </p>
           <div>
             <div className="mb-1">
@@ -157,7 +154,7 @@ const Kontakt = (): JSX.Element => {
                 href="https://www.facebook.com/TaCBayreuth"
                 title="tac auf facebook"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 @tacbayreuth
@@ -172,7 +169,7 @@ const Kontakt = (): JSX.Element => {
                 href="https://www.instagram.com/TacBayreuth/"
                 title="tac auf instagram"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 @tacbayreuth

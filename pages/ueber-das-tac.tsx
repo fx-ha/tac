@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const UeberDasTac = (): JSX.Element => {
+const UeberDasTac = () => {
   return (
     <Layout>
       <Head>
@@ -72,7 +72,7 @@ const UeberDasTac = (): JSX.Element => {
               <a
                 href="https://www.danielschauf.de/"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="text-reset"
               >
                 Daniel Schauf

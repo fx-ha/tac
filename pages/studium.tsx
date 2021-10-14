@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const studium = (): JSX.Element => {
+const studium = () => {
   return (
     <Layout>
       <Head>
@@ -42,7 +42,7 @@ const studium = (): JSX.Element => {
         <a
           href="https://tinyurl.com/musiktheaterwissenschaft"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className="text-reset"
         >
           https://tinyurl.com/musiktheaterwissenschaft
@@ -51,12 +51,12 @@ const studium = (): JSX.Element => {
 
       <h2 className="h5 mt-4 mb-2">Theater und Medien (B.A.)</h2>
       <p>
-        Der Bachelorstudiengang "Theater und Medien" führt zwei Disziplinen
-        zusammen. Die Kombination von theater- und medienwissen­schaftlichen
-        Studieninhalten bietet eine solide Grundla­ge nicht nur für ein weit
-        gefächertes berufspraktisches Feld, sondern auch für eine Fortführung
-        des Studiums in Masterstudiengängen, etwa im Bereich Journalismus,
-        Dramaturgie, Drehbuch oder Medienkunst.
+        Der Bachelorstudiengang &#34;Theater und Medien&#34; führt zwei
+        Disziplinen zusammen. Die Kombination von theater- und
+        medienwissen­schaftlichen Studieninhalten bietet eine solide Grundla­ge
+        nicht nur für ein weit gefächertes berufspraktisches Feld, sondern auch
+        für eine Fortführung des Studiums in Masterstudiengängen, etwa im
+        Bereich Journalismus, Dramaturgie, Drehbuch oder Medienkunst.
       </p>
       <p>
         Der BA Theater und Medien zeichnet sich durch seinen starken
@@ -80,7 +80,7 @@ const studium = (): JSX.Element => {
         <a
           href="https://tinyurl.com/theaterundmedien"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="text-reset"
         >
           https://tinyurl.com/theaterundmedien
@@ -122,7 +122,7 @@ const studium = (): JSX.Element => {
         <a
           href="https://tinyurl.com/theaterdidaktik"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className="text-reset"
         >
           https://tinyurl.com/theaterdidaktik

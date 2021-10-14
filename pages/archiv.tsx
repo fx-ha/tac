@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
-
 import Layout, { siteTitle } from '../components/Layout'
 import EventList from '../components/EventList'
 import { EventType } from '../lib/types'
 
-const Archiv = ({ events }: { events: EventType[] }): JSX.Element => {
+const Archiv = ({ events }: { events: EventType[] }) => {
   events.sort(
     (a, b) =>
       new Date(b.start_date).getTime() - new Date(a.start_date).getTime()

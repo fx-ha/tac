@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const Datenschutz = (): JSX.Element => {
+const Datenschutz = () => {
   return (
     <Layout>
       <Head>

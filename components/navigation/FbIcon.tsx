@@ -6,13 +6,13 @@ const FbIcon = ({
   className?: string
   href: string
   title: string
-}): JSX.Element => {
+}) => {
   return (
     <a
       href={href}
       title={title}
       target="_blank"
-      rel="noopener"
+      rel="noreferrer"
       className={className}
     >
       <svg
