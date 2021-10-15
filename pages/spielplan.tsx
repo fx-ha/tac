@@ -109,7 +109,7 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
       </Head>
 
       {eventMonthObjects.map((eventMonthObject, index) => (
-        <div key={index} className="month-block mx-sm-5">
+        <div key={index} className="month-block">
           {index % 2 === 0 ? (
             // month right
             <div className="text-right">
@@ -132,7 +132,12 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
                   {eventMonthObject.events.map((event, index) => (
                     <div key={index}>
                       <Link href={`/spielplan/${event.id}`}>
-                        <a className="text-reset">{event.title}</a>
+                        <a
+                          className="text-reset"
+                          style={{ fontSize: '1.1rem' }}
+                        >
+                          {event.title}
+                        </a>
                       </Link>{' '}
                       {event.dates.map((date, index) => (
                         <span key={index} className="spielplan-date">
@@ -183,7 +188,12 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
                         </span>
                       ))}{' '}
                       <Link href={`/spielplan/${event.id}`}>
-                        <a className="text-reset">{event.title}</a>
+                        <a
+                          className="text-reset"
+                          style={{ fontSize: '1.1rem' }}
+                        >
+                          {event.title}
+                        </a>
                       </Link>
                     </div>
                   ))}
