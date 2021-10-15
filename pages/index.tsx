@@ -3,11 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-
 import { Card, Col, Row } from 'react-bootstrap'
 import Calendar from 'react-calendar'
 import { isSameDay } from 'date-fns'
-
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
 import { getEventDates } from '../lib/dates'
@@ -18,7 +16,7 @@ const Home = ({
 }: {
   events: EventType[]
   infoBox: { text: string }
-}): JSX.Element => {
+}) => {
   const router = useRouter()
 
   events.sort(
@@ -89,7 +87,7 @@ const Home = ({
                           width={16}
                           height={9}
                           layout="responsive"
-                          className="vorschaubild"
+                          objectFit="cover"
                         />
                       ) : (
                         <Image
@@ -98,7 +96,7 @@ const Home = ({
                           width={16}
                           height={9}
                           layout="responsive"
-                          className="vorschaubild"
+                          objectFit="cover"
                         />
                       )}
                     </a>
