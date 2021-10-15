@@ -17,14 +17,14 @@ const Event = ({ event }: { event: EventType }) => {
       {event.preview_image !== null && (
         <Row>
           <Col>
-            <Image
-              src={event.preview_image.meta.download_url}
-              alt={event.preview_image.title}
-              width={16}
-              height={7}
-              layout="responsive"
-              className="vorschaubild"
-            />
+            <div className="event-detail-image">
+              <Image
+                src={event.preview_image.meta.download_url}
+                alt={event.preview_image.title}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
           </Col>
         </Row>
       )}

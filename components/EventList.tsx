@@ -31,7 +31,7 @@ const EventList = ({
                           width={16}
                           height={9}
                           layout="responsive"
-                          className="vorschaubild"
+                          objectFit="cover"
                         />
                       ) : (
                         <Image
@@ -40,7 +40,7 @@ const EventList = ({
                           width={16}
                           height={9}
                           layout="responsive"
-                          className="vorschaubild"
+                          objectFit="cover"
                         />
                       )}
                     </a>

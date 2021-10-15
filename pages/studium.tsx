@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout, { siteTitle } from '../components/Layout'
 
-const studium = () => {
+const Studium = () => {
   return (
     <Layout>
       <Head>
@@ -132,4 +132,4 @@ const studium = () => {
   )
 }
 
-export default studium
+export default Studium
