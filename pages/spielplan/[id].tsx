@@ -30,7 +30,7 @@ const Event = ({ event }: { event: EventType }) => {
           </Col>
         </Row>
       )}
-      <Row className="mt-2">
+      <Row className="mt-4">
         <Col>
           <h1>{event.title}</h1>
         </Col>
