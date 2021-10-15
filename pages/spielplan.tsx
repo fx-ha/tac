@@ -44,7 +44,7 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
     const relatedEvents: {
       id: string
       title: string
-      dates: (Date | undefined)[]
+      dates: Date[]
     }[] = []
 
     for (const event of events) {
@@ -68,11 +68,11 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
               relatedEvents.push({
                 id: event.id,
                 title: event.title,
-                dates: event.weitere.map((date) => {
-                  if (isSameMonth(new Date(date.value), eventMonth)) {
-                    return new Date(date.value)
-                  }
-                }),
+                dates: event.weitere
+                  .filter(({ value }) =>
+                    isSameMonth(new Date(value), eventMonth)
+                  )
+                  .map(({ value }) => new Date(value)),
               })
               weitereAdded = true
             }
@@ -90,17 +90,17 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
     events: {
       id: string
       title: string
-      dates: (Date | undefined)[]
+      dates: Date[]
     }[]
   }[] = []
 
-  eventMonths.forEach((eventMonth) => {
+  for (const eventMonth of eventMonths) {
     eventMonthObjects.push({
       name: eventMonth.toLocaleString('de-DE', { month: 'long' }),
       date: eventMonth,
       events: getRelatedEvents(events, eventMonth),
     })
-  })
+  }
 
   return (
     <Layout>

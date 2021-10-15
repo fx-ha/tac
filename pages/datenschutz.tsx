@@ -29,6 +29,17 @@ const Datenschutz = () => {
         &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser
         Datenschutzerkl&auml;rung entnehmen.
       </p>
+      <p>
+        Sofern es sich bei den Veranstaltungen um Projekte von Schaulust e.V.
+        handelt, gelten folgende Datenschutzrichtlinien:{' '}
+        <a
+          href="https://www.schaulustev.de/impressum-und-datenschutz/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://www.schaulustev.de/impressum-und-datenschutz/
+        </a>
+      </p>
       <h4>Wie erfassen wir Ihre Daten?</h4>
       <p>
         Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
@@ -437,7 +448,7 @@ const Datenschutz = () => {
         <a
           href="https://policies.google.com/privacy?hl=de"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           https://policies.google.com/privacy?hl=de
         </a>
@@ -480,11 +491,7 @@ const Datenschutz = () => {
         Standardvertragsklauseln der EU-Kommission sowie nach Aussage von Vimeo
         auf &bdquo;berechtigte Gesch&auml;ftsinteressen&ldquo; gest&uuml;tzt.
         Details finden Sie hier:
-        <a
-          href="https://vimeo.com/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://vimeo.com/privacy" target="_blank" rel="noreferrer">
           https://vimeo.com/privacy
         </a>
         .
@@ -492,11 +499,7 @@ const Datenschutz = () => {
       <p>
         Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der
         Datenschutzerkl&auml;rung von Vimeo unter:
-        <a
-          href="https://vimeo.com/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://vimeo.com/privacy" target="_blank" rel="noreferrer">
           https://vimeo.com/privacy
         </a>
         .
@@ -529,7 +532,7 @@ const Datenschutz = () => {
         <a
           href="https://developers.google.com/fonts/faq"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           https://developers.google.com/fonts/faq
         </a>{' '}
@@ -537,7 +540,7 @@ const Datenschutz = () => {
         <a
           href="https://policies.google.com/privacy?hl=de"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           https://policies.google.com/privacy?hl=de
         </a>
@@ -578,7 +581,7 @@ const Datenschutz = () => {
         <a
           href="https://soundcloud.com/pages/privacy"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           https://soundcloud.com/pages/privacy
         </a>
@@ -589,9 +592,6 @@ const Datenschutz = () => {
         Ihrem SoundCloud- Benutzerkonto zuordnet, loggen Sie sich bitte aus
         Ihrem SoundCloud-Benutzerkonto aus bevor Sie Inhalte des
         SoundCloud-Plugins aktivieren.
-      </p>
-      <p>
-        Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
       </p>
     </Layout>
   )
