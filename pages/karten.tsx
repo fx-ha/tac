@@ -10,6 +10,7 @@ import { EventType } from '../lib/types'
 
 const getEventDates = (event: EventType | undefined) => {
   const eventDates = []
+
   if (typeof event !== 'undefined') {
     eventDates.push(
       new Date(event.start_date).toLocaleDateString('de-DE', {
@@ -44,6 +45,7 @@ const Karten = ({
 }) => {
   const [show, setShow] = useState(false)
   let resultMessage = 'Karten wurden reserviert!'
+  const [loading, setLoading] = useState(false)
 
   const [selectedEventDates, setEventDates] = useState(getEventDates(events[0]))
 
@@ -57,6 +59,7 @@ const Karten = ({
 
   const reserveTickets = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault() // don't redirect the page
+    setLoading(true)
 
     const res = await fetch(
       'https://theater-am-campus.herokuapp.com/reservation/',
@@ -73,157 +76,184 @@ const Karten = ({
     )
 
     const result = await res.json()
+
     if (result.result === 'success') {
       resultMessage = 'Karten wurden reserviert!'
     } else {
       resultMessage = 'Fehler! Bitte Admin kontaktieren.'
     }
+
+    setLoading(false)
     setShow(true)
     // e.target.reset() clear form
   }
 
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle} | karten</title>
-      </Head>
-      <Row>
-        <Col md={6} lg={5} className="mb-4">
-          <Form onSubmit={reserveTickets}>
-            <Row className="mb-4">
-              <Col>
-                <Form.Label htmlFor="eventSelect" srOnly>
-                  Veranstaltung
-                </Form.Label>
-                <Form.Control
-                  as="select"
-                  id="eventSelect"
-                  custom
-                  onChange={handleChange}
-                >
-                  {events.map((event: EventType) => (
-                    <option key={event.id} value={event.id}>
-                      {event.title}
-                    </option>
-                  ))}
-                </Form.Control>
-              </Col>
-            </Row>
+    <>
+      <div className="myModal" style={{ display: show ? 'block' : 'none' }}>
+        <div className="modalHeader">
+          <div className="modalTitle">Reservierung</div>
+          <button
+            type="button"
+            className="close"
+            onClick={() => setShow(false)}
+          >
+            <span aria-hidden="true">×</span>
+            <span className="sr-only">Schließen</span>
+          </button>
+        </div>
 
-            <Row className="mb-4">
-              <Col>
-                <Form.Label htmlFor="dateSelect" srOnly>
-                  Datum
-                </Form.Label>
-                <Form.Control as="select" id="dateSelect" custom>
-                  {selectedEventDates.length === 0 ? (
-                    <option value=""></option>
-                  ) : (
-                    <>
-                      {selectedEventDates.map((date, index) => (
-                        <option key={index} value={date}>
-                          {date}
-                        </option>
-                      ))}
-                    </>
-                  )}
-                </Form.Control>
-              </Col>
-            </Row>
+        <div className="modalBody">{resultMessage}</div>
 
-            <Row className="mb-4">
-              <Col>
-                <Form.Label htmlFor="ticketSelect" srOnly>
-                  Karten
-                </Form.Label>
-                <Form.Control as="select" id="ticketSelect" custom>
-                  <option>Karten...</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </Form.Control>
-              </Col>
-            </Row>
+        <div className="modalFooter">
+          <Button variant="secondary" onClick={() => setShow(false)}>
+            Schließen
+          </Button>
+        </div>
+      </div>
 
-            <Row className="mb-4">
-              <Col>
-                <Form.Label htmlFor="registrant" srOnly>
-                  Name
-                </Form.Label>
-                <Form.Control
-                  id="registrant"
-                  type="text"
-                  placeholder="Name"
-                  autoComplete="name"
-                  required
-                />
-              </Col>
-            </Row>
+      <Layout>
+        <Head>
+          <title>{siteTitle} | karten</title>
+        </Head>
 
-            <Row className="mb-3">
-              <Col>
-                <Form.Label htmlFor="email" srOnly>
-                  E-Mail
-                </Form.Label>
-                <Form.Control
-                  id="email"
-                  type="email"
-                  placeholder="E-Mail"
-                  autoComplete="email"
-                  required
-                />
-              </Col>
-            </Row>
-
-            <Row className="mb-3">
-              <Col>
-                <Form.Check type="checkbox">
-                  <Form.Check.Input type="checkbox" required />
-                  <Form.Check.Label>
-                    Ich stimme der{' '}
-                    <Link href="/datenschutz">Datenschutzerklärung</Link> zu.
-                  </Form.Check.Label>
-                </Form.Check>
-              </Col>
-            </Row>
-
-            <Row>
-              <Col>
-                <Button variant="outline-primary" type="submit">
-                  Reservieren
-                </Button>
-              </Col>
-              {show && (
-                <Col className="mt-2 my-sm-auto" sm={7}>
-                  {resultMessage}
+        <Row>
+          <Col md={6} lg={5} className="mb-4">
+            <Form onSubmit={reserveTickets}>
+              <Row className="mb-4">
+                <Col>
+                  <Form.Label htmlFor="eventSelect" srOnly>
+                    Veranstaltung
+                  </Form.Label>
+                  <Form.Control
+                    as="select"
+                    id="eventSelect"
+                    custom
+                    onChange={handleChange}
+                  >
+                    {events.map((event: EventType) => (
+                      <option key={event.id} value={event.id}>
+                        {event.title}
+                      </option>
+                    ))}
+                  </Form.Control>
                 </Col>
-              )}
-            </Row>
-          </Form>
-        </Col>
-        <Col>
-          <MediaQuery minWidth={768}>
-            <Image
-              src="/images/KonTaCt_sm.jpg"
-              alt="Theater am Campus"
-              width={1920}
-              height={1080}
-              layout="responsive"
-            />
-          </MediaQuery>
-        </Col>
-      </Row>
-      <Row>
-        <Col dangerouslySetInnerHTML={{ __html: info.text }} />
-      </Row>
-    </Layout>
+              </Row>
+
+              <Row className="mb-4">
+                <Col>
+                  <Form.Label htmlFor="dateSelect" srOnly>
+                    Datum
+                  </Form.Label>
+                  <Form.Control as="select" id="dateSelect" custom>
+                    {selectedEventDates.length === 0 ? (
+                      <option value=""></option>
+                    ) : (
+                      <>
+                        {selectedEventDates.map((date, index) => (
+                          <option key={index} value={date}>
+                            {date}
+                          </option>
+                        ))}
+                      </>
+                    )}
+                  </Form.Control>
+                </Col>
+              </Row>
+
+              <Row className="mb-4">
+                <Col>
+                  <Form.Label htmlFor="ticketSelect" srOnly>
+                    Karten
+                  </Form.Label>
+                  <Form.Control as="select" id="ticketSelect" custom>
+                    <option>Karten...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </Form.Control>
+                </Col>
+              </Row>
+
+              <Row className="mb-4">
+                <Col>
+                  <Form.Label htmlFor="registrant" srOnly>
+                    Name
+                  </Form.Label>
+                  <Form.Control
+                    id="registrant"
+                    type="text"
+                    placeholder="Name"
+                    autoComplete="name"
+                    required
+                  />
+                </Col>
+              </Row>
+
+              <Row className="mb-3">
+                <Col>
+                  <Form.Label htmlFor="email" srOnly>
+                    E-Mail
+                  </Form.Label>
+                  <Form.Control
+                    id="email"
+                    type="email"
+                    placeholder="E-Mail"
+                    autoComplete="email"
+                    required
+                  />
+                </Col>
+              </Row>
+
+              <Row className="mb-3">
+                <Col>
+                  <Form.Check type="checkbox">
+                    <Form.Check.Input type="checkbox" required />
+                    <Form.Check.Label>
+                      Ich stimme der{' '}
+                      <Link href="/datenschutz">Datenschutzerklärung</Link> zu.
+                    </Form.Check.Label>
+                  </Form.Check>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <Button
+                    variant="outline-primary"
+                    type="submit"
+                    disabled={loading}
+                  >
+                    Reservieren
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+          </Col>
+          <Col>
+            <MediaQuery minWidth={768}>
+              <Image
+                src="/images/KonTaCt_sm.jpg"
+                alt="Theater am Campus"
+                width={1920}
+                height={1080}
+                layout="responsive"
+              />
+            </MediaQuery>
+          </Col>
+        </Row>
+        <Row>
+          <Col dangerouslySetInnerHTML={{ __html: info.text }} />
+        </Row>
+      </Layout>
+    </>
   )
 }
 

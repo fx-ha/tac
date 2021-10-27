@@ -282,3 +282,57 @@ nav
     font-size: 2.6rem
   @media screen and ( min-width: 960px )
     font-size: 3rem
+
+.myModal
+  transition: transform .3s ease-out
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 99
+  width: 300px
+  max-width: 100%
+  background: white
+  box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.9)
+  display: flex
+  flex-direction: column
+  border: 1px solid rgba(0,0,0,.2)
+  border-radius: .3rem
+  .modalHeader
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 1rem
+    border-bottom: 1px solid #dee2e6
+    border-top-left-radius: calc(.3rem - 1px)
+    border-top-right-radius: calc(.3rem - 1px)
+    .close
+      padding: 1rem
+      margin: -1rem -1rem -1rem auto
+      background-color: transparent
+      border: 0
+      float: right
+      font-size: 1.5rem
+      font-weight: 700
+      line-height: 1
+      color: #000
+      text-shadow: 0 1px 0 #fff
+      opacity: .5
+    .modalTitle
+      font-size: 1.5rem
+      margin-bottom: 0
+      line-height: 1.5
+      font-weight: 500
+  .modalBody
+    position: relative
+    flex: 1 1 auto
+    padding: 1rem
+  .modalFooter
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-end
+    padding: .75rem
+    border-top: 1px solid #dee2e6
+    border-bottom-right-radius: calc(.3rem - 1px)
+    border-bottom-left-radius: calc(.3rem - 1px)
