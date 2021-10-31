@@ -286,15 +286,21 @@ const Mitmachen = ({
           </div>
         </Col>
       </Row>
-      <h2 className="mt-5 mb-3" id="aufrufe">
-        Castings, Aufrufe & Co.
-      </h2>
-      {castings.map((casting, index) => (
-        <div key={index}>
-          <h3>{casting.title}</h3>
-          <div dangerouslySetInnerHTML={{ __html: casting.text }} />
-        </div>
-      ))}
+
+      {castings && (
+        <section>
+          <h2 className="mt-5 mb-3" id="aufrufe">
+            Castings, Aufrufe & Co.
+          </h2>
+
+          {castings.map((casting, index) => (
+            <div key={index}>
+              <h3>{casting.title}</h3>
+              <div dangerouslySetInnerHTML={{ __html: casting.text }} />
+            </div>
+          ))}
+        </section>
+      )}
     </Layout>
   )
 }
