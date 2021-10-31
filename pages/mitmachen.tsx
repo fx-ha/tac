@@ -287,7 +287,7 @@ const Mitmachen = ({
         </Col>
       </Row>
 
-      {castings && (
+      {castings?.length !== 0 && (
         <section>
           <h2 className="mt-5 mb-3" id="aufrufe">
             Castings, Aufrufe & Co.
