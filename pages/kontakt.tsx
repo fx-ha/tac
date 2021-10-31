@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Col, Button, Form, Row } from 'react-bootstrap'
@@ -6,7 +7,11 @@ import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
 
-const Kontakt = () => {
+const Kontakt = ({
+  contact,
+}: {
+  contact: { text1: string; text2: string }
+}) => {
   const [show, setShow] = useState(false)
   let resultMessage = 'Nachricht wurde verschickt!'
   const [loading, setLoading] = useState(false)
@@ -67,20 +72,7 @@ const Kontakt = () => {
           <title>{siteTitle} | kontakt</title>
         </Head>
         <Row>
-          <Col>
-            <p>
-              Ihr möchtet alle aktuellen Infos zu Aufführungen, Castings etc.
-              auch als Mail bekommen? Dann meldet euch unter{' '}
-              <a
-                className="text-reset"
-                href="mailto:info@schaulustev.de"
-                title="mail an schaulust senden"
-              >
-                info@schaulustev.de
-              </a>{' '}
-              zum Newsletter an!
-            </p>
-          </Col>
+          <Col dangerouslySetInnerHTML={{ __html: contact.text1 }} />
         </Row>
 
         <Row className="mt-2 mt-md-3">
@@ -156,20 +148,8 @@ const Kontakt = () => {
 
         <Row className="mt-4">
           <Col>
-            <p>
-              Bei Fragen zum Programm, zur Arbeit des &#39;theater am
-              campus&#39; oder auch für mögliche Kooperationen kann über
-              folgende Mailadresse Kontakt zu uns aufgenommen werden:
-            </p>
-            <p>
-              ak.tac@uni-bayreuth.de
-              <br />
-              Ansprechpartnerin: Donata Hörr
-            </p>
-            <p>
-              Für mehr Einblicke in die studentischen Theaterprojekte geht&#39;s
-              hier entlang:
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: contact.text2 }} />
+
             <div>
               <div className="mb-1">
                 <FBIcon
@@ -207,6 +187,21 @@ const Kontakt = () => {
       </Layout>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(
+    `${process.env.API_URL}?type=contact.ContactIndexPage&fields=text1,text2`
+  )
+  const json = await res.json()
+  const contact = json?.items[0]
+
+  return {
+    props: {
+      contact,
+    },
+    revalidate: 10,
+  }
 }
 
 export default Kontakt
