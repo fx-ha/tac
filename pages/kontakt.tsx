@@ -37,7 +37,20 @@ const Kontakt = ({
     if (result.result === 'success') {
       resultMessage = 'Nachricht wurde verschickt!'
     } else {
-      resultMessage = 'Fehler! Bitte Admin kontaktieren.'
+      switch (result.result) {
+        case 'bad header':
+          resultMessage = 'Fehler im "E-Mail-Header"! Bitte Admin kontaktieren.'
+          break
+        case 'smtp error':
+          resultMessage = 'Fehler beim "SMTP-Server"! Bitte Admin kontaktieren.'
+          break
+        case 'unknown error':
+          resultMessage = 'Unbekannter Fehler! Bitte Admin kontaktieren.'
+          break
+        default:
+          resultMessage = 'Fehlgeschlagen! Bitte Admin kontaktieren.'
+          break
+      }
     }
 
     setLoading(false)
