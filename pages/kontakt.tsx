@@ -57,6 +57,7 @@ const Kontakt = ({
     setShow(true)
     // e.target.reset() clear form
   }
+
   return (
     <>
       <div className="myModal" style={{ display: show ? 'block' : 'none' }}>
