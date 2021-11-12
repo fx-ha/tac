@@ -58,7 +58,7 @@ const EventList = ({
                       day: 'numeric',
                     })}
                   </div>
-                  <div>{event.short_description}</div>
+                  <div className="mt-1">{event.short_description}</div>
                 </Col>
               </Row>
             </Col>
