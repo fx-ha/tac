@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Nav, Navbar } from 'react-bootstrap'
 import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
+import YoutubeIcon from './YoutubeIcon'
 import TacHeader from './TacHeader'
 import SmallNavLink from './SmallNavLink'
 
@@ -41,6 +42,11 @@ const SmallNav = () => {
             <InstaIcon
               href="https://www.instagram.com/TacBayreuth/"
               title="tac auf instagram"
+              className="mr-2"
+            />
+            <YoutubeIcon
+              href="https://www.instagram.com/TacBayreuth/"
+              title="tac auf youtube"
             />
           </span>
         </Nav>

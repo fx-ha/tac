@@ -6,6 +6,7 @@ import { Col, Button, Form, Row } from 'react-bootstrap'
 import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
+import YoutubeIcon from '../components/navigation/YoutubeIcon'
 
 const Kontakt = ({
   contact,
@@ -160,7 +161,7 @@ const Kontakt = ({
           </Col>
         </Row>
 
-        <Row className="mt-4">
+        <Row className="mt-4 mb-3">
           <Col>
             <div dangerouslySetInnerHTML={{ __html: contact.text2 }} />
 
@@ -177,10 +178,10 @@ const Kontakt = ({
                   rel="noreferrer"
                   className="text-reset"
                 >
-                  @tacbayreuth
+                  @TaCBayreuth
                 </a>
               </div>
-              <div>
+              <div className="mb-1">
                 <InstaIcon
                   href="https://www.instagram.com/TacBayreuth/"
                   title="tac auf instagram"
@@ -193,6 +194,21 @@ const Kontakt = ({
                   className="text-reset"
                 >
                   @tacbayreuth
+                </a>
+              </div>
+              <div>
+                <YoutubeIcon
+                  href="https://www.youtube.com/channel/UCpYQLXiJm-1T97dimLLv_tQ/"
+                  title="tac auf instagram"
+                />{' '}
+                <a
+                  href="https://www.youtube.com/channel/UCpYQLXiJm-1T97dimLLv_tQ/"
+                  title="tac auf youtube"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-reset"
+                >
+                  Tac Bayreuth
                 </a>
               </div>
             </div>
