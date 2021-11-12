@@ -78,7 +78,7 @@ const Karten = ({
     const result = await res.json()
 
     if (result.result === 'success') {
-      resultMessage = 'Karten wurden reserviert!'
+      resultMessage = 'Danke! Die Reservierung wird bearbeitet!'
     } else {
       switch (result.result) {
         case 'bad header':
