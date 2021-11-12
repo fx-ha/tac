@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 import InstaIcon from './InstaIcon'
 import FbIcon from './FbIcon'
+import YoutubeIcon from './YoutubeIcon'
 import TacHeader from './TacHeader'
 import BigNavLink from './BigNavLink'
 
@@ -20,11 +21,16 @@ const BigNav = () => {
           <FbIcon
             href="https://www.facebook.com/TaCBayreuth"
             title="tac auf facebook"
-            className="mr-2"
+            className="mr-1"
           />
           <InstaIcon
             href="https://www.instagram.com/TacBayreuth/"
             title="tac auf instagram"
+            className="mr-1"
+          />
+          <YoutubeIcon
+            href="https://www.youtube.com/channel/UCpYQLXiJm-1T97dimLLv_tQ/"
+            title="tac auf youtube"
           />
         </Col>
       </Row>
