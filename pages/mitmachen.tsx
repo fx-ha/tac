@@ -53,10 +53,7 @@ const Mitmachen = ({
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[0].title}
           </div>
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: initiatives[0].text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: initiatives[0].text }} />
           <div>
             <div>
               <FBIcon
@@ -122,10 +119,7 @@ const Mitmachen = ({
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[1].title}
           </div>
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: initiatives[1].text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: initiatives[1].text }} />
           <div>
             <span
               className="dot theater-ansehen-bg mr-2"
@@ -150,10 +144,7 @@ const Mitmachen = ({
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[2].title}
           </div>
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: initiatives[2].text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: initiatives[2].text }} />
           <div>
             <div>
               <FBIcon
@@ -208,10 +199,7 @@ const Mitmachen = ({
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[3].title}
           </div>
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: initiatives[3].text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: initiatives[3].text }} />
           <div>
             <FBIcon
               href="https://www.facebook.com/abdcbayreuth"
@@ -266,10 +254,7 @@ const Mitmachen = ({
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[4].title}
           </div>
-          <div
-            className="text-justify"
-            dangerouslySetInnerHTML={{ __html: initiatives[4].text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: initiatives[4].text }} />
           <div>
             <span
               className="dot theater-spielen-bg mr-2"
