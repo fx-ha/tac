@@ -45,7 +45,7 @@ const SmallNav = () => {
               className="mr-2"
             />
             <YoutubeIcon
-              href="https://www.instagram.com/TacBayreuth/"
+              href="https://www.youtube.com/channel/UCpYQLXiJm-1T97dimLLv_tQ/"
               title="tac auf youtube"
             />
           </span>
