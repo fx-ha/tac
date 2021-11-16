@@ -210,7 +210,7 @@ const Karten = ({
                 </Col>
               </Row>
 
-              <Row className="mb-3">
+              <Row className="mb-4">
                 <Col>
                   <Form.Label htmlFor="email" srOnly>
                     E-Mail
@@ -221,6 +221,20 @@ const Karten = ({
                     placeholder="E-Mail"
                     autoComplete="email"
                     required
+                  />
+                </Col>
+              </Row>
+
+              <Row className="mb-3">
+                <Col>
+                  <Form.Label htmlFor="begleitung" srOnly>
+                    Begleitung
+                  </Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    id="begleitung"
+                    placeholder="Begleitung (optional) z.B. Amelie Schepp, Ulrich Kralle, Isaak Malter"
+                    rows={2}
                   />
                 </Col>
               </Row>
