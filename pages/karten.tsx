@@ -47,7 +47,7 @@ const Karten = ({
   const [loading, setLoading] = useState(false)
   const [showBegleitung, setShowBegleitung] = useState(false)
 
-  let resultMessage = 'Karten wurden reserviert!'
+  let resultMessage = 'Danke! Die Reservierung wird bearbeitet!'
 
   const [selectedEventDates, setEventDates] = useState(getEventDates(events[0]))
 
@@ -72,11 +72,17 @@ const Karten = ({
           message_event: e.currentTarget.eventSelect.value,
           message_date: e.currentTarget.dateSelect.value,
           message_tickets: e.currentTarget.ticketSelect.value,
+          message_begleitung:
+            e.currentTarget.begleitung !== undefined &&
+            Number(e.currentTarget.ticketSelect.value) > 1
+              ? e.currentTarget.begleitung.value
+              : undefined,
         }),
         method: 'POST',
       }
     )
 
+    // TODO this doesn't work as expected
     const result = await res.json()
 
     if (result.result === 'success') {
