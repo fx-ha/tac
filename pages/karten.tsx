@@ -44,8 +44,10 @@ const Karten = ({
   info: { text: string }
 }) => {
   const [show, setShow] = useState(false)
-  let resultMessage = 'Karten wurden reserviert!'
   const [loading, setLoading] = useState(false)
+  const [showBegleitung, setShowBegleitung] = useState(false)
+
+  let resultMessage = 'Danke! Die Reservierung wird bearbeitet!'
 
   const [selectedEventDates, setEventDates] = useState(getEventDates(events[0]))
 
@@ -70,11 +72,17 @@ const Karten = ({
           message_event: e.currentTarget.eventSelect.value,
           message_date: e.currentTarget.dateSelect.value,
           message_tickets: e.currentTarget.ticketSelect.value,
+          message_begleitung:
+            e.currentTarget.begleitung !== undefined &&
+            Number(e.currentTarget.ticketSelect.value) > 1
+              ? e.currentTarget.begleitung.value
+              : undefined,
         }),
         method: 'POST',
       }
     )
 
+    // TODO this doesn't work as expected
     const result = await res.json()
 
     if (result.result === 'success') {
@@ -179,7 +187,16 @@ const Karten = ({
                   <Form.Label htmlFor="ticketSelect" srOnly>
                     Karten
                   </Form.Label>
-                  <Form.Control as="select" id="ticketSelect" custom>
+                  <Form.Control
+                    as="select"
+                    id="ticketSelect"
+                    custom
+                    onChange={(e) =>
+                      Number(e.target.value) > 1
+                        ? setShowBegleitung(true)
+                        : setShowBegleitung(false)
+                    }
+                  >
                     <option>Karten...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -210,7 +227,7 @@ const Karten = ({
                 </Col>
               </Row>
 
-              <Row className="mb-3">
+              <Row className={showBegleitung ? 'mb-4' : 'mb-3'}>
                 <Col>
                   <Form.Label htmlFor="email" srOnly>
                     E-Mail
@@ -224,6 +241,23 @@ const Karten = ({
                   />
                 </Col>
               </Row>
+
+              {showBegleitung && (
+                <Row className="mb-3">
+                  <Col>
+                    <Form.Label htmlFor="begleitung" srOnly>
+                      Begleitung
+                    </Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={2}
+                      id="begleitung"
+                      placeholder="Begleitung, z.B. Amelie Schepp, Ulrich Kralle, Isaak Malter"
+                      required
+                    />
+                  </Col>
+                </Row>
+              )}
 
               <Row className="mb-3">
                 <Col>
