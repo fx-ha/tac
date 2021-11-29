@@ -5,6 +5,11 @@ import { Col, Row } from 'react-bootstrap'
 import Layout, { siteTitle } from '../components/Layout'
 import FBIcon from '../components/navigation/FbIcon'
 import InstaIcon from '../components/navigation/InstaIcon'
+import schaulustImg from '../public/images/schaulustv3.png'
+import tacImg from '../public/images/tacv2.png'
+import schafeImg from '../public/images/schwarze_schafev2.png'
+import abcdImg from '../public/images/abdcv2.png'
+import emptyImg from '../public/images/empty_logo.png'
 
 const Mitmachen = ({
   castings,
@@ -44,11 +49,12 @@ const Mitmachen = ({
       <Row className="mt-3">
         <Col sm={4}>
           <Image
-            src="/images/schaulustv3.png"
+            src={schaulustImg}
             alt="Schaulust Logo"
             width={688}
             height={420}
             layout="responsive"
+            placeholder="blur"
           />
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[0].title}
@@ -110,11 +116,12 @@ const Mitmachen = ({
 
         <Col sm={4}>
           <Image
-            src="/images/tacv2.png"
+            src={tacImg}
             alt="tac logo"
             width={688}
             height={420}
             layout="responsive"
+            placeholder="blur"
           />
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[1].title}
@@ -135,11 +142,12 @@ const Mitmachen = ({
 
         <Col sm={4} className="mt-sm-2">
           <Image
-            src="/images/schwarze_schafev2.png"
+            src={schafeImg}
             alt="Schwarze Schafe Logo"
             width={688}
             height={420}
             layout="responsive"
+            placeholder="blur"
           />
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[2].title}
@@ -190,11 +198,12 @@ const Mitmachen = ({
 
         <Col sm={4} className="mt-sm-2">
           <Image
-            src="/images/abdcv2.png"
+            src={abcdImg}
             alt="American British Drama Club Logo"
             width={688}
             height={420}
             layout="responsive"
+            placeholder="blur"
           />
           <div className="font-weight-bold font-italic mt-2">
             {initiatives[3].title}
@@ -244,11 +253,12 @@ const Mitmachen = ({
         <Col sm={4} className="mt-4 mt-sm-2">
           <div className="d-none d-sm-block">
             <Image
-              src="/images/empty_logo.png"
+              src={emptyImg}
               alt="Kein Logo"
               width={688}
               height={420}
               layout="responsive"
+              placeholder="blur"
             />
           </div>
           <div className="font-weight-bold font-italic mt-2">

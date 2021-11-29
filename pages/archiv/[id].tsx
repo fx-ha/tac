@@ -5,6 +5,8 @@ import { Col, Row } from 'react-bootstrap'
 import Layout, { siteTitle } from '../../components/Layout'
 import EventBody from '../../components/EventBody'
 import { EventType } from '../../lib/types'
+import toBase64 from '../../lib/to-base-64'
+import shimmer from '../../lib/shimmer'
 
 const Event = ({ event }: { event: EventType }) => {
   return (
@@ -23,6 +25,10 @@ const Event = ({ event }: { event: EventType }) => {
                 alt={event.preview_image.title}
                 layout="fill"
                 objectFit="contain"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                  shimmer(967, 856)
+                )}`}
               />
             </div>
           </Col>

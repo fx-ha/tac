@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
 import SmallNav from './navigation/SmallNav'
 import BigNav from './navigation/BigNav'
+import backgroundImg from '../public/images/bg_v15.png'
 
 export const siteTitle = 'theater am campus'
 
@@ -24,12 +25,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="bgImg">
           <Image
             alt="Campus"
-            src="/images/bg_v15.png"
-            priority={true}
-            loading="eager"
+            src={backgroundImg}
+            priority
             layout="fill"
             objectFit="cover"
             quality={100}
+            placeholder="blur"
           />
         </div>
         <div className="desktop-container">
