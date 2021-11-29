@@ -23,6 +23,7 @@ const Event = ({ event }: { event: EventType }) => {
                 alt={event.preview_image.title}
                 layout="fill"
                 objectFit="contain"
+                priority
               />
             </div>
           </Col>

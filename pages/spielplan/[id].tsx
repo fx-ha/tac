@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { GetStaticProps, GetStaticPaths } from 'next'
-
 import { Col, Row } from 'react-bootstrap'
-
 import Layout, { siteTitle } from '../../components/Layout'
 import EventBody from '../../components/EventBody'
 import { EventType } from '../../lib/types'
@@ -25,6 +23,7 @@ const Event = ({ event }: { event: EventType }) => {
                 alt={event.preview_image.title}
                 layout="fill"
                 className="contain"
+                priority
               />
             </div>
           </Col>

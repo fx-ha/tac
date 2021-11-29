@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Col, Row } from 'react-bootstrap'
 import { EventType } from '../lib/types'
+import logoTransparentImg from '../public/images/TaCLogo_transparent.png'
 
 const EventList = ({
   events,
@@ -35,7 +36,7 @@ const EventList = ({
                         />
                       ) : (
                         <Image
-                          src="/images/TaCLogo_transparent.png"
+                          src={logoTransparentImg}
                           alt="tac logo"
                           width={16}
                           height={9}

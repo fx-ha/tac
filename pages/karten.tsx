@@ -7,6 +7,7 @@ import { Col, Button, Form, Row } from 'react-bootstrap'
 import MediaQuery from 'react-responsive'
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
+import kontactImg from '../public/images/KonTaCt_sm.jpg'
 
 const getEventDates = (event: EventType | undefined) => {
   const eventDates = []
@@ -287,11 +288,12 @@ const Karten = ({
           <Col>
             <MediaQuery minWidth={768}>
               <Image
-                src="/images/KonTaCt_sm.jpg"
+                src={kontactImg}
                 alt="Theater am Campus"
                 width={1920}
                 height={1080}
                 layout="responsive"
+                priority
               />
             </MediaQuery>
           </Col>

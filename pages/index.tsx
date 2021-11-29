@@ -9,6 +9,8 @@ import { isSameDay } from 'date-fns'
 import Layout, { siteTitle } from '../components/Layout'
 import { EventType } from '../lib/types'
 import { getEventDates } from '../lib/dates'
+import dragwalkImg from '../public/images/dragwalk.jpg'
+import logoTransparentImg from '../public/images/TaCLogo_transparent.png'
 
 const Home = ({
   events,
@@ -33,11 +35,13 @@ const Home = ({
       <Row>
         <Col>
           <Image
-            src="/images/dragwalk.jpg"
+            src={dragwalkImg}
             alt="TaC Bühne"
             width={5865}
             height={4000}
             layout="responsive"
+            placeholder="blur"
+            priority
           />
         </Col>
       </Row>
@@ -88,7 +92,7 @@ const Home = ({
                         />
                       ) : (
                         <Image
-                          src="/images/TaCLogo_transparent.png"
+                          src={logoTransparentImg}
                           alt="tac logo"
                           width={16}
                           height={9}
