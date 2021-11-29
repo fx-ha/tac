@@ -293,7 +293,7 @@ const Karten = ({
                 width={1920}
                 height={1080}
                 layout="responsive"
-                placeholder="blur"
+                priority
               />
             </MediaQuery>
           </Col>

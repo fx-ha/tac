@@ -41,6 +41,7 @@ const Home = ({
             height={4000}
             layout="responsive"
             placeholder="blur"
+            priority
           />
         </Col>
       </Row>

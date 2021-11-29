@@ -27,10 +27,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             alt="Campus"
             src={backgroundImg}
             priority
+            loading="eager"
             layout="fill"
             objectFit="cover"
             quality={100}
-            placeholder="blur"
           />
         </div>
         <div className="desktop-container">
