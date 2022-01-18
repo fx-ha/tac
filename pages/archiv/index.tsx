@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
-import Layout, { siteTitle } from '../components/Layout'
-import EventList from '../components/EventList'
-import { EventType } from '../lib/types'
+import Layout, { siteTitle } from '../../components/Layout'
+import EventList from '../../components/EventList'
+import { EventType } from '../../lib/types'
 
 const Archiv = ({ events }: { events: EventType[] }) => {
   events.sort(

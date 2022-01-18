@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import { isSameMonth, set } from 'date-fns'
-import Layout, { siteTitle } from '../components/Layout'
-import { EventType } from '../lib/types'
-import { getEventDates } from '../lib/dates'
+import Layout, { siteTitle } from '../../components/Layout'
+import { EventType } from '../../lib/types'
+import { getEventDates } from '../../lib/dates'
 
 const Spielplan = ({ events }: { events: EventType[] }) => {
   // we can't simply use an array of getMonth()
@@ -35,6 +35,11 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
       if (isSameMonth(new Date(date.value), eventMonth)) {
         dates.push(new Date(date.value))
       }
+    }
+
+    // normalize dates
+    for (const d of dates) {
+      d.setHours(11, 0, 0)
     }
 
     return dates
@@ -79,6 +84,13 @@ const Spielplan = ({ events }: { events: EventType[] }) => {
           }
         }
       }
+    }
+
+    // remove duplicate dates
+    for (const event of relatedEvents) {
+      event.dates = [...new Set(event.dates.map((date) => date.getTime()))].map(
+        (uniqueDate) => new Date(uniqueDate)
+      )
     }
 
     return relatedEvents
